@@ -3,209 +3,434 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nathaniel Rodriguez is a WordPress Website Designer and Developer specializing in Elementor Pro, Figma to WordPress builds, landing pages, redesigns, and SEO-friendly websites." />
+  <meta name="description" content="Nathaniel Rodriguez is a WordPress Website Designer and Developer specializing in Elementor Pro, Figma to WordPress builds, landing pages, business websites, redesigns, responsive design, and SEO-friendly page structure." />
+  <meta name="theme-color" content="#050507" />
   <title>Nathaniel Rodriguez | WordPress Website Designer & Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="site-bg"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-bg" aria-hidden="true"></div>
 
-  <header class="site-header">
+  <!-- Header / Navigation -->
+  <header class="site-header" data-header>
     <div class="container nav-wrap">
-      <a class="logo" href="#top">NR</a>
-      <nav class="nav-links" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Nathaniel Rodriguez home">
+        <span class="brand-mark">NR</span>
+        <span class="brand-text">Nathaniel Rodriguez</span>
+      </a>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="#process">Process</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a class="btn btn-primary nav-mobile-cta" href="#contact">Start a Project</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle menu">Menu</button>
+
+      <a class="btn btn-primary nav-cta" href="#contact">Start a Project</a>
+      <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="visually-hidden">Toggle navigation</span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero section-padding">
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero section" id="home" aria-labelledby="hero-title">
       <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <p class="eyebrow">WordPress • Elementor Pro • Figma to WordPress</p>
-          <h1>Clean, modern websites for businesses that need to look trusted online.</h1>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">WordPress Website Designer & Developer</p>
+          <h1 id="hero-title">WordPress Websites Built to Look Premium, Load Fast, and Convert Better.</h1>
           <p class="hero-text">
-            Hi, I'm Nathaniel Rodriguez — a WordPress Website Designer & Developer focused on building responsive, conversion-friendly websites with clear structure, polished layouts, and SEO-ready foundations.
+            I design and build clean, responsive WordPress websites using Elementor Pro, Figma, and SEO-friendly page structures for businesses, agencies, and service-based brands.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">View Work</a>
-            <a class="btn btn-secondary" href="#contact">Let's Connect</a>
+
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="btn btn-primary" href="#work">View My Work</a>
+            <a class="btn btn-secondary" href="#contact">Let's Work Together</a>
           </div>
-          <div class="trust-row" aria-label="Trust highlights">
-            <span>Elementor Pro Builds</span>
-            <span>Responsive Layouts</span>
-            <span>SEO-Friendly Structure</span>
-          </div>
+
+          <ul class="trust-list" aria-label="Trust highlights">
+            <li>WordPress & Elementor Specialist</li>
+            <li>Responsive Design</li>
+            <li>SEO-Friendly Structure</li>
+            <li>Freelance & Agency Experience</li>
+          </ul>
         </div>
 
-        <div class="hero-card reveal delay-1">
-          <div class="avatar-wrap">
-            <img src="assets/images/profile-placeholder.jpg" alt="Nathaniel Rodriguez profile placeholder" />
+        <figure class="hero-visual reveal delay-1">
+          <div class="visual-frame">
+            <img src="assets/images/portfolio-hero-mockup.png" alt="Original dark website interface mockup with violet UI panels" />
+            <div class="visual-badge visual-badge-top">Elementor Pro workflow</div>
+            <div class="visual-badge visual-badge-bottom">Responsive launch-ready pages</div>
           </div>
-          <div class="status-card">
-            <span class="status-dot"></span>
-            Available for selected website projects
-          </div>
-          <div class="mini-stats">
-            <div>
-              <strong>WordPress</strong>
-              <span>Core Platform</span>
-            </div>
-            <div>
-              <strong>Elementor</strong>
-              <span>Main Builder</span>
-            </div>
-            <div>
-              <strong>Figma</strong>
-              <span>Design Workflow</span>
-            </div>
-          </div>
-        </div>
+          <figcaption class="visually-hidden">
+            Original visual concept for Nathaniel Rodriguez WordPress portfolio projects.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section-padding small-top" id="services">
+    <!-- Services Section -->
+    <section class="section section-divider" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Services</p>
-          <h2>What I can help with</h2>
-          <p>I work best on websites that need a balance of clean design, practical WordPress development, and SEO-conscious page structure.</p>
+          <h2 id="services-title">What I Can Help You Build</h2>
+          <p>
+            Clean WordPress builds, focused landing pages, and redesigns that give your content structure, clarity, and a stronger path to conversion.
+          </p>
         </div>
 
-        <div class="cards-grid services-grid">
-          <article class="card reveal">
-            <h3>WordPress Website Builds</h3>
-            <p>Custom business websites built with WordPress and Elementor Pro, structured for easy management and future updates.</p>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="card-number">01</span>
+            <h3>WordPress Website Design</h3>
+            <p>Modern business websites designed around clear messaging, polished presentation, and practical content management.</p>
+            <ul>
+              <li>Business website structure</li>
+              <li>Responsive page layouts</li>
+              <li>Conversion-focused sections</li>
+            </ul>
           </article>
-          <article class="card reveal delay-1">
+
+          <article class="service-card reveal delay-1">
+            <span class="card-number">02</span>
+            <h3>Elementor Pro Development</h3>
+            <p>Custom Elementor Pro builds with reusable sections, clean spacing, mobile adjustments, and editor-friendly setup.</p>
+            <ul>
+              <li>Elementor Pro page builds</li>
+              <li>Reusable design patterns</li>
+              <li>Performance-conscious styling</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal delay-2">
+            <span class="card-number">03</span>
             <h3>Figma to WordPress</h3>
-            <p>Turning approved Figma designs into responsive WordPress pages with careful spacing, hierarchy, and mobile adjustments.</p>
+            <p>Careful translation of approved Figma designs into responsive WordPress pages that keep the intent of the design intact.</p>
+            <ul>
+              <li>Pixel-aware layout conversion</li>
+              <li>Desktop, tablet, and mobile views</li>
+              <li>Design system consistency</li>
+            </ul>
           </article>
-          <article class="card reveal delay-2">
-            <h3>Landing Pages</h3>
-            <p>Focused landing page layouts designed to communicate offers clearly and guide visitors toward enquiries or bookings.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Website Redesigns</h3>
-            <p>Improving outdated websites with cleaner layouts, stronger visual flow, better usability, and more polished presentation.</p>
-          </article>
-          <article class="card reveal delay-1">
-            <h3>SEO Page Structure</h3>
-            <p>Support for headings, FAQ sections, RankMath basics, content formatting, image alt text, and schema-ready page content.</p>
-          </article>
-          <article class="card reveal delay-2">
-            <h3>WooCommerce Layouts</h3>
-            <p>Product page structure, category layouts, and content presentation for small eCommerce websites using WooCommerce.</p>
+
+          <article class="service-card reveal">
+            <span class="card-number">04</span>
+            <h3>Landing Pages & Redesigns</h3>
+            <p>Focused page experiences that improve hierarchy, sharpen calls to action, and make existing websites feel current.</p>
+            <ul>
+              <li>Landing page flow</li>
+              <li>Website refreshes</li>
+              <li>Basic SEO setup</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-padding" id="work">
+    <!-- Featured Work / Case Studies Section -->
+    <section class="section" id="work" aria-labelledby="work-title">
       <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Portfolio case study areas</h2>
-          <p>These are starter portfolio cards. Replace the placeholders with real project screenshots, links, and case study pages as you build your GitHub portfolio.</p>
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="eyebrow">Featured Work</p>
+            <h2 id="work-title">Selected Website Projects</h2>
+          </div>
+          <p>
+            Placeholder case study cards built so you can duplicate each article, swap the visual, update the copy, and link to a full project page later.
+          </p>
         </div>
 
-        <div class="work-grid">
-          <article class="work-card reveal">
-            <div class="work-image gradient-one">Dental Website</div>
-            <div class="work-content">
-              <span>WordPress • Elementor • SEO Structure</span>
-              <h3>Dental Practice Website Build</h3>
-              <p>A professional dental website layout with treatment pages, FAQ sections, local SEO support, and booking-focused sections.</p>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-media media-dental" role="img" aria-label="Placeholder visual for Dental Practice Website Redesign">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Website Redesign</p>
+              <h3>Dental Practice Website Redesign</h3>
+              <p>A cleaner service website direction with treatment page structure, booking-focused sections, FAQs, and local SEO-friendly content areas.</p>
+              <ul class="tag-list">
+                <li>WordPress</li>
+                <li>Elementor</li>
+                <li>SEO</li>
+                <li>Responsive</li>
+              </ul>
+              <a class="text-link" href="#contact">View Case Study <span aria-hidden="true">-></span></a>
             </div>
           </article>
 
-          <article class="work-card reveal delay-1">
-            <div class="work-image gradient-two">Landing Page</div>
-            <div class="work-content">
-              <span>UI Layout • Conversion Flow</span>
-              <h3>Business Landing Page</h3>
-              <p>A focused landing page structure with a strong hero, service benefits, trust blocks, FAQs, and a clear enquiry flow.</p>
+          <article class="project-card reveal delay-1">
+            <div class="project-media media-landing" role="img" aria-label="Placeholder visual for Local Business Landing Page">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Landing Page</p>
+              <h3>Local Business Landing Page</h3>
+              <p>A sharp single-page layout with a strong hero, credibility blocks, service benefits, clear CTAs, and a simple enquiry path.</p>
+              <ul class="tag-list">
+                <li>WordPress</li>
+                <li>Elementor</li>
+                <li>Conversion</li>
+                <li>Responsive</li>
+              </ul>
+              <a class="text-link" href="#contact">View Case Study <span aria-hidden="true">-></span></a>
             </div>
           </article>
 
-          <article class="work-card reveal delay-2">
-            <div class="work-image gradient-three">WooCommerce</div>
-            <div class="work-content">
-              <span>Product Layout • Content Structure</span>
-              <h3>WooCommerce Product Page</h3>
-              <p>A clean product page layout with organized descriptions, benefits, product details, notices, and mobile-friendly presentation.</p>
+          <article class="project-card reveal delay-2">
+            <div class="project-media media-service" role="img" aria-label="Placeholder visual for Service-Based Website Build">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Business Website</p>
+              <h3>Service-Based Website Build</h3>
+              <p>A multi-section website concept for a service brand with clear messaging, trust signals, lead-generation sections, and scalable page structure.</p>
+              <ul class="tag-list">
+                <li>WordPress</li>
+                <li>Elementor</li>
+                <li>Structure</li>
+                <li>Responsive</li>
+              </ul>
+              <a class="text-link" href="#contact">View Case Study <span aria-hidden="true">-></span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media media-seo" role="img" aria-label="Placeholder visual for SEO-Friendly Treatment Page Layout">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-category">SEO Page Layout</p>
+              <h3>SEO-Friendly Treatment Page Layout</h3>
+              <p>A structured long-form page layout with headings, content blocks, FAQs, internal linking areas, and clean mobile readability.</p>
+              <ul class="tag-list">
+                <li>WordPress</li>
+                <li>SEO</li>
+                <li>FAQ</li>
+                <li>Responsive</li>
+              </ul>
+              <a class="text-link" href="#contact">View Case Study <span aria-hidden="true">-></span></a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-padding" id="process">
-      <div class="container process-grid">
-        <div class="section-heading align-left reveal">
-          <p class="eyebrow">Process</p>
-          <h2>How I usually approach a project</h2>
-          <p>I like keeping the process clear and practical — understand the goal, build the structure, polish the design, then make sure the site works well across devices.</p>
+    <!-- Results / Trust Section -->
+    <section class="results-section" aria-labelledby="results-title">
+      <div class="container results-wrap">
+        <div class="results-copy reveal">
+          <p class="eyebrow">Results</p>
+          <h2 id="results-title">Practical Numbers, Realistic Standards</h2>
+          <p>
+            The focus is simple: organized pages, responsive layouts, clean build systems, and a reliable handoff that helps the website keep working after launch.
+          </p>
         </div>
 
-        <div class="timeline reveal delay-1">
-          <div class="timeline-item">
-            <span>01</span>
-            <div>
-              <h3>Understand the goal</h3>
-              <p>Clarify the business, audience, website purpose, content needs, and conversion goals.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span>02</span>
-            <div>
-              <h3>Plan the structure</h3>
-              <p>Map out the sections, page flow, headings, CTAs, trust elements, and responsive behavior.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span>03</span>
-            <div>
-              <h3>Build and polish</h3>
-              <p>Develop the website in WordPress, refine spacing, check mobile layouts, and clean up styling.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span>04</span>
-            <div>
-              <h3>Prepare for launch</h3>
-              <p>Review responsiveness, links, forms, basic SEO fields, images, and final content formatting.</p>
-            </div>
-          </div>
+        <div class="stats-grid">
+          <article class="stat-card reveal">
+            <strong>20+</strong>
+            <span>Website Pages Built</span>
+          </article>
+          <article class="stat-card reveal delay-1">
+            <strong>100%</strong>
+            <span>Responsive Layouts</span>
+          </article>
+          <article class="stat-card reveal delay-2">
+            <strong>Elementor Pro</strong>
+            <span>Workflow</span>
+          </article>
+          <article class="stat-card reveal">
+            <strong>SEO-Friendly</strong>
+            <span>Structure</span>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section-padding" id="contact">
-      <div class="container contact-card reveal">
-        <p class="eyebrow">Contact</p>
-        <h2>Need a clean WordPress website or landing page?</h2>
-        <p>I'm open to selected website design, Elementor Pro, Figma-to-WordPress, and redesign projects.</p>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://github.com/thanielll" target="_blank" rel="noopener">View GitHub</a>
-          <a class="btn btn-secondary" href="mailto:your-email@example.com">Email Me</a>
+    <!-- Process Section -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="eyebrow">Process</p>
+            <h2 id="process-title">How I Work</h2>
+          </div>
+          <p>
+            A clear, collaborative workflow from the first idea to a polished website that can be reviewed, edited, tested, and launched with confidence.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <span class="card-number">01</span>
+            <h3>Discovery & Planning</h3>
+            <p>I clarify the goal, audience, content, offer, and page structure so the build starts with a useful direction.</p>
+            <ul>
+              <li>Project goals and audience</li>
+              <li>Page map and section flow</li>
+              <li>Content and CTA planning</li>
+            </ul>
+          </article>
+
+          <article class="process-card reveal delay-1">
+            <span class="card-number">02</span>
+            <h3>Design & Development</h3>
+            <p>I design and build the website with careful spacing, hierarchy, responsive behavior, and Elementor-friendly editing.</p>
+            <ul>
+              <li>Figma or direct Elementor build</li>
+              <li>Reusable sections and templates</li>
+              <li>Desktop, tablet, and mobile polish</li>
+            </ul>
+          </article>
+
+          <article class="process-card reveal delay-2">
+            <span class="card-number">03</span>
+            <h3>Testing, Launch & Support</h3>
+            <p>I review the site before launch, clean up key details, and help prepare the website for real users.</p>
+            <ul>
+              <li>Responsive QA and link checks</li>
+              <li>Basic SEO field setup</li>
+              <li>Launch support and handoff notes</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-divider" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">A Web Designer Who Understands Both Design and Build</h2>
+          <p>
+            I'm Nathaniel Rodriguez, a WordPress Website Designer & Developer focused on creating clean, modern, responsive websites that are easy to manage and built with real business goals in mind. I work with Elementor Pro, Figma, WordPress, and SEO-friendly content structures to help clients turn ideas into polished, functional websites.
+          </p>
+        </div>
+
+        <aside class="tool-panel reveal delay-1" aria-label="Tools and skills">
+          <h3>Tools I Work With</h3>
+          <ul class="tool-list">
+            <li>WordPress</li>
+            <li>Elementor Pro</li>
+            <li>Figma</li>
+            <li>Rank Math</li>
+            <li>WooCommerce</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact" aria-labelledby="cta-title">
+      <div class="container cta-wrap reveal">
+        <p class="eyebrow">Start a Project</p>
+        <h2 id="cta-title">Have a website idea or project in mind?</h2>
+        <p>
+          Let's create a clean, professional website that looks great, works smoothly, and supports your business goals.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="mailto:hello@example.com">Start a Project</a>
+          <a class="btn btn-secondary" href="#work">View My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-heading reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Common Questions</h2>
+          <p>Quick answers for clients, agencies, and business owners considering a WordPress or Elementor project.</p>
+        </div>
+
+        <div class="faq-list reveal delay-1">
+          <details class="faq-item" open>
+            <summary>What type of websites do you build?</summary>
+            <p>I build WordPress business websites, landing pages, service pages, portfolio pages, redesigns, and SEO-friendly content layouts for service-based brands.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you work with Elementor Pro?</summary>
+            <p>Yes. Elementor Pro is one of my main build tools for creating responsive, editable WordPress pages with reusable sections and clean layouts.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can you convert Figma designs into WordPress?</summary>
+            <p>Yes. I can turn Figma layouts into WordPress and Elementor pages while keeping spacing, hierarchy, responsiveness, and editability in mind.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you make websites mobile responsive?</summary>
+            <p>Yes. Desktop, tablet, and mobile layouts are planned and adjusted so pages remain clear, readable, and easy to use across screen sizes.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can you help improve an existing website?</summary>
+            <p>Yes. I can help with redesigns, page structure improvements, CTA placement, layout cleanup, basic SEO setup, and responsive fixes.</p>
+          </details>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>© <span id="year"></span> Nathaniel Rodriguez. Built with HTML, CSS, and GitHub Pages.</p>
-      <a href="#top">Back to top</a>
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="#home">Nathaniel Rodriguez</a>
+        <p>WordPress Website Designer & Developer</p>
+        <a class="footer-email" href="mailto:hello@example.com">hello@example.com</a>
+      </div>
+
+      <div>
+        <h2 class="footer-heading">Quick Links</h2>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div>
+        <h2 class="footer-heading">Social</h2>
+        <nav class="footer-links" aria-label="Social links">
+          <a href="https://github.com/thanielll" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" aria-label="LinkedIn placeholder">LinkedIn</a>
+          <a href="#" aria-label="Instagram placeholder">Instagram</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Nathaniel Rodriguez. Built for GitHub Pages.</p>
+      <a href="#home">Back to top</a>
     </div>
   </footer>
 
