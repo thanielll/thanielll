@@ -49,3 +49,12 @@
     });
   }
 })();
+
+(function loadPointerEffect() {
+  if (document.querySelector('script[src="assets/js/pointer-effect.js"]')) return;
+
+  const pointerScript = document.createElement('script');
+  pointerScript.src = 'assets/js/pointer-effect.js';
+  pointerScript.defer = true;
+  document.body.appendChild(pointerScript);
+})();
