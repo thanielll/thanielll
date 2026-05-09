@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thanielll.github.io/thanielll/sitemap.xml
+Sitemap: https://rnthaniel.vercel.app/sitemap.xml
