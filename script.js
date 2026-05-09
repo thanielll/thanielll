@@ -72,7 +72,7 @@ const renderFeaturedProjects = () => {
   const featuredGrid = document.querySelector('[data-featured-projects]');
   if (!featuredGrid || !caseStudies.length) return;
 
-  const featuredProjects = caseStudies.filter((study) => study.featured).slice(0, 4);
+  const featuredProjects = caseStudies.filter((study) => study.featured).slice(0, 3);
 
   featuredGrid.innerHTML = featuredProjects
     .map(

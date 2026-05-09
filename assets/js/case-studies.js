@@ -4,8 +4,8 @@ window.caseStudies = [
     slug: "dental-practice-website",
     category: "Healthcare / WordPress",
     summary:
-      "A healthcare website example focused on service clarity, trust-building sections, mobile-friendly booking paths, and SEO-friendly treatment page structure.",
-    tags: ["WordPress", "Elementor Pro", "Responsive", "SEO Structure"],
+      "A clean healthcare website concept focused on service clarity, responsive structure, patient trust, and clear enquiry pathways.",
+    tags: ["WordPress", "Elementor Pro", "Responsive"],
     filters: ["WordPress", "Elementor", "SEO"],
     services: ["Website Design", "Elementor Pro Development", "Responsive Setup", "SEO-Friendly Structure"],
     tools: ["WordPress", "Elementor Pro", "Figma", "Rank Math"],
@@ -20,8 +20,8 @@ window.caseStudies = [
     slug: "figma-to-wordpress-business-website",
     category: "Figma to WordPress",
     summary:
-      "A business website example showing how a polished Figma layout can become a responsive, editable Elementor Pro build.",
-    tags: ["Figma", "WordPress", "Elementor Pro", "Responsive"],
+      "A responsive WordPress build direction for turning polished Figma layouts into flexible, editable Elementor pages.",
+    tags: ["Figma", "WordPress", "Elementor Pro"],
     filters: ["WordPress", "Elementor", "Figma to WordPress"],
     services: ["Figma to WordPress", "Responsive Development", "Elementor Pro Build"],
     tools: ["Figma", "WordPress", "Elementor Pro", "CSS"],
@@ -36,8 +36,8 @@ window.caseStudies = [
     slug: "elementor-landing-page",
     category: "Landing Page",
     summary:
-      "A focused landing page example built around clear messaging, sharp section hierarchy, responsive layout, and conversion CTAs.",
-    tags: ["Elementor Pro", "Landing Page", "CTA", "Responsive"],
+      "A focused landing page structure built around clear messaging, responsive sections, and conversion-focused calls to action.",
+    tags: ["Elementor Pro", "Landing Page", "CTA"],
     filters: ["WordPress", "Elementor", "Landing Pages"],
     services: ["Landing Page Design", "Elementor Pro Development", "Conversion Layout"],
     tools: ["WordPress", "Elementor Pro", "HTML/CSS"],
@@ -59,7 +59,7 @@ window.caseStudies = [
     tools: ["WordPress", "Elementor Pro", "Rank Math"],
     image: "",
     mockup: "preview-seo",
-    featured: true,
+    featured: false,
     link: "case-study-dental-practice-website.html?project=seo-friendly-service-page",
     status: "Case study notes cover the intended page flow, build approach, and WordPress structure."
   },
