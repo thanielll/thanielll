@@ -1,5 +1,7 @@
 (function applySeoEnhancements() {
-  const siteUrl = 'https://thanielll.github.io/thanielll/';
+  if (document.head.querySelector('meta[data-static-seo="true"]')) return;
+
+  const siteUrl = 'https://rnthaniel.vercel.app/';
   const logoUrl = `${siteUrl}assets/images/Nathaniel%20Logo.png`;
   const defaultImage = `${siteUrl}assets/case-studies/consilium%20dynamics/Project%20Thumbnail.jpg`;
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
@@ -72,10 +74,6 @@
   setLink('canonical', canonicalUrl);
   setLink('manifest', `${siteUrl}site.webmanifest`);
 
-  const removeExistingJsonLd = () => {
-    document.head.querySelectorAll('script[data-seo-jsonld="true"]').forEach((script) => script.remove());
-  };
-
   const addJsonLd = (schema) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -84,9 +82,9 @@
     document.head.appendChild(script);
   };
 
-  removeExistingJsonLd();
+  document.head.querySelectorAll('script[data-seo-jsonld="true"]').forEach((script) => script.remove());
 
-  const personSchema = {
+  addJsonLd({
     '@context': 'https://schema.org',
     '@type': 'Person',
     '@id': `${siteUrl}#person`,
@@ -94,16 +92,11 @@
     url: siteUrl,
     image: `${siteUrl}assets/images/About%20Me.png`,
     jobTitle: 'WordPress Website Designer and Developer',
-    description: 'WordPress Website Designer and Developer specializing in Elementor Pro, Figma-to-WordPress builds, responsive websites, landing pages, redesigns, and SEO-friendly page structures.',
     knowsAbout: ['WordPress', 'Elementor Pro', 'Figma to WordPress', 'Responsive Web Design', 'Landing Page Design', 'SEO-Friendly Website Structure'],
-    sameAs: [
-      'https://github.com/thanielll',
-      'https://www.linkedin.com/in/rnaths',
-      'https://www.upwork.com/freelancers/~01e812a28cc6f0769d'
-    ]
-  };
+    sameAs: ['https://github.com/thanielll', 'https://www.linkedin.com/in/rnaths', 'https://www.upwork.com/freelancers/~01e812a28cc6f0769d']
+  });
 
-  const websiteSchema = {
+  addJsonLd({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${siteUrl}#website`,
@@ -111,9 +104,9 @@
     name: 'Nathaniel Rodriguez Portfolio',
     description: pageData[''].description,
     publisher: { '@id': `${siteUrl}#person` }
-  };
+  });
 
-  const serviceSchema = {
+  addJsonLd({
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${siteUrl}#services`,
@@ -122,13 +115,8 @@
     image: logoUrl,
     provider: { '@id': `${siteUrl}#person` },
     areaServed: 'Worldwide',
-    serviceType: ['WordPress Website Design', 'Elementor Pro Development', 'Figma to WordPress', 'Landing Page Design', 'Website Redesign'],
-    description: 'Responsive WordPress website design and Elementor Pro development for businesses and agencies.'
-  };
-
-  addJsonLd(personSchema);
-  addJsonLd(websiteSchema);
-  addJsonLd(serviceSchema);
+    serviceType: ['WordPress Website Design', 'Elementor Pro Development', 'Figma to WordPress', 'Landing Page Design', 'Website Redesign']
+  });
 
   if (normalizedPath === 'case-study-consilium-dynamics.html') {
     addJsonLd({
