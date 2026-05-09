@@ -37,20 +37,20 @@
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 0.72fr) minmax(320px, 0.45fr);
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.44fr);
       gap: clamp(1.5rem, 4vw, 4rem);
       align-items: center;
     }
 
     .project-inquiry-copy h2 {
-      max-width: 10ch;
+      max-width: 16ch !important;
       font-size: clamp(3rem, 4.45rem, 4.45rem);
       line-height: 0.94;
       letter-spacing: -0.055em;
     }
 
     .project-inquiry-copy > p {
-      max-width: 44rem;
+      max-width: 56rem;
       margin-top: 1.15rem;
       color: var(--color-muted);
       font-size: 1rem;
@@ -174,6 +174,10 @@
     @media (max-width: 900px) {
       .project-inquiry-grid {
         grid-template-columns: 1fr;
+      }
+
+      .project-inquiry-copy h2 {
+        max-width: 13ch !important;
       }
     }
 
