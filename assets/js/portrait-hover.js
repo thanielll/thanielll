@@ -24,39 +24,6 @@
       transform-origin: var(--portrait-x, 50%) var(--portrait-y, 50%);
     }
 
-    .about-portrait-frame .portrait-suit-reveal {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      pointer-events: none;
-      opacity: 0;
-      clip-path: polygon(0 41%, 100% 41%, 100% 100%, 0 100%);
-      background:
-        radial-gradient(circle at 50% 45%, rgba(255, 245, 238, 0.16) 0 2px, transparent 3px),
-        radial-gradient(ellipse at 50% 42%, rgba(224, 47, 39, 0.88) 0 18%, transparent 19%),
-        linear-gradient(115deg, transparent 0 42%, rgba(255, 250, 245, 0.24) 42.5% 43%, transparent 43.5% 100%),
-        linear-gradient(65deg, transparent 0 45%, rgba(255, 250, 245, 0.18) 45.5% 46%, transparent 46.5% 100%),
-        repeating-radial-gradient(ellipse at 50% 48%, transparent 0 26px, rgba(255, 250, 245, 0.2) 27px 28px, transparent 29px 54px),
-        repeating-linear-gradient(90deg, rgba(255, 250, 245, 0.18) 0 1px, transparent 1px 22px),
-        linear-gradient(90deg, rgba(25, 54, 113, 0.92) 0 24%, rgba(196, 28, 32, 0.9) 25% 74%, rgba(25, 54, 113, 0.92) 75% 100%);
-      background-size: auto, auto, auto, auto, auto, auto, auto;
-      mix-blend-mode: overlay;
-      -webkit-mask-image: radial-gradient(circle 78px at var(--portrait-x, 50%) var(--portrait-y, 50%), #000 0 58%, rgba(0,0,0,.72) 64%, transparent 72%);
-      mask-image: radial-gradient(circle 78px at var(--portrait-x, 50%) var(--portrait-y, 50%), #000 0 58%, rgba(0,0,0,.72) 64%, transparent 72%);
-      transition: opacity 260ms ease;
-    }
-
-    .about-portrait-frame .portrait-suit-reveal::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(100deg, transparent 0 46%, rgba(18, 18, 18, 0.22) 46% 54%, transparent 54% 100%),
-        radial-gradient(ellipse at 50% 35%, rgba(255, 255, 255, 0.12), transparent 36%),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.26), transparent 19% 81%, rgba(0, 0, 0, 0.26));
-      mix-blend-mode: multiply;
-    }
-
     .about-portrait-frame .portrait-scanline {
       position: absolute;
       inset: 0;
@@ -76,15 +43,13 @@
       left: var(--portrait-x, 50%);
       top: var(--portrait-y, 50%);
       z-index: 4;
-      width: 70px;
-      height: 70px;
+      width: 46px;
+      height: 46px;
       border: 1px solid rgba(var(--color-accent-rgb), 0.72);
-      border-radius: 50%;
       opacity: 0;
       pointer-events: none;
       transform: translate(-50%, -50%) scale(0.72);
       transition: opacity 220ms ease, transform 420ms cubic-bezier(.16, 1, .3, 1);
-      box-shadow: 0 0 0 1px rgba(255, 253, 247, 0.28) inset;
     }
 
     .about-portrait-frame .portrait-focus-dot::before,
@@ -132,11 +97,6 @@
       mix-blend-mode: multiply;
     }
 
-    .about-portrait-frame:hover .portrait-suit-reveal,
-    .about-portrait-frame:focus-within .portrait-suit-reveal {
-      opacity: 0.82;
-    }
-
     .about-portrait-frame:hover .portrait-scanline,
     .about-portrait-frame:focus-within .portrait-scanline {
       opacity: 1;
@@ -167,9 +127,7 @@
   if (!frame) return;
 
   if (!frame.querySelector('.portrait-scanline')) {
-    frame.insertAdjacentHTML('beforeend', '<span class="portrait-suit-reveal" aria-hidden="true"></span><span class="portrait-scanline" aria-hidden="true"></span><span class="portrait-focus-dot" aria-hidden="true"></span>');
-  } else if (!frame.querySelector('.portrait-suit-reveal')) {
-    frame.insertAdjacentHTML('afterbegin', '<span class="portrait-suit-reveal" aria-hidden="true"></span>');
+    frame.insertAdjacentHTML('beforeend', '<span class="portrait-scanline" aria-hidden="true"></span><span class="portrait-focus-dot" aria-hidden="true"></span>');
   }
 
   frame.addEventListener('pointermove', (event) => {
