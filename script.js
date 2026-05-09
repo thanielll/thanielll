@@ -184,7 +184,65 @@ const renderSingleCaseStudy = () => {
   document.title = `${study.title} Case Study | Nathaniel Rodriguez`;
 };
 
+const setupScrollReveal = () => {
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  if (motionQuery.matches || !('IntersectionObserver' in window)) return;
+
+  const revealSelectors = [
+    '.section-heading',
+    '.value-item',
+    '.about-copy',
+    '.tools-panel',
+    '.best-for-grid article',
+    '.service-card',
+    '.project-card',
+    '.process-step',
+    '.cta-copy',
+    '.channel-card',
+    '.archive-intro',
+    '.case-card',
+    '.case-hero-copy',
+    '.case-hero-visual',
+    '.case-section-heading',
+    '.overview-grid article',
+    '.highlight-grid article',
+    '.case-copy',
+    '.screenshot-panel',
+    '.tools-row li'
+  ];
+
+  const revealItems = [...document.querySelectorAll(revealSelectors.join(','))];
+  if (!revealItems.length) return;
+
+  document.documentElement.classList.add('has-reveal');
+
+  revealItems.forEach((item, index) => {
+    item.classList.add('reveal');
+    item.style.setProperty('--reveal-delay', `${Math.min((index % 3) * 20, 40)}ms`);
+    item.addEventListener('focusin', () => item.classList.add('is-visible'));
+  });
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      rootMargin: '0px 0px 18% 0px',
+      threshold: 0.12
+    }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+};
+
 renderFeaturedProjects();
 renderArchiveProjects();
 setupCaseStudyFilters();
 renderSingleCaseStudy();
+setupScrollReveal();
