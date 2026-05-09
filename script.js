@@ -15,7 +15,7 @@ const consiliumStudy = {
   image: 'assets/case-studies/consilium%20dynamics/Project%20Thumbnail.jpg',
   mockup: 'preview-consilium',
   featured: true,
-  link: 'case-study-dental-practice-website.html?project=consilium-dynamics-website-redesign',
+  link: 'case-study-consilium-dynamics.html',
   liveLink: 'https://www.consiliumdynamics.com/',
   clientIndustry: 'Strategic Advisory / Business Consulting',
   projectType: 'Website Redesign / Figma to WordPress',
@@ -216,7 +216,7 @@ const renderSingleCaseStudy = () => {
   if (!caseTemplate || !caseStudies.length) return;
 
   const params = new URLSearchParams(window.location.search);
-  const requestedSlug = params.get('project') || 'dental-practice-website';
+  const requestedSlug = params.get('project') || 'consilium-dynamics-website-redesign';
   const study = caseStudies.find((item) => item.slug === requestedSlug) || caseStudies[0];
   const services = study.services || [];
   const tools = study.tools || [];
@@ -247,8 +247,24 @@ const renderSingleCaseStudy = () => {
   if (toolsTarget) toolsTarget.innerHTML = renderTagList(tools);
 
   const actions = caseTemplate.querySelector('.case-actions');
-  if (actions && study.liveLink && !actions.querySelector('[data-live-link]')) {
-    actions.insertAdjacentHTML('beforeend', `<a class="btn btn-light" href="${escapeHTML(study.liveLink)}" target="_blank" rel="noopener" data-live-link>Visit Live Website</a>`);
+  if (actions && study.liveLink) {
+    const liveButtons = [...actions.querySelectorAll('a')].filter((link) => {
+      const href = link.getAttribute('href') || '';
+      const text = link.textContent.trim().toLowerCase();
+      return href === study.liveLink || text === 'visit live website';
+    });
+
+    liveButtons.forEach((link, index) => {
+      link.setAttribute('href', study.liveLink);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener');
+      link.setAttribute('data-live-link', 'true');
+      if (index > 0) link.remove();
+    });
+
+    if (!actions.querySelector('[data-live-link]')) {
+      actions.insertAdjacentHTML('beforeend', `<a class="btn btn-light" href="${escapeHTML(study.liveLink)}" target="_blank" rel="noopener" data-live-link>Visit Live Website</a>`);
+    }
   }
 
   const heroVisual = caseTemplate.querySelector('.case-hero-visual');
