@@ -155,7 +155,7 @@
       <section class="proof-strip" aria-label="Portfolio proof points">
         <div class="container proof-grid">
           <article class="proof-item"><span>Upwork Feedback</span><strong>5.0 Client Review</strong></article>
-          <article class="proof-item"><span>Recent Project</span><strong>$297 Fixed-Price Build</strong></article>
+          <article class="proof-item"><span>Recent Project</span><strong>Premium Redesign Build</strong></article>
           <article class="proof-item"><span>Workflow</span><strong>Figma to Elementor</strong></article>
           <article class="proof-item"><span>Support</span><strong>Agency Collaboration</strong></article>
         </div>
