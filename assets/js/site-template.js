@@ -37,7 +37,8 @@
 
     const nav = header.querySelector('#primary-navigation');
     if (nav) {
-      const isHome = location.pathname.endsWith('/') || location.pathname.endsWith('/index.html') || !location.pathname.split('/').pop();
+      const fileName = location.pathname.split('/').pop();
+      const isHome = location.pathname.endsWith('/') || fileName === 'index.html' || !fileName;
       const prefix = isHome ? '' : 'index.html';
       nav.innerHTML = `
         <a href="${prefix}#home">Home</a>
@@ -50,7 +51,7 @@
         <a class="btn btn-dark nav-mobile-cta" href="${emailHref}">Let's Work Together</a>
       `;
 
-      if (location.pathname.includes('case-studies')) {
+      if (location.pathname.includes('case-stud')) {
         nav.querySelector('a[href="case-studies.html"]')?.setAttribute('aria-current', 'page');
       }
     }
@@ -104,15 +105,21 @@
     document.body.appendChild(script);
   };
 
+  const isCaseTemplate = document.body.hasAttribute('data-case-template');
+
   ensureFavicons();
   normalizeHeader();
   normalizeFooter();
   loadScriptOnce('assets/js/pointer-effect.js');
   loadScriptOnce('assets/js/portfolio-polish.js');
-  loadScriptOnce('assets/js/testimonial-section.js');
-  loadScriptOnce('assets/js/best-for-section.js');
   loadScriptOnce('assets/js/section-watermarks.js');
-  loadScriptOnce('assets/js/process-section.js');
-  loadScriptOnce('assets/js/portrait-hover.js');
-  loadScriptOnce('assets/js/conversion-upgrades.js');
+
+  if (!isCaseTemplate) {
+    loadScriptOnce('assets/js/testimonial-section.js');
+    loadScriptOnce('assets/js/best-for-section.js');
+    loadScriptOnce('assets/js/process-section.js');
+    loadScriptOnce('assets/js/portrait-hover.js');
+    loadScriptOnce('assets/js/conversion-upgrades.js');
+    loadScriptOnce('assets/js/portfolio-final-pass.js');
+  }
 })();
