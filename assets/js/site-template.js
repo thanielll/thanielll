@@ -110,4 +110,5 @@
   loadScriptOnce('assets/js/pointer-effect.js');
   loadScriptOnce('assets/js/portfolio-polish.js');
   loadScriptOnce('assets/js/testimonial-section.js');
+  loadScriptOnce('assets/js/best-for-section.js');
 })();
