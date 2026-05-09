@@ -115,6 +115,7 @@
   loadScriptOnce('assets/js/portfolio-polish.js');
   loadScriptOnce('assets/js/section-watermarks.js');
   loadScriptOnce('assets/js/eyebrow-consistency.js');
+  loadScriptOnce('assets/js/contact-brand-icons.js');
 
   if (!isCaseTemplate) {
     loadScriptOnce('assets/js/testimonial-section.js');
