@@ -111,4 +111,5 @@
   loadScriptOnce('assets/js/portfolio-polish.js');
   loadScriptOnce('assets/js/testimonial-section.js');
   loadScriptOnce('assets/js/best-for-section.js');
+  loadScriptOnce('assets/js/section-watermarks.js');
 })();
