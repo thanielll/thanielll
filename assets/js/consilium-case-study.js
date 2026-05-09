@@ -50,11 +50,15 @@
   }
 })();
 
-(function loadPointerEffect() {
-  if (document.querySelector('script[src="assets/js/pointer-effect.js"]')) return;
+(function loadInteractionEnhancements() {
+  const scripts = ['assets/js/pointer-effect.js', 'assets/js/portfolio-polish.js'];
 
-  const pointerScript = document.createElement('script');
-  pointerScript.src = 'assets/js/pointer-effect.js';
-  pointerScript.defer = true;
-  document.body.appendChild(pointerScript);
+  scripts.forEach((src) => {
+    if (document.querySelector(`script[src="${src}"]`)) return;
+
+    const script = document.createElement('script');
+    script.src = src;
+    script.defer = true;
+    document.body.appendChild(script);
+  });
 })();
