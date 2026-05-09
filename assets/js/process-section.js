@@ -68,6 +68,14 @@
       z-index: 1;
       max-width: 620px;
       padding: clamp(1rem, 2vw, 1.5rem);
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 520ms ease, transform 520ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    #process .process-copy-panel.is-changing {
+      opacity: 0.45;
+      transform: translateY(6px);
     }
 
     #process .process-copy-panel .eyebrow {
@@ -145,8 +153,9 @@
     #process .process-track {
       display: grid;
       gap: 1rem;
-      transform: translateY(var(--process-shift, 0));
-      transition: transform 520ms cubic-bezier(.2,.7,.2,1);
+      transform: translate3d(0, var(--process-shift, 0), 0);
+      transition: transform 960ms cubic-bezier(.16, 1, .3, 1);
+      will-change: transform;
     }
 
     #process .process-slide {
@@ -155,9 +164,11 @@
       gap: 1rem;
       align-items: center;
       min-height: 86px;
-      opacity: 0.28;
-      transform: scale(0.96);
-      transition: opacity 420ms ease, transform 420ms ease;
+      opacity: 0.24;
+      transform: scale(0.965);
+      transform-origin: left center;
+      transition: opacity 760ms ease, transform 760ms cubic-bezier(.16, 1, .3, 1);
+      will-change: opacity, transform;
     }
 
     #process .process-slide.is-active {
@@ -173,6 +184,7 @@
       line-height: 0.8;
       letter-spacing: -0.08em;
       -webkit-text-stroke: 1px rgba(var(--color-accent-rgb), 0.72);
+      transition: color 760ms ease, -webkit-text-stroke-color 760ms ease;
     }
 
     #process .process-slide.is-active .process-number {
@@ -210,10 +222,13 @@
       height: 8px;
       border: 1px solid rgba(var(--color-accent-rgb), 0.5);
       background: transparent;
+      transition: background 360ms ease, transform 360ms ease, border-color 360ms ease;
     }
 
     #process .process-dot.is-active {
       background: var(--color-accent);
+      border-color: var(--color-accent);
+      transform: scale(1.25);
     }
 
     @media (max-width: 900px) {
@@ -282,6 +297,7 @@
     </div>
   `;
 
+  const copyPanel = section.querySelector('.process-copy-panel');
   const titleTarget = section.querySelector('[data-process-active-title]');
   const textTarget = section.querySelector('[data-process-active-text]');
   const slides = [...section.querySelectorAll('.process-slide')];
@@ -289,31 +305,51 @@
   const track = section.querySelector('[data-process-track]');
   let activeIndex = 0;
   let intervalId;
+  let copyTimer;
+
+  const calculateShift = (index) => {
+    if (!track || !slides[index]) return;
+
+    const rotator = section.querySelector('.process-rotator');
+    const activeSlide = slides[index];
+    const rotatorHeight = rotator?.clientHeight || 360;
+    const activeCenter = activeSlide.offsetTop + activeSlide.offsetHeight / 2;
+    const targetCenter = rotatorHeight / 2;
+
+    track.style.setProperty('--process-shift', `${targetCenter - activeCenter}px`);
+  };
 
   const updateActiveStep = (index) => {
     activeIndex = (index + steps.length) % steps.length;
     const activeStep = steps[activeIndex];
 
-    if (titleTarget) titleTarget.textContent = activeStep.title;
-    if (textTarget) textTarget.textContent = activeStep.text;
+    if (copyPanel) {
+      window.clearTimeout(copyTimer);
+      copyPanel.classList.add('is-changing');
+      copyTimer = window.setTimeout(() => {
+        if (titleTarget) titleTarget.textContent = activeStep.title;
+        if (textTarget) textTarget.textContent = activeStep.text;
+        copyPanel.classList.remove('is-changing');
+      }, 180);
+    } else {
+      if (titleTarget) titleTarget.textContent = activeStep.title;
+      if (textTarget) textTarget.textContent = activeStep.text;
+    }
 
     slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === activeIndex));
     dots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === activeIndex));
-
-    if (track) {
-      const slideHeight = slides[0]?.offsetHeight || 86;
-      const gap = 16;
-      track.style.setProperty('--process-shift', `${-(activeIndex * (slideHeight + gap))}px`);
-    }
+    calculateShift(activeIndex);
   };
 
   const startRotation = () => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    intervalId = window.setInterval(() => updateActiveStep(activeIndex + 1), 2800);
+    if (intervalId || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    intervalId = window.setInterval(() => updateActiveStep(activeIndex + 1), 5600);
   };
 
   const stopRotation = () => {
-    if (intervalId) window.clearInterval(intervalId);
+    if (!intervalId) return;
+    window.clearInterval(intervalId);
+    intervalId = null;
   };
 
   dots.forEach((dot) => {
@@ -326,6 +362,7 @@
 
   processList.addEventListener('mouseenter', stopRotation);
   processList.addEventListener('mouseleave', startRotation);
+  window.addEventListener('resize', () => calculateShift(activeIndex));
 
   updateActiveStep(0);
   startRotation();
