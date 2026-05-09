@@ -1,0 +1,21 @@
+{
+  "name": "Nathaniel Rodriguez Portfolio",
+  "short_name": "NR Portfolio",
+  "description": "WordPress Website Designer and Elementor Developer portfolio by Nathaniel Rodriguez.",
+  "start_url": "/thanielll/",
+  "display": "standalone",
+  "background_color": "#fff8f0",
+  "theme_color": "#f5f0e8",
+  "icons": [
+    {
+      "src": "assets/images/Nathaniel%20Logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/Nathaniel%20Logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
