@@ -50,8 +50,8 @@
   }
 })();
 
-(function loadInteractionEnhancements() {
-  const scripts = ['assets/js/pointer-effect.js', 'assets/js/portfolio-polish.js'];
+(function loadSharedTemplateAndInteractions() {
+  const scripts = ['assets/js/site-template.js'];
 
   scripts.forEach((src) => {
     if (document.querySelector(`script[src="${src}"]`)) return;
