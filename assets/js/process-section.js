@@ -18,11 +18,15 @@
       grid-template-columns: minmax(0, 0.72fr) minmax(280px, 0.42fr);
       gap: clamp(1.5rem, 4vw, 4rem);
       align-items: end;
-      margin-bottom: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: clamp(1.45rem, 3vw, 2.35rem);
+    }
+
+    #process .section-heading .eyebrow {
+      margin-bottom: 0.62rem !important;
     }
 
     #process .section-heading h2 {
-      max-width: 9.5ch;
+      max-width: 14ch !important;
       font-size: clamp(3rem, 4.45rem, 4.45rem) !important;
       line-height: 0.94 !important;
       letter-spacing: -0.055em !important;
@@ -66,7 +70,7 @@
     #process .process-copy-panel {
       position: relative;
       z-index: 1;
-      max-width: 620px;
+      max-width: 680px;
       padding: clamp(1rem, 2vw, 1.5rem);
       opacity: 1;
       transform: translateY(0);
@@ -79,11 +83,11 @@
     }
 
     #process .process-copy-panel .eyebrow {
-      margin-bottom: 1rem;
+      margin-bottom: 0.68rem !important;
     }
 
     #process .process-copy-panel h3 {
-      max-width: 10ch;
+      max-width: 13ch;
       margin: 0;
       font-size: clamp(2.2rem, 4vw, 4rem);
       line-height: 0.92;
@@ -235,6 +239,10 @@
       #process .section-heading,
       #process .process-list {
         grid-template-columns: 1fr;
+      }
+
+      #process .section-heading h2 {
+        max-width: 12.5ch !important;
       }
 
       #process .section-heading::before {
