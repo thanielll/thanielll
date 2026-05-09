@@ -113,6 +113,7 @@
   loadScriptOnce('assets/js/pointer-effect.js');
   loadScriptOnce('assets/js/portfolio-polish.js');
   loadScriptOnce('assets/js/section-watermarks.js');
+  loadScriptOnce('assets/js/eyebrow-consistency.js');
 
   if (!isCaseTemplate) {
     loadScriptOnce('assets/js/testimonial-section.js');
