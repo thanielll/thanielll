@@ -124,50 +124,6 @@
       min-height: 310px;
     }
 
-    .case-card .case-preview-badge,
-    .project-card .case-preview-badge {
-      position: absolute;
-      left: 1rem;
-      top: 1rem;
-      z-index: 3;
-      border: 1px solid rgba(var(--color-accent-rgb), 0.45);
-      padding: 0.42rem 0.55rem;
-      background: rgba(var(--color-bg-soft-rgb), 0.82);
-      color: var(--color-accent-dark);
-      font-size: 0.68rem;
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      backdrop-filter: blur(12px);
-    }
-
-    .before-after-strip {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 0.55rem;
-      align-items: center;
-      margin-top: 1rem;
-      border: 1px solid var(--color-border);
-      padding: 0.65rem;
-      background: rgba(var(--color-bg-soft-rgb), 0.72);
-    }
-
-    .before-after-strip span {
-      color: var(--color-muted);
-      font-size: 0.68rem;
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .before-after-strip strong {
-      color: var(--color-accent-dark);
-      font-size: 0.72rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
     .mobile-sticky-cta {
       position: fixed;
       left: 12px;
@@ -267,32 +223,17 @@
     `);
   };
 
-  const upgradeCaseCards = () => {
+  const cleanCaseCards = () => {
     const cards = document.querySelectorAll('.case-card, .project-card');
 
     cards.forEach((card) => {
       const title = card.querySelector('h2, h3')?.textContent?.trim() || '';
       const isConsilium = title.includes('Consilium Dynamics');
-      const preview = card.querySelector('.project-preview');
-      const content = card.querySelector('.case-card-body, .project-content');
 
-      if (!preview || !content) return;
-
-      if (!preview.querySelector('.case-preview-badge')) {
-        preview.insertAdjacentHTML('beforeend', `<span class="case-preview-badge">${isConsilium ? 'Before / After Ready' : 'Case Study'}</span>`);
-      }
+      card.querySelectorAll('.case-preview-badge, .before-after-strip').forEach((item) => item.remove());
 
       if (isConsilium) {
         card.classList.add('is-consilium-highlight');
-
-        if (!content.querySelector('.before-after-strip')) {
-          const link = content.querySelector('.text-link, strong');
-          const strip = document.createElement('div');
-          strip.className = 'before-after-strip';
-          strip.innerHTML = '<span>Before</span><strong>→</strong><span>After</span>';
-          if (link) link.insertAdjacentElement('beforebegin', strip);
-          else content.appendChild(strip);
-        }
       }
     });
   };
@@ -326,12 +267,12 @@
   };
 
   addProjectInquiry();
-  upgradeCaseCards();
+  cleanCaseCards();
   addMobileStickyCta();
 
   const projectGrid = document.querySelector('[data-featured-projects], [data-case-study-grid]');
   if (projectGrid) {
-    const observer = new MutationObserver(() => upgradeCaseCards());
+    const observer = new MutationObserver(() => cleanCaseCards());
     observer.observe(projectGrid, { childList: true, subtree: true });
   }
 })();
