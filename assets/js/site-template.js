@@ -109,4 +109,5 @@
   normalizeFooter();
   loadScriptOnce('assets/js/pointer-effect.js');
   loadScriptOnce('assets/js/portfolio-polish.js');
+  loadScriptOnce('assets/js/testimonial-section.js');
 })();
