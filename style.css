@@ -1,23 +1,35 @@
 /* Global */
 :root {
-  --color-bg: #f6f5f1;
+  --color-bg: #f4f3ef;
+  --color-surface: #ffffff;
+  --color-text: #101214;
+  --color-muted: #62676e;
+  --color-border: #d7d5cf;
+  --color-accent: #51606f;
+  --color-accent-dark: #2f3944;
   --color-bg-soft: #fbfaf7;
-  --color-bg-alt: #ededeb;
-  --color-text: #080808;
-  --color-heading: #000000;
-  --color-muted: #4c4c4c;
-  --color-muted-soft: #767676;
-  --color-line: #d7d5cf;
-  --color-line-strong: #111111;
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-charcoal: #181818;
+  --color-bg-alt: #e9e7e1;
+  --color-heading: var(--color-text);
+  --color-muted-soft: #7c838b;
+  --color-line: var(--color-border);
+  --color-line-strong: #a4a9ad;
+  --color-white: var(--color-surface);
+  --color-black: var(--color-accent-dark);
+  --color-charcoal: var(--color-text);
+  --color-on-dark: #f7f6f2;
+  --color-on-dark-muted: #c8cdd2;
+  --color-bg-rgb: 244, 243, 239;
+  --color-bg-soft-rgb: 251, 250, 247;
+  --color-surface-rgb: 255, 255, 255;
+  --color-text-rgb: 16, 18, 20;
+  --color-accent-rgb: 81, 96, 111;
+  --color-accent-dark-rgb: 47, 57, 68;
   --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "Archivo", "Inter", system-ui, sans-serif;
   --container: 1300px;
   --section-space: 96px;
   --radius: 6px;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --shadow: 0 20px 60px rgba(var(--color-accent-dark-rgb), 0.12);
   --motion-fast: 180ms;
   --motion-base: 260ms;
   --motion-reveal: 280ms;
@@ -38,8 +50,8 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(var(--color-accent-rgb), 0.035) 1px, transparent 1px),
     var(--color-bg);
   background-size: 72px 72px;
   font-family: var(--font-body);
@@ -73,12 +85,12 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-black);
+  outline: 3px solid var(--color-accent);
   outline-offset: 4px;
 }
 
 .cta-section a:focus-visible {
-  outline-color: var(--color-white);
+  outline-color: var(--color-on-dark);
 }
 
 .container {
@@ -146,7 +158,7 @@ h3 {
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1rem;
-  color: var(--color-muted);
+  color: var(--color-accent);
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -157,11 +169,11 @@ h3 {
   display: inline-block;
   width: 34px;
   height: 1px;
-  background: var(--color-black);
+  background: var(--color-accent);
 }
 
 .eyebrow-invert {
-  color: #d8d8d8;
+  color: var(--color-on-dark-muted);
 }
 
 .eyebrow-invert::before {
@@ -176,7 +188,7 @@ h3 {
   justify-content: center;
   overflow: hidden;
   min-height: 50px;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-accent-dark);
   border-radius: var(--radius);
   padding: 0 1.15rem;
   font-size: 0.9rem;
@@ -209,43 +221,46 @@ h3 {
 }
 
 .btn-dark {
-  color: var(--color-white);
-  background: var(--color-black);
+  color: var(--color-on-dark);
+  background: var(--color-accent-dark);
 }
 
 .btn-dark:hover,
 .btn-dark:focus-visible {
-  background: var(--color-charcoal);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
 }
 
 .btn-light {
-  color: var(--color-black);
-  background: rgba(255, 255, 255, 0.72);
+  color: var(--color-text);
+  border-color: rgba(var(--color-accent-rgb), 0.35);
+  background: rgba(var(--color-surface-rgb), 0.78);
 }
 
 .btn-light:hover,
 .btn-light:focus-visible {
-  color: var(--color-white);
-  background: var(--color-black);
+  color: var(--color-on-dark);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
 }
 
 .btn-white {
-  color: var(--color-black);
-  border-color: var(--color-white);
-  background: var(--color-white);
+  color: var(--color-accent-dark);
+  border-color: var(--color-surface);
+  background: var(--color-surface);
 }
 
 .btn-outline-dark {
-  color: var(--color-white);
-  border-color: #6f6f6f;
+  color: var(--color-on-dark);
+  border-color: rgba(var(--color-surface-rgb), 0.36);
   background: transparent;
 }
 
 .btn-outline-dark:hover,
 .btn-outline-dark:focus-visible {
-  color: var(--color-black);
-  border-color: var(--color-white);
-  background: var(--color-white);
+  color: var(--color-accent-dark);
+  border-color: var(--color-surface);
+  background: var(--color-surface);
 }
 
 /* Header / Navigation */
@@ -254,14 +269,14 @@ h3 {
   top: 0;
   z-index: 40;
   border-bottom: 1px solid var(--color-line);
-  background: rgba(246, 245, 241, 0.92);
+  background: rgba(var(--color-bg-rgb), 0.92);
   backdrop-filter: blur(18px);
   transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(251, 250, 247, 0.96);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+  background: rgba(var(--color-bg-soft-rgb), 0.96);
+  box-shadow: 0 12px 40px rgba(var(--color-accent-dark-rgb), 0.07);
 }
 
 .nav-wrap {
@@ -287,17 +302,17 @@ h3 {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-accent-dark);
   border-radius: var(--radius);
-  color: var(--color-white);
-  background: var(--color-black);
+  color: var(--color-on-dark);
+  background: var(--color-accent-dark);
   font-family: var(--font-display);
   line-height: 1;
 }
 
 .brand-name {
   overflow: hidden;
-  color: var(--color-black);
+  color: var(--color-text);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -320,7 +335,7 @@ h3 {
 .nav-links a:hover,
 .nav-links a:focus-visible,
 .nav-links a[aria-current="page"] {
-  color: var(--color-black);
+  color: var(--color-accent-dark);
 }
 
 .nav-mobile-cta {
@@ -332,7 +347,7 @@ h3 {
   width: 44px;
   height: 44px;
   place-items: center;
-  border: 1px solid var(--color-black);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.52);
   border-radius: var(--radius);
   background: var(--color-bg-soft);
   cursor: pointer;
@@ -344,7 +359,7 @@ h3 {
   display: block;
   grid-column: 1;
   grid-row: 1;
-  background: var(--color-black);
+  background: var(--color-accent-dark);
   transition: transform 0.2s ease;
 }
 
@@ -371,10 +386,10 @@ h3 {
   padding: clamp(48px, 6vw, 70px) 0 clamp(52px, 6vw, 76px);
   border-bottom: 1px solid var(--color-line);
   background:
-    radial-gradient(circle at 78% 18%, rgba(0, 0, 0, 0.055) 0 1px, transparent 1px 100%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.026) 1px, transparent 1px),
-    linear-gradient(rgba(0, 0, 0, 0.026) 1px, transparent 1px),
-    linear-gradient(120deg, transparent 0 63%, rgba(0, 0, 0, 0.06) 63% 63.25%, transparent 63.25% 100%),
+    radial-gradient(circle at 78% 18%, rgba(var(--color-accent-rgb), 0.08) 0 1px, transparent 1px 100%),
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.036) 1px, transparent 1px),
+    linear-gradient(rgba(var(--color-accent-rgb), 0.036) 1px, transparent 1px),
+    linear-gradient(120deg, transparent 0 63%, rgba(var(--color-accent-rgb), 0.075) 63% 63.25%, transparent 63.25% 100%),
     linear-gradient(180deg, var(--color-bg-soft), var(--color-bg));
   background-size: 18px 18px, 86px 86px, 86px 86px, auto, auto;
 }
@@ -398,8 +413,8 @@ h3 {
   bottom: 42px;
   height: 1px;
   background:
-    linear-gradient(90deg, var(--color-black), transparent 72%),
-    repeating-linear-gradient(90deg, transparent 0 36px, rgba(0, 0, 0, 0.28) 36px 37px, transparent 37px 72px);
+    linear-gradient(90deg, var(--color-accent), transparent 72%),
+    repeating-linear-gradient(90deg, transparent 0 36px, rgba(var(--color-accent-rgb), 0.28) 36px 37px, transparent 37px 72px);
   opacity: 0.22;
 }
 
@@ -452,7 +467,7 @@ h3 {
   border-radius: var(--radius);
   padding: 0.55rem 0.7rem;
   color: var(--color-muted);
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(var(--color-surface-rgb), 0.58);
   font-size: 0.82rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -497,11 +512,11 @@ h3 {
 .hero-accent p {
   align-self: start;
   justify-self: start;
-  border: 1px solid var(--color-black);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.5);
   border-radius: var(--radius);
   padding: 0.56rem 0.68rem;
-  color: var(--color-black);
-  background: rgba(255, 255, 255, 0.72);
+  color: var(--color-accent-dark);
+  background: rgba(var(--color-surface-rgb), 0.72);
   font-size: 0.74rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -519,14 +534,14 @@ h3 {
   border-radius: var(--radius);
   padding: 0.48rem 0.58rem;
   color: var(--color-muted);
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(var(--color-surface-rgb), 0.62);
   font-size: 0.74rem;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .hero-stat {
-  border: 1px solid var(--color-black);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.5);
   border-radius: var(--radius);
   padding: 1rem;
   background: var(--color-bg-soft);
@@ -543,7 +558,7 @@ h3 {
 .hero-stat strong {
   display: block;
   margin-top: 0.7rem;
-  color: var(--color-black);
+  color: var(--color-accent-dark);
   font-family: var(--font-display);
   font-size: 1.08rem;
   line-height: 1;
@@ -551,13 +566,14 @@ h3 {
 }
 
 .hero-stat-dark {
-  color: var(--color-white);
-  background: var(--color-black);
+  color: var(--color-on-dark);
+  border-color: var(--color-accent-dark);
+  background: var(--color-accent-dark);
 }
 
 .hero-stat-dark span,
 .hero-stat-dark strong {
-  color: var(--color-white);
+  color: var(--color-on-dark);
 }
 
 .browser-bar {
@@ -567,14 +583,14 @@ h3 {
   gap: 0.45rem;
   align-items: center;
   padding: 0 1rem;
-  border-bottom: 1px solid var(--color-black);
-  background: #eeeeec;
+  border-bottom: 1px solid rgba(var(--color-accent-rgb), 0.45);
+  background: var(--color-bg-alt);
 }
 
 .browser-bar span {
   width: 9px;
   height: 9px;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-accent);
   border-radius: 50%;
 }
 
@@ -589,7 +605,7 @@ h3 {
 /* Stats / Value Strip */
 .value-strip {
   border-bottom: 1px solid var(--color-line);
-  background: var(--color-white);
+  background: var(--color-surface);
 }
 
 .value-grid {
@@ -613,10 +629,10 @@ h3 {
   display: grid;
   place-items: center;
   margin-bottom: 2rem;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-accent-dark);
   border-radius: var(--radius);
-  color: var(--color-white);
-  background: var(--color-black);
+  color: var(--color-on-dark);
+  background: var(--color-accent-dark);
   font-family: var(--font-display);
   font-weight: 900;
 }
@@ -666,7 +682,7 @@ main > section:not(.cta-section)::after {
   right: -70px;
   width: 172px;
   height: 172px;
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.11);
   opacity: 0;
   transform: rotate(16deg);
 }
@@ -681,7 +697,7 @@ main > section:not(.cta-section)::after {
   border-top: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
   background:
-    linear-gradient(90deg, transparent 0 49.9%, rgba(0, 0, 0, 0.05) 49.9% 50.1%, transparent 50.1% 100%),
+    linear-gradient(90deg, transparent 0 49.9%, rgba(var(--color-accent-rgb), 0.06) 49.9% 50.1%, transparent 50.1% 100%),
     var(--color-bg-soft);
 }
 
@@ -698,7 +714,7 @@ main > section:not(.cta-section)::after {
   bottom: -1.4rem;
   width: min(100%, 460px);
   height: 1px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent);
+  background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.42), transparent);
   opacity: 0.55;
 }
 
@@ -727,10 +743,10 @@ main > section:not(.cta-section)::after {
   right: max(24px, calc((100% - var(--container)) / 2));
   width: min(34vw, 420px);
   height: 240px;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid rgba(var(--color-accent-rgb), 0.18);
+  border-right: 1px solid rgba(var(--color-accent-rgb), 0.18);
   background:
-    linear-gradient(135deg, transparent 0 48%, rgba(0, 0, 0, 0.08) 48% 48.35%, transparent 48.35% 100%);
+    linear-gradient(135deg, transparent 0 48%, rgba(var(--color-accent-rgb), 0.11) 48% 48.35%, transparent 48.35% 100%);
   opacity: 0.7;
   pointer-events: none;
 }
@@ -757,7 +773,7 @@ main > section:not(.cta-section)::after {
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   padding: 1.35rem;
-  background: var(--color-bg-soft);
+  background: var(--color-surface);
   transition: transform var(--motion-base) ease, border-color var(--motion-base) ease, box-shadow var(--motion-base) ease;
 }
 
@@ -768,7 +784,7 @@ main > section:not(.cta-section)::after {
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--color-black);
+  background: var(--color-accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--motion-base) ease;
@@ -781,8 +797,8 @@ main > section:not(.cta-section)::after {
   bottom: 1rem;
   width: 34px;
   height: 34px;
-  border-right: 1px solid rgba(0, 0, 0, 0.24);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  border-right: 1px solid rgba(var(--color-accent-rgb), 0.34);
+  border-bottom: 1px solid rgba(var(--color-accent-rgb), 0.34);
   opacity: 0;
   transform: translate(6px, 6px);
   transition: opacity var(--motion-base) ease, transform var(--motion-base) ease;
@@ -790,7 +806,7 @@ main > section:not(.cta-section)::after {
 
 .service-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-black);
+  border-color: var(--color-accent);
   box-shadow: var(--shadow);
 }
 
@@ -826,7 +842,7 @@ main > section:not(.cta-section)::after {
   gap: 0.35rem;
   align-items: center;
   margin-top: auto;
-  color: var(--color-black);
+  color: var(--color-accent-dark);
   font-weight: 900;
   text-transform: uppercase;
   transition: gap 0.2s ease;
@@ -858,7 +874,7 @@ main > section:not(.cta-section)::after {
   border-right: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
   padding: 1.15rem;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(var(--color-surface-rgb), 0.35);
 }
 
 .best-for-grid span {
@@ -887,7 +903,7 @@ main > section:not(.cta-section)::after {
   font-size: clamp(5rem, 13vw, 11rem);
   font-weight: 900;
   line-height: 0.8;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.055);
+  -webkit-text-stroke: 1px rgba(var(--color-accent-rgb), 0.11);
   text-transform: uppercase;
   pointer-events: none;
 }
@@ -909,14 +925,14 @@ main > section:not(.cta-section)::after {
   min-height: 100%;
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
-  background: var(--color-bg-soft);
+  background: var(--color-surface);
   transition: transform var(--motion-base) ease, border-color var(--motion-base) ease, box-shadow var(--motion-base) ease;
 }
 
 .project-card:hover,
 .project-card:focus-within {
   transform: translateY(-5px);
-  border-color: var(--color-black);
+  border-color: var(--color-accent);
   box-shadow: var(--shadow);
 }
 
@@ -934,7 +950,7 @@ main > section:not(.cta-section)::after {
   align-content: end;
   padding: 1rem;
   border-bottom: 1px solid var(--color-line);
-  background: #e8e7e3;
+  background: var(--color-bg-alt);
   isolation: isolate;
 }
 
@@ -957,11 +973,11 @@ main > section:not(.cta-section)::after {
   position: absolute;
   inset: 18px;
   z-index: -1;
-  border: 1px solid rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.34);
   border-radius: var(--radius);
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.13) 0 16%, transparent 16%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.09) 0 24%, transparent 24%);
+    linear-gradient(180deg, rgba(var(--color-accent-rgb), 0.15) 0 16%, transparent 16%),
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.11) 0 24%, transparent 24%);
   transition: transform var(--motion-base) ease, opacity var(--motion-base) ease;
 }
 
@@ -972,9 +988,9 @@ main > section:not(.cta-section)::after {
   right: 24px;
   width: 34%;
   height: 34%;
-  border: 1px solid rgba(0, 0, 0, 0.38);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.42);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.34);
+  background: rgba(var(--color-surface-rgb), 0.46);
   transition: transform var(--motion-base) ease, opacity var(--motion-base) ease;
 }
 
@@ -984,7 +1000,7 @@ main > section:not(.cta-section)::after {
   display: block;
   margin-top: 0.55rem;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(var(--color-accent-dark-rgb), 0.58);
   transition: transform var(--motion-base) ease, opacity var(--motion-base) ease;
 }
 
@@ -1014,29 +1030,29 @@ main > section:not(.cta-section)::after {
 }
 
 .preview-healthcare {
-  background: linear-gradient(135deg, #f4f3ef, #d2d0ca);
+  background: linear-gradient(135deg, var(--color-bg), rgba(var(--color-accent-rgb), 0.22));
 }
 
 .preview-local,
 .preview-figma {
-  background: linear-gradient(135deg, #deddd8, #f7f6f2);
+  background: linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.16), var(--color-bg-soft));
 }
 
 .preview-business,
 .preview-landing {
-  background: linear-gradient(135deg, #c9c8c4, #eeeeea);
+  background: linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.28), var(--color-bg-alt));
 }
 
 .preview-seo {
-  background: linear-gradient(135deg, #f8f7f4, #bdbbb6);
+  background: linear-gradient(135deg, var(--color-surface), rgba(var(--color-accent-dark-rgb), 0.24));
 }
 
 .preview-commerce {
-  background: linear-gradient(135deg, #efeeea, #c7c5bf);
+  background: linear-gradient(135deg, var(--color-bg), rgba(var(--color-accent-rgb), 0.25));
 }
 
 .preview-redesign {
-  background: linear-gradient(135deg, #dad8d2, #fbfaf7);
+  background: linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.18), var(--color-bg-soft));
 }
 
 .project-content {
@@ -1078,8 +1094,9 @@ main > section:not(.cta-section)::after {
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   padding: 0.42rem 0.55rem;
-  color: var(--color-muted);
-  background: var(--color-white);
+  color: var(--color-accent-dark);
+  border-color: rgba(var(--color-accent-rgb), 0.24);
+  background: rgba(var(--color-surface-rgb), 0.82);
   font-size: 0.76rem;
   font-weight: 900;
 }
@@ -1088,7 +1105,7 @@ main > section:not(.cta-section)::after {
   display: inline-flex;
   gap: 0.35rem;
   margin-top: 1rem;
-  color: var(--color-black);
+  color: var(--color-accent-dark);
   font-size: 0.82rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -1113,9 +1130,9 @@ main > section:not(.cta-section)::after {
   padding: 96px 0 84px;
   border-bottom: 1px solid var(--color-line);
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.026) 1px, transparent 1px),
-    linear-gradient(rgba(0, 0, 0, 0.026) 1px, transparent 1px),
-    linear-gradient(120deg, transparent 0 58%, rgba(0, 0, 0, 0.065) 58% 58.35%, transparent 58.35% 100%),
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.036) 1px, transparent 1px),
+    linear-gradient(rgba(var(--color-accent-rgb), 0.036) 1px, transparent 1px),
+    linear-gradient(120deg, transparent 0 58%, rgba(var(--color-accent-rgb), 0.075) 58% 58.35%, transparent 58.35% 100%),
     var(--color-bg-soft);
   background-size: 84px 84px, 84px 84px, auto, auto;
 }
@@ -1127,7 +1144,7 @@ main > section:not(.cta-section)::after {
   bottom: 56px;
   width: min(36vw, 420px);
   height: 160px;
-  border: 1px solid rgba(0, 0, 0, 0.09);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.14);
   transform: skewX(-18deg);
   pointer-events: none;
 }
@@ -1169,7 +1186,7 @@ main > section:not(.cta-section)::after {
   border-radius: var(--radius);
   padding: 0 0.8rem;
   color: var(--color-muted);
-  background: var(--color-bg-soft);
+  background: var(--color-surface);
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -1180,9 +1197,9 @@ main > section:not(.cta-section)::after {
 .filter-chip:hover,
 .filter-chip:focus-visible,
 .filter-chip.is-active {
-  color: var(--color-white);
-  border-color: var(--color-black);
-  background: var(--color-black);
+  color: var(--color-on-dark);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
 }
 
 .filter-chip:hover,
@@ -1200,14 +1217,14 @@ main > section:not(.cta-section)::after {
   overflow: hidden;
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
-  background: var(--color-bg-soft);
+  background: var(--color-surface);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .case-card:hover,
 .case-card:focus-within {
   transform: translateY(-5px);
-  border-color: var(--color-black);
+  border-color: var(--color-accent);
   box-shadow: var(--shadow);
 }
 
@@ -1257,8 +1274,9 @@ main > section:not(.cta-section)::after {
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   padding: 0.42rem 0.55rem;
-  color: var(--color-muted);
-  background: var(--color-white);
+  color: var(--color-accent-dark);
+  border-color: rgba(var(--color-accent-rgb), 0.24);
+  background: rgba(var(--color-surface-rgb), 0.82);
   font-size: 0.76rem;
   font-weight: 900;
 }
@@ -1267,7 +1285,7 @@ main > section:not(.cta-section)::after {
   display: inline-flex;
   gap: 0.35rem;
   margin-top: 1rem;
-  color: var(--color-black);
+  color: var(--color-accent-dark);
   font-size: 0.82rem;
   text-transform: uppercase;
 }
@@ -1284,9 +1302,9 @@ main > section:not(.cta-section)::after {
   padding: 96px 0 104px;
   border-bottom: 1px solid var(--color-line);
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.026) 1px, transparent 1px),
-    linear-gradient(rgba(0, 0, 0, 0.026) 1px, transparent 1px),
-    linear-gradient(120deg, transparent 0 54%, rgba(0, 0, 0, 0.065) 54% 54.35%, transparent 54.35% 100%),
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.036) 1px, transparent 1px),
+    linear-gradient(rgba(var(--color-accent-rgb), 0.036) 1px, transparent 1px),
+    linear-gradient(120deg, transparent 0 54%, rgba(var(--color-accent-rgb), 0.075) 54% 54.35%, transparent 54.35% 100%),
     linear-gradient(180deg, var(--color-bg-soft), var(--color-bg));
   background-size: 84px 84px, 84px 84px, auto, auto;
 }
@@ -1298,7 +1316,7 @@ main > section:not(.cta-section)::after {
   top: 70px;
   width: 420px;
   height: 420px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.13);
   transform: rotate(16deg);
   pointer-events: none;
 }
@@ -1330,9 +1348,9 @@ main > section:not(.cta-section)::after {
 
 .case-hero-visual {
   overflow: hidden;
-  border: 1px solid var(--color-black);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.55);
   border-radius: var(--radius);
-  background: var(--color-white);
+  background: var(--color-surface);
   box-shadow: var(--shadow);
   transform: rotate(-1deg);
 }
@@ -1345,13 +1363,13 @@ main > section:not(.cta-section)::after {
   min-height: 260px;
   display: grid;
   align-content: end;
-  border: 1px solid var(--color-black);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.46);
   border-radius: var(--radius);
   padding: 1rem;
   background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.12), transparent 42%),
-    repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px 12px),
-    #f2f1ed;
+    linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.14), transparent 42%),
+    repeating-linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.06) 0 1px, transparent 1px 12px),
+    var(--color-bg);
 }
 
 .screen-hero span {
@@ -1364,7 +1382,7 @@ main > section:not(.cta-section)::after {
 .screen-hero strong {
   max-width: 320px;
   margin-top: 0.4rem;
-  color: var(--color-black);
+  color: var(--color-accent-dark);
   font-family: var(--font-display);
   font-size: 2.1rem;
   line-height: 0.94;
@@ -1398,8 +1416,8 @@ main > section:not(.cta-section)::after {
   top: 40px;
   width: 92px;
   height: 92px;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid rgba(var(--color-accent-rgb), 0.17);
+  border-right: 1px solid rgba(var(--color-accent-rgb), 0.17);
   pointer-events: none;
 }
 
@@ -1424,7 +1442,7 @@ main > section:not(.cta-section)::after {
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   padding: 1.2rem;
-  background: var(--color-bg-soft);
+  background: var(--color-surface);
 }
 
 .overview-grid span {
@@ -1437,7 +1455,7 @@ main > section:not(.cta-section)::after {
 .overview-grid strong {
   display: block;
   margin-top: 0.7rem;
-  color: var(--color-black);
+  color: var(--color-accent-dark);
   font-family: var(--font-display);
   font-size: 1.1rem;
   line-height: 1;
@@ -1484,12 +1502,12 @@ main > section:not(.cta-section)::after {
   min-height: 240px;
   display: grid;
   align-content: end;
-  border: 1px solid var(--color-black);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.5);
   border-radius: var(--radius);
   padding: 1rem;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.13) 0 16%, transparent 16%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.09) 0 24%, transparent 24%),
+    linear-gradient(180deg, rgba(var(--color-accent-rgb), 0.15) 0 16%, transparent 16%),
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.11) 0 24%, transparent 24%),
     var(--color-bg-soft);
 }
 
@@ -1499,7 +1517,7 @@ main > section:not(.cta-section)::after {
 }
 
 .screenshot-panel span {
-  color: var(--color-black);
+  color: var(--color-accent-dark);
   font-family: var(--font-display);
   font-weight: 900;
   text-transform: uppercase;
@@ -1507,7 +1525,7 @@ main > section:not(.cta-section)::after {
 
 .tools-row li {
   padding: 0.7rem 0.85rem;
-  color: var(--color-black);
+  color: var(--color-accent-dark);
 }
 
 /* Process Section */
@@ -1522,7 +1540,7 @@ main > section:not(.cta-section)::after {
   right: max(24px, calc((100% - var(--container)) / 2));
   width: 240px;
   height: 240px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.12);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1546,7 +1564,7 @@ main > section:not(.cta-section)::after {
   bottom: 2rem;
   left: 70px;
   width: 1px;
-  background: linear-gradient(180deg, var(--color-black), rgba(0, 0, 0, 0.08));
+  background: linear-gradient(180deg, var(--color-accent), rgba(var(--color-accent-rgb), 0.1));
   opacity: 0.36;
 }
 
@@ -1567,7 +1585,7 @@ main > section:not(.cta-section)::after {
   left: 65px;
   width: 11px;
   height: 11px;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-accent);
   border-radius: 50%;
   background: var(--color-bg);
   box-shadow: 0 0 0 6px var(--color-bg);
@@ -1601,8 +1619,8 @@ main > section:not(.cta-section)::after {
   top: 58px;
   width: 112px;
   height: 112px;
-  border-top: 1px solid rgba(0, 0, 0, 0.18);
-  border-left: 1px solid rgba(0, 0, 0, 0.18);
+  border-top: 1px solid rgba(var(--color-accent-rgb), 0.22);
+  border-left: 1px solid rgba(var(--color-accent-rgb), 0.22);
   opacity: 0.7;
   pointer-events: none;
 }
@@ -1638,8 +1656,9 @@ main > section:not(.cta-section)::after {
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   padding: 0.55rem 0.7rem;
-  color: var(--color-muted);
-  background: rgba(255, 255, 255, 0.68);
+  color: var(--color-accent-dark);
+  border-color: rgba(var(--color-accent-rgb), 0.22);
+  background: rgba(var(--color-surface-rgb), 0.68);
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -1651,10 +1670,10 @@ main > section:not(.cta-section)::after {
 
 .tools-panel {
   position: relative;
-  border: 1px solid var(--color-black);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.5);
   border-radius: var(--radius);
   padding: 1.4rem;
-  background: var(--color-white);
+  background: var(--color-surface);
   box-shadow: var(--shadow);
 }
 
@@ -1663,10 +1682,10 @@ main > section:not(.cta-section)::after {
   position: absolute;
   inset: -18px 18px 18px -18px;
   z-index: -1;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.14);
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(var(--color-accent-rgb), 0.05) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
@@ -1684,7 +1703,8 @@ main > section:not(.cta-section)::after {
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   padding: 0.8rem;
-  color: var(--color-black);
+  color: var(--color-accent-dark);
+  border-color: rgba(var(--color-accent-rgb), 0.24);
   background: var(--color-bg-soft);
   font-weight: 900;
 }
@@ -1692,14 +1712,14 @@ main > section:not(.cta-section)::after {
 /* CTA Section */
 .cta-section {
   padding: 88px 0;
-  color: var(--color-white);
+  color: var(--color-on-dark);
   background:
-    radial-gradient(circle at 14% 16%, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 100%),
-    radial-gradient(circle at 76% 72%, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 100%),
-    linear-gradient(120deg, transparent 0 58%, rgba(255, 255, 255, 0.08) 58% 58.35%, transparent 58.35% 100%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 80px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 80px),
-    var(--color-black);
+    radial-gradient(circle at 14% 16%, rgba(var(--color-surface-rgb), 0.12) 0 1px, transparent 1px 100%),
+    radial-gradient(circle at 76% 72%, rgba(var(--color-surface-rgb), 0.1) 0 1px, transparent 1px 100%),
+    linear-gradient(120deg, transparent 0 58%, rgba(var(--color-accent-rgb), 0.38) 58% 58.35%, transparent 58.35% 100%),
+    repeating-linear-gradient(90deg, rgba(var(--color-surface-rgb), 0.06) 0 1px, transparent 1px 80px),
+    repeating-linear-gradient(0deg, rgba(var(--color-surface-rgb), 0.035) 0 1px, transparent 1px 80px),
+    var(--color-accent-dark);
   background-size: 18px 18px, 24px 24px, auto, auto, auto, auto;
 }
 
@@ -1712,13 +1732,13 @@ main > section:not(.cta-section)::after {
 
 .cta-section h2 {
   max-width: 720px;
-  color: var(--color-white);
+  color: var(--color-on-dark);
 }
 
 .cta-section p:not(.eyebrow) {
   max-width: 650px;
   margin-top: 1rem;
-  color: #d2d2d2;
+  color: var(--color-on-dark-muted);
   font-size: 1.08rem;
 }
 
@@ -1742,7 +1762,7 @@ main > section:not(.cta-section)::after {
   bottom: -80px;
   width: 360px;
   height: 360px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.34);
   transform: rotate(16deg);
 }
 
@@ -1757,13 +1777,13 @@ main > section:not(.cta-section)::after {
 
 .cta-copy h2 {
   max-width: 760px;
-  color: var(--color-white);
+  color: var(--color-on-dark);
 }
 
 .cta-copy p:not(.eyebrow) {
   max-width: 620px;
   margin-top: 1rem;
-  color: #d2d2d2;
+  color: var(--color-on-dark-muted);
   font-size: 1.08rem;
 }
 
@@ -1779,11 +1799,11 @@ main > section:not(.cta-section)::after {
   grid-template-columns: auto 1fr auto;
   gap: 1rem;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(var(--color-surface-rgb), 0.34);
   border-radius: var(--radius);
   padding: 1rem;
-  color: var(--color-white);
-  background: rgba(255, 255, 255, 0.055);
+  color: var(--color-on-dark);
+  background: rgba(var(--color-surface-rgb), 0.055);
   font-weight: 900;
   text-transform: uppercase;
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
@@ -1792,8 +1812,8 @@ main > section:not(.cta-section)::after {
 .channel-card:hover,
 .channel-card:focus-visible {
   transform: translateY(-4px);
-  border-color: var(--color-white);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(var(--color-surface-rgb), 0.82);
+  background: rgba(var(--color-surface-rgb), 0.12);
 }
 
 .channel-icon,
@@ -1802,10 +1822,10 @@ main > section:not(.cta-section)::after {
   height: 46px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-surface);
   border-radius: var(--radius);
-  color: var(--color-black);
-  background: var(--color-white);
+  color: var(--color-accent-dark);
+  background: var(--color-surface);
   font-family: var(--font-display);
   font-size: 1rem;
   line-height: 1;
@@ -1822,7 +1842,7 @@ main > section:not(.cta-section)::after {
 }
 
 .channel-card i {
-  color: #d6d6d6;
+  color: var(--color-on-dark-muted);
   font-style: normal;
   transition: transform var(--motion-fast) ease;
 }
