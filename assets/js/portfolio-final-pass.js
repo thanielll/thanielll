@@ -93,8 +93,8 @@
     }
 
     @keyframes pageSoftIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @media (max-width: 900px) {
@@ -107,11 +107,41 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .hero h1,
+      .page-hero h1,
+      .case-hero h1 {
+        font-size: clamp(2.9rem, 13vw, 4.2rem) !important;
+        line-height: 0.92 !important;
+        letter-spacing: -0.065em !important;
+      }
+
+      .section-heading h2,
+      .about-copy h2,
+      .case-section-heading h2,
+      .cta-section h2,
+      .project-inquiry-copy h2,
+      .testimonial-intro h2,
+      .best-for-section .section-heading h2,
+      #process .section-heading h2 {
+        font-size: clamp(2.35rem, 10vw, 3.55rem) !important;
+        line-height: 0.94 !important;
+        letter-spacing: -0.055em !important;
+        max-width: 12ch !important;
+      }
+
+      .process-copy-panel h3,
+      .project-inquiry-card h3 {
+        font-size: clamp(1.8rem, 8vw, 2.7rem) !important;
+        line-height: 0.96 !important;
+      }
+    }
+
     @media (max-width: 620px) {
       .hero h1,
       .page-hero h1,
       .case-hero h1 {
-        font-size: clamp(3rem, 16vw, 4.5rem) !important;
+        font-size: clamp(2.7rem, 13.5vw, 3.85rem) !important;
       }
 
       .section {
@@ -127,6 +157,25 @@
         border-left: 1px solid var(--color-border);
         border-right: 1px solid var(--color-border);
         border-bottom: 1px solid var(--color-border);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1,
+      .page-hero h1,
+      .case-hero h1 {
+        font-size: clamp(2.35rem, 12.5vw, 3.25rem) !important;
+      }
+
+      .section-heading h2,
+      .about-copy h2,
+      .case-section-heading h2,
+      .cta-section h2,
+      .project-inquiry-copy h2,
+      .testimonial-intro h2,
+      .best-for-section .section-heading h2,
+      #process .section-heading h2 {
+        font-size: clamp(2rem, 9vw, 2.75rem) !important;
       }
     }
   `;
