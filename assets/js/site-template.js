@@ -112,4 +112,5 @@
   loadScriptOnce('assets/js/testimonial-section.js');
   loadScriptOnce('assets/js/best-for-section.js');
   loadScriptOnce('assets/js/section-watermarks.js');
+  loadScriptOnce('assets/js/process-section.js');
 })();
