@@ -110,6 +110,7 @@
   ensureFavicons();
   normalizeHeader();
   normalizeFooter();
+  loadScriptOnce('assets/js/seo-enhancements.js');
   loadScriptOnce('assets/js/pointer-effect.js');
   loadScriptOnce('assets/js/portfolio-polish.js');
   loadScriptOnce('assets/js/section-watermarks.js');
