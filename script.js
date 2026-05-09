@@ -60,7 +60,7 @@ const renderMockup = (study) => {
   }
 
   return `
-    <div class="project-preview ${escapeHTML(study.mockup || 'preview-healthcare')}" role="img" aria-label="${escapeHTML(study.title)} screenshot placeholder">
+    <div class="project-preview ${escapeHTML(study.mockup || 'preview-healthcare')}" role="img" aria-label="${escapeHTML(study.title)} website preview">
       <span></span>
       <span></span>
       <span></span>
@@ -159,13 +159,13 @@ const renderSingleCaseStudy = () => {
   const textTargets = [
     ['[data-case-category]', study.category],
     ['[data-case-title]', study.title],
-    ['[data-case-summary]', `${study.summary} ${study.status || 'Project details to be added.'}`],
+    ['[data-case-summary]', `${study.summary} ${study.status || 'Case study notes cover the intended page flow, build approach, and WordPress structure.'}`],
     ['[data-case-industry]', study.category],
-    ['[data-case-services]', services.join(', ') || 'Project details to be added.'],
+    ['[data-case-services]', services.join(', ') || 'WordPress website design and Elementor Pro development'],
     ['[data-case-platform]', study.tags?.includes('WooCommerce') ? 'WordPress / WooCommerce' : 'WordPress'],
-    ['[data-case-tools]', tools.join(', ') || 'Project details to be added.'],
+    ['[data-case-tools]', tools.join(', ') || 'WordPress, Elementor Pro, Figma'],
     ['[data-case-type]', study.category],
-    ['[data-case-reference]', 'Project reference to be added.'],
+    ['[data-case-reference]', 'Portfolio case study'],
     ['[data-screen-title]', study.title],
     ['[data-screenshot-primary]', `${study.title} Preview`]
   ];

@@ -1,10 +1,10 @@
 # Images Folder
 
-The current homepage uses CSS-built monochrome mockups and does not require image assets.
+The homepage uses a CSS-led monochrome visual system, so image assets are reserved for approved project screenshots and supporting portfolio media.
 
-When real case studies are ready, add project screenshots here and update the matching project cards in `index.html`.
+When project screenshots are ready, add them here and update the matching records in `assets/js/case-studies.js`.
 
-Suggested future files:
+Suggested files:
 
 ```txt
 project-dental-practice.jpg

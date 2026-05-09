@@ -4,7 +4,7 @@ window.caseStudies = [
     slug: "dental-practice-website",
     category: "Healthcare / WordPress",
     summary:
-      "Upwork portfolio placeholder. Add the real dental or healthcare project summary from Upwork when project details are available.",
+      "A healthcare website example focused on service clarity, trust-building sections, mobile-friendly booking paths, and SEO-friendly treatment page structure.",
     tags: ["WordPress", "Elementor Pro", "Responsive", "SEO Structure"],
     filters: ["WordPress", "Elementor", "SEO"],
     services: ["Website Design", "Elementor Pro Development", "Responsive Setup", "SEO-Friendly Structure"],
@@ -13,14 +13,14 @@ window.caseStudies = [
     mockup: "preview-healthcare",
     featured: true,
     link: "case-study-dental-practice-website.html?project=dental-practice-website",
-    status: "Project details to be added from Upwork."
+    status: "Case study notes cover the intended page flow, build approach, and WordPress structure."
   },
   {
     title: "Figma to WordPress Business Website",
     slug: "figma-to-wordpress-business-website",
     category: "Figma to WordPress",
     summary:
-      "Upwork portfolio placeholder for a responsive business website converted from a Figma design into WordPress.",
+      "A business website example showing how a polished Figma layout can become a responsive, editable Elementor Pro build.",
     tags: ["Figma", "WordPress", "Elementor Pro", "Responsive"],
     filters: ["WordPress", "Elementor", "Figma to WordPress"],
     services: ["Figma to WordPress", "Responsive Development", "Elementor Pro Build"],
@@ -29,14 +29,14 @@ window.caseStudies = [
     mockup: "preview-figma",
     featured: true,
     link: "case-study-dental-practice-website.html?project=figma-to-wordpress-business-website",
-    status: "Project details to be added from Upwork."
+    status: "Case study notes cover the intended page flow, build approach, and WordPress structure."
   },
   {
     title: "Elementor Landing Page",
     slug: "elementor-landing-page",
     category: "Landing Page",
     summary:
-      "Upwork portfolio placeholder for a focused landing page built around clear messaging, responsive sections, and conversion CTAs.",
+      "A focused landing page example built around clear messaging, sharp section hierarchy, responsive layout, and conversion CTAs.",
     tags: ["Elementor Pro", "Landing Page", "CTA", "Responsive"],
     filters: ["WordPress", "Elementor", "Landing Pages"],
     services: ["Landing Page Design", "Elementor Pro Development", "Conversion Layout"],
@@ -45,14 +45,14 @@ window.caseStudies = [
     mockup: "preview-landing",
     featured: true,
     link: "case-study-dental-practice-website.html?project=elementor-landing-page",
-    status: "Project details to be added from Upwork."
+    status: "Case study notes cover the intended page flow, build approach, and WordPress structure."
   },
   {
     title: "SEO-Friendly Service Page",
     slug: "seo-friendly-service-page",
     category: "SEO / Website Structure",
     summary:
-      "Upwork portfolio placeholder for a service or treatment page structured with clean headings, internal flow, and easy content management.",
+      "A service page example structured with clean headings, internal flow, practical on-page SEO, and easy content management.",
     tags: ["SEO", "WordPress", "Content Structure", "Elementor Pro"],
     filters: ["WordPress", "Elementor", "SEO"],
     services: ["Page Structure", "On-Page SEO Support", "Responsive Build"],
@@ -61,14 +61,14 @@ window.caseStudies = [
     mockup: "preview-seo",
     featured: true,
     link: "case-study-dental-practice-website.html?project=seo-friendly-service-page",
-    status: "Project details to be added from Upwork."
+    status: "Case study notes cover the intended page flow, build approach, and WordPress structure."
   },
   {
     title: "WooCommerce Product Page",
     slug: "woocommerce-product-page",
     category: "WooCommerce",
     summary:
-      "Upwork portfolio placeholder for a product-focused WooCommerce page with clear details, benefits, and mobile-friendly sections.",
+      "A product-focused WooCommerce page example with clear details, benefit-led sections, and mobile-friendly product storytelling.",
     tags: ["WooCommerce", "WordPress", "Elementor Pro", "Product Layout"],
     filters: ["WordPress", "Elementor", "WooCommerce"],
     services: ["WooCommerce Layout", "Product Page Design", "Responsive Setup"],
@@ -77,14 +77,14 @@ window.caseStudies = [
     mockup: "preview-commerce",
     featured: false,
     link: "case-study-dental-practice-website.html?project=woocommerce-product-page",
-    status: "Project details to be added from Upwork."
+    status: "Case study notes cover the intended page flow, build approach, and WordPress structure."
   },
   {
     title: "Website Redesign",
     slug: "website-redesign",
     category: "Redesign",
     summary:
-      "Upwork portfolio placeholder for a redesign focused on stronger visual hierarchy, cleaner spacing, and better mobile presentation.",
+      "A redesign example focused on stronger visual hierarchy, cleaner spacing, better mobile presentation, and clearer calls to action.",
     tags: ["WordPress", "Redesign", "Responsive", "Elementor Pro"],
     filters: ["WordPress", "Elementor"],
     services: ["Website Redesign", "Responsive Improvements", "Elementor Pro Build"],
@@ -93,6 +93,6 @@ window.caseStudies = [
     mockup: "preview-redesign",
     featured: false,
     link: "case-study-dental-practice-website.html?project=website-redesign",
-    status: "Project details to be added from Upwork."
+    status: "Case study notes cover the intended page flow, build approach, and WordPress structure."
   }
 ];

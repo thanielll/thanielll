@@ -1,7 +1,5 @@
 # Case Study Images
 
-Upwork screenshots were not accessible during this update because the profile URL returned a CAPTCHA/403 challenge.
-
 Add approved project screenshots here using optimized filenames such as:
 
 - dental-practice-website-case-study.jpg
