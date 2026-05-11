@@ -283,6 +283,23 @@
   margin-top: 0.25rem;
 }
 
+.project-card .project-preview,
+.case-card .project-preview {
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  padding: 0 !important;
+}
+
+.project-card .project-preview img,
+.case-card .project-preview img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
 @media (max-width: 900px) {
   .testimonial-grid,
   .project-inquiry-grid {
