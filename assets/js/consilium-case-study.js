@@ -15,7 +15,7 @@
       image: 'assets/case-studies/consilium%20dynamics/Project%20Thumbnail.jpg',
       mockup: 'preview-consilium',
       featured: true,
-      link: 'case-study-dental-practice-website.html?project=consilium-dynamics-website-redesign',
+      link: 'case-study.html?project=consilium-dynamics-website-redesign',
       liveLink: 'https://www.consiliumdynamics.com/',
       clientIndustry: 'Strategic Advisory / Business Consulting',
       projectType: 'Website Redesign / Figma to WordPress',
