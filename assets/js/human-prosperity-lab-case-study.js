@@ -44,34 +44,9 @@
         text-transform: uppercase;
       }
 
-      .preview-hpl span:nth-child(1) {
-        position: absolute;
-        inset: 24% 0 auto 0;
-        height: 42%;
-        background: linear-gradient(135deg, rgba(255, 253, 247, 0.18), rgba(255, 253, 247, 0.04));
-        transform: skewY(-8deg);
-      }
-
-      .preview-hpl span:nth-child(2) {
-        position: absolute;
-        right: 1.2rem;
-        bottom: 1.2rem;
-        width: 38%;
-        height: 38%;
-        border: 1px solid rgba(255, 253, 247, 0.38);
-        border-radius: 999px !important;
-        background: rgba(255, 253, 247, 0.08);
-      }
-
-      .preview-hpl span:nth-child(3) {
-        position: absolute;
-        left: 44%;
-        top: 18%;
-        width: 42%;
-        height: 50%;
-        border: 1px solid rgba(255, 253, 247, 0.24);
-        transform: rotate(-12deg);
-      }
+      .preview-hpl span:nth-child(1) { position: absolute; inset: 24% 0 auto 0; height: 42%; background: linear-gradient(135deg, rgba(255, 253, 247, 0.18), rgba(255, 253, 247, 0.04)); transform: skewY(-8deg); }
+      .preview-hpl span:nth-child(2) { position: absolute; right: 1.2rem; bottom: 1.2rem; width: 38%; height: 38%; border: 1px solid rgba(255, 253, 247, 0.38); border-radius: 999px !important; background: rgba(255, 253, 247, 0.08); }
+      .preview-hpl span:nth-child(3) { position: absolute; left: 44%; top: 18%; width: 42%; height: 50%; border: 1px solid rgba(255, 253, 247, 0.24); transform: rotate(-12deg); }
     `;
     document.head.appendChild(style);
   }
@@ -90,21 +65,13 @@
     tools: ['WordPress', 'Elementor', 'Figma', 'Brand Guidelines', 'Responsive Design'],
     mockup: 'preview-hpl',
     featured: true,
-    link: 'case-study-dental-practice-website.html?project=human-prosperity-lab-website-build',
+    link: 'case-study.html?project=human-prosperity-lab-website-build',
     liveLink: 'https://humanprosperitylab.com/',
     clientIndustry: 'Leadership / Human-Centered Business',
     projectType: 'Brand Website / WordPress Build',
     referenceLink: 'Live Human Prosperity Lab website',
     assetFolder: 'assets/case-studies/human-prosperity-lab/',
-    assetFileNames: [
-      'Project Thumbnail.jpg',
-      'Homepage Preview.jpg',
-      'Mobile Preview.jpg',
-      'Brand Guidelines.jpg',
-      'About Section.jpg',
-      'Contact Section.jpg',
-      'Approved HPL Brand Guidelines.pdf'
-    ],
+    assetFileNames: ['Project Thumbnail.jpg', 'Homepage Preview.jpg', 'Mobile Preview.jpg', 'Brand Guidelines.jpg', 'About Section.jpg', 'Contact Section.jpg', 'Approved HPL Brand Guidelines.pdf'],
     status: 'Built as a complete brand and website experience with brand guidelines, Figma layout direction, and responsive WordPress implementation using Elementor Pro.',
     challenge: [
       'Human Prosperity Lab needed a complete digital presence that could communicate its mission clearly while still feeling credible, modern, and aligned with its brand values.',
