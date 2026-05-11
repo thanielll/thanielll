@@ -62,7 +62,7 @@
 
     [data-pointer-reactive] {
       transform: translate3d(var(--pointer-x, 0), var(--pointer-y, 0), 0);
-      transition: transform 260ms cubic-bezier(.16, 1, .3, 1), box-shadow 180ms ease, border-color 180ms ease;
+      transition: transform 340ms cubic-bezier(.16, 1, .3, 1), box-shadow 180ms ease, border-color 180ms ease;
       will-change: transform;
     }
   `;
@@ -98,10 +98,10 @@
   let ringY = mouseY;
 
   const movePointer = () => {
-    dotX += (mouseX - dotX) * 0.38;
-    dotY += (mouseY - dotY) * 0.38;
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
+    dotX += (mouseX - dotX) * 0.2;
+    dotY += (mouseY - dotY) * 0.2;
+    ringX += (mouseX - ringX) * 0.07;
+    ringY += (mouseY - ringY) * 0.07;
 
     dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
     ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
@@ -128,8 +128,8 @@
     const rect = reactive.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
 
-    const offsetX = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
-    const offsetY = ((event.clientY - rect.top) / rect.height - 0.5) * 8;
+    const offsetX = ((event.clientX - rect.left) / rect.width - 0.5) * 7;
+    const offsetY = ((event.clientY - rect.top) / rect.height - 0.5) * 7;
 
     reactive.style.setProperty('--pointer-x', `${offsetX}px`);
     reactive.style.setProperty('--pointer-y', `${offsetY}px`);
