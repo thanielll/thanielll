@@ -89,8 +89,6 @@
     services: ['Brand Guidelines', 'Website Design', 'Elementor Development', 'Responsive WordPress Build'],
     tools: ['WordPress', 'Elementor', 'Figma', 'Brand Guidelines', 'Responsive Design'],
     mockup: 'preview-hpl',
-    image: 'assets/case-studies/human-prosperity-lab/Project%20Thumbnail.jpg',
-    imageFallback: true,
     featured: true,
     link: 'case-study-dental-practice-website.html?project=human-prosperity-lab-website-build',
     liveLink: 'https://humanprosperitylab.com/',
@@ -119,16 +117,6 @@
     outcome: [
       'The final website gives Human Prosperity Lab a credible and modern online presence that better supports its mission and makes the organization easier to understand at a glance.',
       'The WordPress setup provides a manageable foundation for future updates, additional content, and ongoing brand communication.'
-    ],
-    screenshots: [
-      { label: 'Homepage Preview', src: 'assets/case-studies/human-prosperity-lab/Homepage%20Preview.jpg' },
-      { label: 'Mobile Preview', src: 'assets/case-studies/human-prosperity-lab/Mobile%20Preview.jpg' },
-      { label: 'Brand Guidelines', src: 'assets/case-studies/human-prosperity-lab/Brand%20Guidelines.jpg' },
-      { label: 'About Section', src: 'assets/case-studies/human-prosperity-lab/About%20Section.jpg' },
-      { label: 'Contact Section', src: 'assets/case-studies/human-prosperity-lab/Contact%20Section.jpg' }
-    ],
-    pdfs: [
-      { label: 'Approved HPL Brand Guidelines PDF', src: 'assets/case-studies/human-prosperity-lab/Approved%20HPL%20Brand%20Guidelines.pdf' }
     ]
   });
 })();
