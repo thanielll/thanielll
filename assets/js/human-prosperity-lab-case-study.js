@@ -89,12 +89,24 @@
     services: ['Brand Guidelines', 'Website Design', 'Elementor Development', 'Responsive WordPress Build'],
     tools: ['WordPress', 'Elementor', 'Figma', 'Brand Guidelines', 'Responsive Design'],
     mockup: 'preview-hpl',
+    image: 'assets/case-studies/human-prosperity-lab/Project%20Thumbnail.jpg',
+    imageFallback: true,
     featured: true,
     link: 'case-study-dental-practice-website.html?project=human-prosperity-lab-website-build',
     liveLink: 'https://humanprosperitylab.com/',
     clientIndustry: 'Leadership / Human-Centered Business',
     projectType: 'Brand Website / WordPress Build',
     referenceLink: 'Live Human Prosperity Lab website',
+    assetFolder: 'assets/case-studies/human-prosperity-lab/',
+    assetFileNames: [
+      'Project Thumbnail.jpg',
+      'Homepage Preview.jpg',
+      'Mobile Preview.jpg',
+      'Brand Guidelines.jpg',
+      'About Section.jpg',
+      'Contact Section.jpg',
+      'Approved HPL Brand Guidelines.pdf'
+    ],
     status: 'Built as a complete brand and website experience with brand guidelines, Figma layout direction, and responsive WordPress implementation using Elementor Pro.',
     challenge: [
       'Human Prosperity Lab needed a complete digital presence that could communicate its mission clearly while still feeling credible, modern, and aligned with its brand values.',
@@ -107,6 +119,16 @@
     outcome: [
       'The final website gives Human Prosperity Lab a credible and modern online presence that better supports its mission and makes the organization easier to understand at a glance.',
       'The WordPress setup provides a manageable foundation for future updates, additional content, and ongoing brand communication.'
+    ],
+    screenshots: [
+      { label: 'Homepage Preview', src: 'assets/case-studies/human-prosperity-lab/Homepage%20Preview.jpg' },
+      { label: 'Mobile Preview', src: 'assets/case-studies/human-prosperity-lab/Mobile%20Preview.jpg' },
+      { label: 'Brand Guidelines', src: 'assets/case-studies/human-prosperity-lab/Brand%20Guidelines.jpg' },
+      { label: 'About Section', src: 'assets/case-studies/human-prosperity-lab/About%20Section.jpg' },
+      { label: 'Contact Section', src: 'assets/case-studies/human-prosperity-lab/Contact%20Section.jpg' }
+    ],
+    pdfs: [
+      { label: 'Approved HPL Brand Guidelines PDF', src: 'assets/case-studies/human-prosperity-lab/Approved%20HPL%20Brand%20Guidelines.pdf' }
     ]
   });
 })();
