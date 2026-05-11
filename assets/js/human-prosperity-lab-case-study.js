@@ -1,6 +1,81 @@
 (function addHumanProsperityLabCaseStudy() {
   if (!Array.isArray(window.caseStudies)) return;
 
+  if (!document.querySelector('[data-hpl-preview-style]')) {
+    const style = document.createElement('style');
+    style.setAttribute('data-hpl-preview-style', 'true');
+    style.textContent = `
+      .preview-hpl {
+        overflow: hidden;
+        align-content: stretch !important;
+        background:
+          linear-gradient(180deg, rgba(4, 77, 75, 0.96), rgba(4, 77, 75, 0.86)),
+          radial-gradient(circle at 20% 22%, rgba(255, 253, 247, 0.22), transparent 34%) !important;
+      }
+
+      .preview-hpl::before {
+        content: 'HUMAN\\A PROSPERITY\\A LAB';
+        white-space: pre-line;
+        position: absolute;
+        left: 1.25rem;
+        top: 1.15rem;
+        z-index: 2;
+        color: rgba(255, 253, 247, 0.92);
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+        font-weight: 700;
+        line-height: 0.92;
+        letter-spacing: -0.045em;
+      }
+
+      .preview-hpl::after {
+        content: 'WordPress / Elementor Build';
+        position: absolute;
+        left: 1.25rem;
+        bottom: 1.15rem;
+        z-index: 2;
+        border: 1px solid rgba(255, 253, 247, 0.55) !important;
+        padding: 0.48rem 0.62rem;
+        color: rgba(255, 253, 247, 0.92);
+        background: rgba(255, 253, 247, 0.08) !important;
+        font-size: 0.62rem;
+        font-weight: 900;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      .preview-hpl span:nth-child(1) {
+        position: absolute;
+        inset: 24% 0 auto 0;
+        height: 42%;
+        background: linear-gradient(135deg, rgba(255, 253, 247, 0.18), rgba(255, 253, 247, 0.04));
+        transform: skewY(-8deg);
+      }
+
+      .preview-hpl span:nth-child(2) {
+        position: absolute;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        width: 38%;
+        height: 38%;
+        border: 1px solid rgba(255, 253, 247, 0.38);
+        border-radius: 999px !important;
+        background: rgba(255, 253, 247, 0.08);
+      }
+
+      .preview-hpl span:nth-child(3) {
+        position: absolute;
+        left: 44%;
+        top: 18%;
+        width: 42%;
+        height: 50%;
+        border: 1px solid rgba(255, 253, 247, 0.24);
+        transform: rotate(-12deg);
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   const exists = window.caseStudies.some((study) => study.slug === 'human-prosperity-lab-website-build');
   if (exists) return;
 
