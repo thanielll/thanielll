@@ -10,7 +10,8 @@
     filters: ['WordPress', 'Elementor', 'Figma to WordPress'],
     services: ['Figma to WordPress', 'Elementor Pro Development', 'Custom CSS Styling', 'Responsive Website Build'],
     tools: ['WordPress', 'Elementor Pro', 'Figma', 'CSS'],
-    image: 'assets/case-studies/genieum/genieum-thumbnail.svg',
+    image: 'assets/case-studies/genieum/Project%20Thumbnail.jpg',
+    fallbackImage: 'assets/case-studies/genieum/genieum-thumbnail.svg',
     mockup: 'preview-genieum',
     featured: false,
     link: 'case-study-genieum.html',
@@ -30,6 +31,13 @@
     outcome: [
       'The result is a clean, modern, responsive WordPress website that reflects the original Figma design while remaining manageable through Elementor Pro.',
       'The custom CSS enhancements helped improve polish, consistency, and flexibility across the final build.'
+    ],
+    screenshots: [
+      { label: 'Project Thumbnail', src: 'assets/case-studies/genieum/Project%20Thumbnail.jpg', fallback: 'assets/case-studies/genieum/genieum-thumbnail.svg' },
+      { label: 'Home Page Preview', src: 'assets/case-studies/genieum/Home%20Page.jpg' },
+      { label: 'Hero Section Preview', src: 'assets/case-studies/genieum/Hero%20Section.jpg' },
+      { label: 'Dashboard Section Preview', src: 'assets/case-studies/genieum/Dashboard%20Section.jpg' },
+      { label: 'Mobile Responsive Preview', src: 'assets/case-studies/genieum/Mobile%20Responsive.jpg' }
     ]
   };
 
