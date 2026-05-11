@@ -62,7 +62,7 @@
 
     [data-pointer-reactive] {
       transform: translate3d(var(--pointer-x, 0), var(--pointer-y, 0), 0);
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      transition: transform 260ms cubic-bezier(.16, 1, .3, 1), box-shadow 180ms ease, border-color 180ms ease;
       will-change: transform;
     }
   `;
@@ -92,14 +92,18 @@
 
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
+  let dotX = mouseX;
+  let dotY = mouseY;
   let ringX = mouseX;
   let ringY = mouseY;
 
   const movePointer = () => {
-    ringX += (mouseX - ringX) * 0.18;
-    ringY += (mouseY - ringY) * 0.18;
+    dotX += (mouseX - dotX) * 0.38;
+    dotY += (mouseY - dotY) * 0.38;
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
 
-    dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
     ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
 
     requestAnimationFrame(movePointer);
