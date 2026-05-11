@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="site-is-loading">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +8,16 @@
   <meta property="og:description" content="A refined WordPress case study page covering Elementor Pro builds, responsive layouts, and SEO-friendly page structure." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#F7F1E8" />
-  <title>Dental Practice Website Case Study | Nathaniel Rodriguez</title>
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <title>Website Case Study | Nathaniel Rodriguez</title>
+  <link rel="icon" href="assets/images/Nathaniel%20Logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/Nathaniel%20Logo.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20260510" />
+  <link rel="stylesheet" href="assets/css/launch-fixes.css?v=20260510" />
+  <script src="assets/js/page-loader.js?v=20260510"></script>
 </head>
 <body data-case-template>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +25,7 @@
   <header class="site-header" data-header>
     <div class="container nav-wrap">
       <a class="brand" href="index.html#home" aria-label="Nathaniel Rodriguez home">
-        <span class="brand-mark">NR</span>
+        <span class="brand-mark brand-logo-wrap"><img src="assets/images/Nathaniel%20Logo.png" alt="Nathaniel Rodriguez logo" /></span>
         <span class="brand-name">Nathaniel Rodriguez</span>
       </a>
 
@@ -29,7 +33,7 @@
         <a href="index.html#home">Home</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#work">Work</a>
-        <a href="case-studies.html">Case Studies</a>
+        <a href="case-studies.html" aria-current="page">Case Studies</a>
         <a href="index.html#process">Process</a>
         <a href="index.html#about">About</a>
         <a href="index.html#contact">Contact</a>
@@ -51,7 +55,7 @@
       <div class="container case-hero-grid">
         <div class="case-hero-copy">
           <p class="eyebrow" data-case-category>Healthcare / WordPress</p>
-          <h1 id="case-title" data-case-title>Dental Practice Website</h1>
+          <h1 id="case-title" data-case-title>Website Case Study</h1>
           <p data-case-summary>
             A WordPress website example focused on clean section hierarchy, responsive Elementor Pro development, conversion-focused calls to action, and SEO-friendly page structure.
           </p>
@@ -67,7 +71,7 @@
           </div>
         </div>
 
-        <div class="case-hero-visual" role="img" aria-label="Dental practice website visual preview">
+        <div class="case-hero-visual" role="img" aria-label="Website visual preview">
           <div class="browser-bar">
             <span></span>
             <span></span>
@@ -77,7 +81,7 @@
           <div class="case-screen">
             <div class="screen-hero">
               <span>Portfolio Preview</span>
-              <strong data-screen-title>Dental Practice Website</strong>
+              <strong data-screen-title>Website Case Study</strong>
             </div>
             <div class="screen-grid">
               <span></span>
@@ -99,7 +103,7 @@
         <div class="overview-grid">
           <article>
             <span>Client / Industry</span>
-            <strong data-case-industry>Dental / Healthcare</strong>
+            <strong data-case-industry>Service-Based Business</strong>
           </article>
           <article>
             <span>Service Provided</span>
@@ -111,7 +115,7 @@
           </article>
           <article>
             <span>Tools Used</span>
-            <strong data-case-tools>WordPress, Elementor Pro, Figma, Rank Math</strong>
+            <strong data-case-tools>WordPress, Elementor Pro, Figma</strong>
           </article>
           <article>
             <span>Project Type</span>
@@ -245,7 +249,6 @@
           <li>WordPress</li>
           <li>Elementor Pro</li>
           <li>Figma</li>
-          <li>Rank Math</li>
           <li>HTML/CSS</li>
         </ul>
       </div>
@@ -319,7 +322,9 @@
     </div>
   </footer>
 
-  <script src="assets/js/case-studies.js"></script>
-  <script src="script.js"></script>
+  <script src="assets/js/case-studies.js?v=20260510"></script>
+  <script src="assets/js/human-prosperity-lab-case-study.js?v=20260510"></script>
+  <script src="assets/js/site-template.js?v=20260510"></script>
+  <script src="script.js?v=20260510"></script>
 </body>
 </html>
