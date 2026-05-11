@@ -32,30 +32,6 @@ I work on business websites, landing pages, redesigns, Figma-to-WordPress builds
 
 ---
 
-## Featured Project
-
-### Consilium
-
-Consilium remains my featured project and main portfolio highlight.
-
----
-
-## Case Studies
-
-### Genieum Custom Elementor Website
-
-**Role:** WordPress Developer / Elementor Pro Developer  
-**Project Type:** Figma to WordPress Development  
-**Website:** https://genieum.com/
-
-Converted the provided Figma design into a fully responsive WordPress website using Elementor Pro. The build focused on accurately recreating the design, maintaining clean spacing and visual consistency, and applying custom CSS where needed to achieve sections beyond Elementor’s standard styling options.
-
-The final website was delivered with a modern, responsive layout optimized across desktop, tablet, and mobile devices.
-
-[View Genieum Case Study](case-studies/genieum-custom-elementor-website.md)
-
----
-
 ## Portfolio Focus
 
 I'm using this GitHub profile as a portfolio space for:
