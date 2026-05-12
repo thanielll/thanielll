@@ -2,15 +2,16 @@
 
 This branch prepares a future centralized case study data file without changing the live site.
 
-## New File
+## New Files
 
 ```txt
 assets/data/case-studies.js
+assets/data/case-study-adapter.js
 ```
 
 ## Important Safety Notes
 
-This file is **not loaded** by the current HTML pages yet.
+These files are **not loaded** by the current HTML pages yet.
 
 The live site still uses the existing working files:
 
@@ -41,7 +42,7 @@ The prepared data file includes:
 
 ## Intentional Structure Choice
 
-The file uses:
+The data file uses:
 
 ```js
 window.NRPortfolioCaseStudies = [...]
@@ -54,6 +55,29 @@ window.caseStudies = [...]
 ```
 
 This avoids interfering with the current working site, which already uses `window.caseStudies`.
+
+## Compatibility Adapter
+
+The adapter file exposes:
+
+```js
+window.NRPortfolioCaseStudyAdapter
+```
+
+Available helper methods:
+
+```js
+getPreparedStudies()
+toLegacyStudy(study)
+toLegacyStudies()
+mergeIntoLegacyCaseStudies()
+```
+
+Important:
+
+- The adapter does not run unless the file is loaded.
+- The adapter does not mutate `window.caseStudies` automatically.
+- `mergeIntoLegacyCaseStudies()` must be called manually in a future migration branch.
 
 ## Future Migration Plan
 
@@ -70,11 +94,17 @@ Make sure no project details, links, screenshots, PDFs, or statuses are missing.
 
 ### Step 2: Load as Read-Only
 
-In a future branch, load `assets/data/case-studies.js` before the current project scripts, but do not render from it yet.
+In a future branch, load `assets/data/case-studies.js` and `assets/data/case-study-adapter.js`, but do not render from them yet.
 
-### Step 3: Build a Compatibility Adapter
+### Step 3: Use the Compatibility Adapter
 
-Create a small adapter that can copy the prepared data into the current `window.caseStudies` format while preserving existing behavior.
+Call the adapter manually in a controlled future branch:
+
+```js
+window.NRPortfolioCaseStudyAdapter.mergeIntoLegacyCaseStudies();
+```
+
+Only do this after confirming the existing old data files are still loaded as fallback.
 
 ### Step 4: Replace One Data Source at a Time
 
