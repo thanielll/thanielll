@@ -283,6 +283,17 @@
   margin-top: 0.25rem;
 }
 
+.featured-projects-action {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.featured-projects-action .btn {
+  min-width: 190px;
+  justify-content: center;
+}
+
 .project-card .project-preview,
 .case-card .project-preview {
   min-height: 0 !important;
