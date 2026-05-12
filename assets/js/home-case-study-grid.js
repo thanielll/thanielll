@@ -1,4 +1,11 @@
 (function renderAllHomepageCaseStudies() {
+  if (
+    window.NRPortfolioCaseStudyAdapter &&
+    typeof window.NRPortfolioCaseStudyAdapter.mergeIntoLegacyCaseStudies === 'function'
+  ) {
+    window.NRPortfolioCaseStudyAdapter.mergeIntoLegacyCaseStudies();
+  }
+
   const grid = document.querySelector('[data-featured-projects]');
   const studies = Array.isArray(window.caseStudies) ? window.caseStudies : [];
   if (!grid || !studies.length) return;
@@ -18,11 +25,7 @@
       return `<div class="project-preview ${escapeHTML(study.mockup || 'preview-healthcare')}" role="img" aria-label="${escapeHTML(study.title)} website preview"><span></span><span></span><span></span></div>`;
     }
 
-    const fallback = study.fallbackImage && study.fallbackImage !== image
-      ? ` onerror="this.onerror=null;this.src='${escapeHTML(study.fallbackImage)}';"`
-      : '';
-
-    return `<div class="project-preview has-image" role="img" aria-label="${escapeHTML(study.title)} screenshot"><img src="${escapeHTML(image)}" alt="${escapeHTML(study.title)} screenshot" loading="lazy"${fallback}></div>`;
+    return `<div class="project-preview has-image" role="img" aria-label="${escapeHTML(study.title)} screenshot"><img src="${escapeHTML(image)}" alt="${escapeHTML(study.title)} screenshot" loading="lazy"></div>`;
   };
 
   grid.innerHTML = studies.map((study) => `
