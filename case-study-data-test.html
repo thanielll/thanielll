@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Case Study Data Test | Nathaniel Rodriguez Portfolio</title>
+  <link rel="stylesheet" href="style.css?v=20260510" />
+  <link rel="stylesheet" href="assets/css/launch-fixes.css?v=20260510" />
+  <style>
+    body {
+      padding: 48px 20px;
+    }
+
+    .data-test-shell {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .data-test-header {
+      margin-bottom: 32px;
+    }
+
+    .data-test-header h1 {
+      max-width: 780px;
+    }
+
+    .data-test-status {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .data-test-status article,
+    .data-test-card {
+      border: 1px solid var(--color-border);
+      padding: 18px;
+      background: var(--color-surface);
+    }
+
+    .data-test-status span,
+    .data-test-card span {
+      display: block;
+      color: var(--color-accent-dark);
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .data-test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .data-test-card h2 {
+      margin-top: 10px;
+      font-size: 1.25rem;
+    }
+
+    .data-test-card ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .data-test-card li {
+      border: 1px solid var(--color-border);
+      padding: 4px 8px;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+
+    .data-test-note {
+      margin-top: 28px;
+      color: var(--color-muted);
+    }
+
+    @media (max-width: 900px) {
+      .data-test-status,
+      .data-test-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="data-test-shell">
+    <section class="data-test-header">
+      <p class="eyebrow">Internal Test Page</p>
+      <h1>Case Study Data Adapter Test</h1>
+      <p>This isolated page tests the prepared centralized case study data and compatibility adapter. It is not linked from the live site and is marked noindex.</p>
+    </section>
+
+    <section class="data-test-status" aria-label="Adapter status checks">
+      <article><span>Prepared Data</span><strong data-test-prepared>Checking...</strong></article>
+      <article><span>Prepared Count</span><strong data-test-count>Checking...</strong></article>
+      <article><span>Adapter</span><strong data-test-adapter>Checking...</strong></article>
+      <article><span>Legacy Output</span><strong data-test-legacy>Checking...</strong></article>
+    </section>
+
+    <section>
+      <div class="data-test-grid" data-test-grid></div>
+    </section>
+
+    <p class="data-test-note">This page uses <code>toLegacyStudies()</code> only. It does not call <code>mergeIntoLegacyCaseStudies()</code>, so it does not mutate the current live <code>window.caseStudies</code> data.</p>
+  </main>
+
+  <script src="assets/data/case-studies.js"></script>
+  <script src="assets/data/case-study-adapter.js"></script>
+  <script>
+    (function renderCaseStudyDataTest() {
+      const prepared = Array.isArray(window.NRPortfolioCaseStudies) ? window.NRPortfolioCaseStudies : [];
+      const adapter = window.NRPortfolioCaseStudyAdapter;
+      const legacyStudies = adapter && typeof adapter.toLegacyStudies === 'function'
+        ? adapter.toLegacyStudies()
+        : [];
+
+      document.querySelector('[data-test-prepared]').textContent = Array.isArray(window.NRPortfolioCaseStudies) ? 'Loaded' : 'Missing';
+      document.querySelector('[data-test-count]').textContent = String(prepared.length);
+      document.querySelector('[data-test-adapter]').textContent = adapter ? 'Loaded' : 'Missing';
+      document.querySelector('[data-test-legacy]').textContent = Array.isArray(legacyStudies) ? `${legacyStudies.length} items` : 'Unavailable';
+
+      const escapeHTML = (value) => String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+
+      const grid = document.querySelector('[data-test-grid]');
+      grid.innerHTML = legacyStudies.map((study) => `
+        <article class="data-test-card">
+          <span>${escapeHTML(study.category)}</span>
+          <h2>${escapeHTML(study.title)}</h2>
+          <p>${escapeHTML(study.summary)}</p>
+          <ul>${(study.tags || []).slice(0, 4).map((tag) => `<li>${escapeHTML(tag)}</li>`).join('')}</ul>
+        </article>
+      `).join('');
+    })();
+  </script>
+</body>
+</html>
