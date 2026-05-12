@@ -1,4 +1,4 @@
-(function renderAllHomepageCaseStudies() {
+(function renderHomepageFeaturedCaseStudies() {
   if (
     window.NRPortfolioCaseStudyAdapter &&
     typeof window.NRPortfolioCaseStudyAdapter.mergeIntoLegacyCaseStudies === 'function'
@@ -9,6 +9,13 @@
   const grid = document.querySelector('[data-featured-projects]');
   const studies = Array.isArray(window.caseStudies) ? window.caseStudies : [];
   if (!grid || !studies.length) return;
+
+  const uniqueStudies = studies.filter((study, index, source) =>
+    study.slug && source.findIndex((currentStudy) => currentStudy.slug === study.slug) === index
+  );
+  const featuredStudies = uniqueStudies.filter((study) => study.featured);
+  const fallbackStudies = uniqueStudies.filter((study) => !study.featured);
+  const homepageStudies = [...featuredStudies, ...fallbackStudies].slice(0, 3);
 
   const escapeHTML = (value) => String(value || '')
     .replaceAll('&', '&amp;')
@@ -28,7 +35,7 @@
     return `<div class="project-preview has-image" role="img" aria-label="${escapeHTML(study.title)} screenshot"><img src="${escapeHTML(image)}" alt="${escapeHTML(study.title)} screenshot" loading="lazy"></div>`;
   };
 
-  grid.innerHTML = studies.map((study) => `
+  grid.innerHTML = homepageStudies.map((study) => `
     <article class="project-card">
       <a class="project-link" href="${escapeHTML(study.link)}">
         ${renderImage(study)}
@@ -42,4 +49,13 @@
       </a>
     </article>
   `).join('');
+
+  const existingAction = grid.parentElement.querySelector('[data-featured-projects-action]');
+  if (!existingAction) {
+    grid.insertAdjacentHTML('afterend', `
+      <div class="featured-projects-action" data-featured-projects-action>
+        <a class="btn btn-dark" href="case-studies.html">View Case Studies</a>
+      </div>
+    `);
+  }
 })();
