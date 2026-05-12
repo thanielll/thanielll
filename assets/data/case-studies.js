@@ -190,6 +190,67 @@ window.NRPortfolioCaseStudies = [
     }
   },
   {
+    title: 'Ivy Aesthetic Med Spa Web Design and Development',
+    slug: 'ivy-aesthetic-med-spa-web-design-development',
+    category: 'Medical Spa Website / WordPress Development',
+    summary:
+      'A premium medical spa website designed and developed to showcase aesthetic services, attract new clients, and support a clean, high-end booking-focused user experience.',
+    tags: ['Web Design', 'Landing Page', 'Responsive Design', 'Elementor', 'Figma'],
+    filters: ['WordPress', 'Elementor', 'Figma to WordPress', 'Landing Pages'],
+    services: [
+      'Web Design',
+      'WordPress Development',
+      'Elementor Pro Development',
+      'Responsive Website Design',
+      'Conversion-Focused Service Pages'
+    ],
+    tools: ['WordPress', 'Elementor Pro', 'Figma', 'Responsive Design'],
+    image: '',
+    fallbackImage: '',
+    mockup: 'preview-healthcare',
+    featured: false,
+    publishedDate: '2026-01-29',
+    links: {
+      archiveCard: 'case-study.html?project=ivy-aesthetic-med-spa-web-design-development',
+      live: 'https://ivyaestheticmedspa.com/',
+      reference: 'Live Ivy Aesthetic Med Spa website'
+    },
+    clientIndustry: 'Medical Spa / Aesthetic Services',
+    projectType: 'Web Design and WordPress Development',
+    assetFolder: 'assets/case-studies/ivy-aesthetic-med-spa/',
+    assetFileNames: [
+      'project-thumbnail.jpg',
+      'homepage-preview.jpg',
+      'service-page-preview.jpg',
+      'mobile-preview.jpg',
+      'booking-section.jpg'
+    ],
+    status:
+      'Designed and developed as a premium medical spa website using WordPress and Elementor Pro, with a clean high-end aesthetic, responsive layout, and conversion-focused service presentation.',
+    challenge: [
+      'Ivy Aesthetic Med Spa needed a polished online presence that could present its services clearly while feeling premium, calm, and aligned with the high-end aesthetic of the brand.',
+      'The website needed to help visitors understand the available treatments, build trust quickly, and move toward booking or enquiry actions without feeling cluttered or overly sales-driven.'
+    ],
+    solution: [
+      'I designed and developed the website using WordPress and Elementor Pro, focusing on clean visual hierarchy, elegant spacing, soft brand presentation, and service pages that are easy to scan.',
+      'The build focused on responsive layouts, strong calls to action, clear service pathways, and a refined design style that supports both new client acquisition and a premium medical spa experience.'
+    ],
+    outcome: [
+      'The finished website gives Ivy Aesthetic Med Spa a more professional and polished digital presence, helping visitors quickly understand the brand, services, and booking options.',
+      'The WordPress and Elementor setup provides a manageable foundation for service updates, future landing pages, and ongoing improvements as the business grows.'
+    ],
+    screenshots: [],
+    pdfs: [],
+    seo: {
+      title: 'Ivy Aesthetic Med Spa Web Design and Development Case Study | Nathaniel Rodriguez',
+      description:
+        'Ivy Aesthetic Med Spa web design and development case study by Nathaniel Rodriguez, covering WordPress Elementor development, responsive design, premium service pages, and conversion-focused website structure.',
+      canonical:
+        'https://rnthaniel.vercel.app/case-study.html?project=ivy-aesthetic-med-spa-web-design-development',
+      ogImage: ''
+    }
+  },
+  {
     title: 'Human Prosperity Lab Website Build',
     slug: 'human-prosperity-lab-website-build',
     category: 'Brand Website / WordPress Build',
