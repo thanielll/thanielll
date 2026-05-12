@@ -311,6 +311,66 @@ window.NRPortfolioCaseStudies = [
     }
   },
   {
+    title: 'Color Ink Website Redesign',
+    slug: 'color-ink-website-redesign',
+    category: 'Website Redesign / WordPress Development',
+    summary:
+      'A modern WordPress website redesign for Color Ink, rebuilt with updated page layouts, improved visual consistency, responsive structure, and a stronger overall user experience across devices.',
+    tags: ['WordPress', 'Elementor', 'Website Redesign', 'Adobe XD', 'Responsive Design'],
+    filters: ['WordPress', 'Elementor', 'Landing Pages'],
+    services: [
+      'Website Redesign',
+      'WordPress Development',
+      'Elementor Development',
+      'Responsive Website Design',
+      'Adobe XD to WordPress'
+    ],
+    tools: ['WordPress', 'Elementor', 'Adobe XD', 'Responsive Design'],
+    image: '',
+    fallbackImage: '',
+    mockup: 'preview-creative',
+    featured: false,
+    publishedDate: '2026-01-29',
+    links: {
+      archiveCard: 'case-study.html?project=color-ink-website-redesign',
+      live: 'https://colorink.com/',
+      reference: 'Live Color Ink website'
+    },
+    clientIndustry: 'Experiential Communications / Creative Production',
+    projectType: 'Website Redesign and WordPress Development',
+    assetFolder: 'assets/case-studies/color-ink/',
+    assetFileNames: [
+      'project-thumbnail.jpg',
+      'homepage-preview.jpg',
+      'services-preview.jpg',
+      'mobile-preview.jpg',
+      'before-after-preview.jpg'
+    ],
+    status:
+      'Redesigned and rebuilt the Color Ink website in WordPress using Elementor, based on updated Adobe XD layouts, with a focus on responsive design, consistency, and a more modern user experience.',
+    challenge: [
+      'Color Ink needed a more modern and user-friendly website that could better represent its experiential communications work while improving visual consistency across pages.',
+      'The existing site needed updated layouts, clearer page structure, and a smoother responsive experience so visitors could browse services, influencer kits, and brand information more easily across devices.'
+    ],
+    solution: [
+      'I recreated updated page layouts from Adobe XD and developed the redesign in WordPress using Elementor, focusing on cleaner structure, stronger visual hierarchy, and more consistent page styling.',
+      'The build improved responsive behavior across desktop, tablet, and mobile while keeping the overall brand energy bold, creative, and aligned with Color Ink’s experiential communications positioning.'
+    ],
+    outcome: [
+      'The redesigned website gives Color Ink a more polished and cohesive digital presence, with clearer service presentation and a better browsing experience for potential clients.',
+      'The WordPress and Elementor setup also provides a more manageable foundation for ongoing content updates, future service pages, and continued improvements to the site experience.'
+    ],
+    screenshots: [],
+    pdfs: [],
+    seo: {
+      title: 'Color Ink Website Redesign Case Study | Nathaniel Rodriguez',
+      description:
+        'Color Ink website redesign case study by Nathaniel Rodriguez, covering WordPress Elementor development, Adobe XD page layouts, responsive redesign, and improved website user experience.',
+      canonical: 'https://rnthaniel.vercel.app/case-study.html?project=color-ink-website-redesign',
+      ogImage: ''
+    }
+  },
+  {
     title: 'Human Prosperity Lab Website Build',
     slug: 'human-prosperity-lab-website-build',
     category: 'Brand Website / WordPress Build',
