@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="site-is-loading">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Homepage Adapter Test | Nathaniel Rodriguez Portfolio</title>
+  <link rel="icon" href="assets/images/Nathaniel%20Logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/Nathaniel%20Logo.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260510" />
+  <link rel="stylesheet" href="assets/css/launch-fixes.css?v=20260510" />
+  <script src="assets/js/page-loader.js?v=20260510"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home" aria-label="Nathaniel Rodriguez home">
+        <span class="brand-mark brand-logo-wrap"><img src="assets/images/Nathaniel%20Logo.png" alt="Nathaniel Rodriguez logo" /></span>
+        <span class="brand-name">Nathaniel Rodriguez</span>
+      </a>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="btn btn-dark nav-mobile-cta" href="mailto:freelancer.rnathaniel@gmail.com">Let's Work Together</a>
+      </nav>
+
+      <a class="btn btn-dark nav-cta" href="mailto:freelancer.rnathaniel@gmail.com">Let's Work Together</a>
+
+      <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="visually-hidden">Toggle navigation</span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="homepage-adapter-title">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">Internal Test Page</p>
+          <h1 id="homepage-adapter-title">Homepage Adapter Test</h1>
+        </div>
+        <p>This isolated noindex page tests the prepared adapter with the homepage project grid behavior. It does not change the real homepage.</p>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading heading-split">
+          <div>
+            <p class="eyebrow">Work</p>
+            <h2 id="work-title">Featured Projects Test</h2>
+          </div>
+          <p>This grid uses the same <code>data-featured-projects</code> target as the homepage and loads the same project rendering scripts.</p>
+        </div>
+        <div class="project-grid" data-featured-projects></div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="homepage-test-cta-title">
+      <div class="container cta-grid">
+        <div>
+          <p class="eyebrow eyebrow-invert">Internal QA</p>
+          <h2 id="homepage-test-cta-title">Homepage Project Grid Test</h2>
+          <p>This page should show project cards without duplicates while leaving the real homepage unchanged.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-white" href="index.html">Back to Real Homepage</a>
+          <a class="btn btn-outline-dark" href="case-studies.html">View Real Archive</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Nathaniel Rodriguez. All rights reserved.</p>
+      <a href="index.html#home">Back to home</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/case-studies.js?v=20260510"></script>
+  <script src="assets/data/case-studies.js"></script>
+  <script src="assets/data/case-study-adapter.js"></script>
+  <script>
+    if (window.NRPortfolioCaseStudyAdapter && typeof window.NRPortfolioCaseStudyAdapter.mergeIntoLegacyCaseStudies === 'function') {
+      window.NRPortfolioCaseStudyAdapter.mergeIntoLegacyCaseStudies();
+    }
+  </script>
+  <script src="assets/js/genieum-case-study-data.js?v=20260510"></script>
+  <script src="assets/js/consilium-case-study.js?v=20260510"></script>
+  <script src="assets/js/human-prosperity-lab-case-study.js?v=20260510"></script>
+  <script src="script.js?v=20260510"></script>
+  <script src="assets/js/home-case-study-grid.js?v=20260510"></script>
+</body>
+</html>
