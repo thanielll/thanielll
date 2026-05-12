@@ -272,3 +272,25 @@
     window.addEventListener('load', finishLoading, { once: true });
   }
 })();
+
+(function loadReadonlyCaseStudyData() {
+  const scripts = ['assets/data/case-studies.js', 'assets/data/case-study-adapter.js'];
+
+  const loadScript = (src) =>
+    new Promise((resolve) => {
+      if (document.querySelector(`script[src="${src}"]`)) {
+        resolve();
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = src;
+      script.defer = true;
+      script.setAttribute('data-readonly-case-study-data', 'true');
+      script.onload = resolve;
+      script.onerror = resolve;
+      document.head.appendChild(script);
+    });
+
+  scripts.reduce((chain, src) => chain.then(() => loadScript(src)), Promise.resolve());
+})();
