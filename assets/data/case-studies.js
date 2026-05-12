@@ -1,494 +1,172 @@
-/*
-  Central case study data preparation file.
-
-  Important:
-  - This file is intentionally NOT loaded by the current live HTML pages yet.
-  - Existing working files remain the source of truth for the live site:
-    - script.js
-    - assets/js/case-studies.js
-    - assets/js/consilium-case-study.js
-    - assets/js/genieum-case-study-data.js
-    - assets/js/human-prosperity-lab-case-study.js
-  - This file prepares a cleaner future migration without changing current design or behavior.
-*/
-
 window.NRPortfolioCaseStudies = [
   {
     title: 'Consilium Dynamics Website Redesign',
     slug: 'consilium-dynamics-website-redesign',
     category: 'Website Redesign / Figma to WordPress',
-    summary:
-      'A premium website redesign for Consilium Dynamics, a strategic advisory firm, focused on stronger hierarchy, refined visual direction, responsive WordPress implementation, and clearer conversion paths.',
+    summary: 'A premium website redesign for Consilium Dynamics, a strategic advisory firm, focused on stronger hierarchy, refined visual direction, responsive WordPress implementation, and clearer conversion paths.',
     tags: ['Figma', 'WordPress', 'Elementor Pro', 'Website Redesign'],
     filters: ['WordPress', 'Elementor', 'Figma to WordPress', 'Landing Pages', 'SEO'],
-    services: [
-      'Website Redesign',
-      'Figma Design Mockup',
-      'Elementor Pro Development',
-      'Responsive WordPress Build',
-      'SEO-Ready Setup'
-    ],
+    services: ['Website Redesign', 'Figma Design Mockup', 'Elementor Pro Development', 'Responsive WordPress Build', 'SEO-Ready Setup'],
     tools: ['Figma', 'WordPress', 'Elementor Pro', 'CSS', 'Responsive Design'],
     image: 'assets/case-studies/consilium%20dynamics/Project%20Thumbnail.jpg',
     fallbackImage: '',
     mockup: 'preview-consilium',
     featured: true,
-    links: {
-      archiveCard: 'case-study-consilium-dynamics.html',
-      dynamicTemplate: 'case-study.html?project=consilium-dynamics-website-redesign',
-      live: 'https://www.consiliumdynamics.com/',
-      reference: 'Live Consilium Dynamics website'
-    },
+    links: { archiveCard: 'case-study-consilium-dynamics.html', dynamicTemplate: 'case-study.html?project=consilium-dynamics-website-redesign', live: 'https://www.consiliumdynamics.com/', reference: 'Live Consilium Dynamics website' },
     clientIndustry: 'Strategic Advisory / Business Consulting',
     projectType: 'Website Redesign / Figma to WordPress',
-    status:
-      'Designed in Figma and implemented in WordPress using Elementor Pro with a responsive, SEO-ready, conversion-focused structure.',
-    challenge: [
-      'Consilium Dynamics needed a more premium and authoritative online presence that better matched its strategic advisory positioning. The existing website had to communicate clarity, confidence, and executive-level trust while still guiding visitors toward meaningful enquiry actions.',
-      'The redesign needed to improve visual hierarchy, spacing, brand consistency, and page flow without making the website feel overdesigned or difficult to manage in WordPress.'
-    ],
-    solution: [
-      'I created the redesign direction in Figma, focusing on a darker premium visual style, refined typography, stronger content hierarchy, and clear section spacing. The final build was developed in WordPress using Elementor Pro for editable, responsive sections.',
-      'The implementation focused on pixel-accurate layouts, clean structure, mobile responsiveness, SEO-ready page organization, and conversion-focused calls to action that support consultation and enquiry goals.'
-    ],
-    outcome: [
-      'The finished redesign gives Consilium Dynamics a stronger digital presence with a more premium, strategic, and trustworthy feel. Visitors can now understand the firm’s value faster and move through the site with clearer direction.',
-      'The WordPress build is structured for easier updates, better responsive performance, and a cleaner foundation for future content, resources, and internal page expansion.'
-    ],
+    status: 'Designed in Figma and implemented in WordPress using Elementor Pro with a responsive, SEO-ready, conversion-focused structure.',
+    challenge: ['Consilium Dynamics needed a more premium and authoritative online presence that better matched its strategic advisory positioning. The existing website had to communicate clarity, confidence, and executive-level trust while still guiding visitors toward meaningful enquiry actions.', 'The redesign needed to improve visual hierarchy, spacing, brand consistency, and page flow without making the website feel overdesigned or difficult to manage in WordPress.'],
+    solution: ['I created the redesign direction in Figma, focusing on a darker premium visual style, refined typography, stronger content hierarchy, and clear section spacing. The final build was developed in WordPress using Elementor Pro for editable, responsive sections.', 'The implementation focused on pixel-accurate layouts, clean structure, mobile responsiveness, SEO-ready page organization, and conversion-focused calls to action that support consultation and enquiry goals.'],
+    outcome: ['The finished redesign gives Consilium Dynamics a stronger digital presence with a more premium, strategic, and trustworthy feel. Visitors can now understand the firm’s value faster and move through the site with clearer direction.', 'The WordPress build is structured for easier updates, better responsive performance, and a cleaner foundation for future content, resources, and internal page expansion.'],
     screenshots: [
-      {
-        label: 'Project Thumbnail',
-        src: 'assets/case-studies/consilium%20dynamics/Project%20Thumbnail.jpg',
-        alt: 'Consilium Dynamics project thumbnail'
-      },
-      {
-        label: 'After Homepage View',
-        src: 'assets/case-studies/consilium%20dynamics/After%20CD.jpg',
-        alt: 'Consilium Dynamics after homepage view'
-      },
-      {
-        label: 'Before Homepage View',
-        src: 'assets/case-studies/consilium%20dynamics/Before%20CD.jpg',
-        alt: 'Consilium Dynamics before homepage view'
-      },
-      {
-        label: 'Home Page Layout',
-        src: 'assets/case-studies/consilium%20dynamics/CD%20Home.jpg',
-        alt: 'Consilium Dynamics home page layout'
-      },
-      {
-        label: 'About Page Layout',
-        src: 'assets/case-studies/consilium%20dynamics/CD%20About.jpg',
-        alt: 'Consilium Dynamics about page layout'
-      },
-      {
-        label: 'Book Page Layout',
-        src: 'assets/case-studies/consilium%20dynamics/CD%20Book.jpg',
-        alt: 'Consilium Dynamics book page layout'
-      },
-      {
-        label: 'Internal Pages Overview',
-        src: 'assets/case-studies/consilium%20dynamics/Internal%20Pages.jpg',
-        alt: 'Consilium Dynamics internal pages overview'
-      }
+      { label: 'Project Thumbnail', src: 'assets/case-studies/consilium%20dynamics/Project%20Thumbnail.jpg', alt: 'Consilium Dynamics project thumbnail' },
+      { label: 'After Homepage View', src: 'assets/case-studies/consilium%20dynamics/After%20CD.jpg', alt: 'Consilium Dynamics after homepage view' },
+      { label: 'Before Homepage View', src: 'assets/case-studies/consilium%20dynamics/Before%20CD.jpg', alt: 'Consilium Dynamics before homepage view' },
+      { label: 'Home Page Layout', src: 'assets/case-studies/consilium%20dynamics/CD%20Home.jpg', alt: 'Consilium Dynamics home page layout' },
+      { label: 'About Page Layout', src: 'assets/case-studies/consilium%20dynamics/CD%20About.jpg', alt: 'Consilium Dynamics about page layout' },
+      { label: 'Book Page Layout', src: 'assets/case-studies/consilium%20dynamics/CD%20Book.jpg', alt: 'Consilium Dynamics book page layout' },
+      { label: 'Internal Pages Overview', src: 'assets/case-studies/consilium%20dynamics/Internal%20Pages.jpg', alt: 'Consilium Dynamics internal pages overview' }
     ],
-    pdfs: [
-      {
-        label: 'Old Website Design PDF',
-        src: 'assets/case-studies/consilium%20dynamics/Old%20Website%20Design%20CD.pdf'
-      },
-      {
-        label: 'New Website Design PDF',
-        src: 'assets/case-studies/consilium%20dynamics/New%20Website%20Design%20CD.pdf'
-      }
-    ],
-    seo: {
-      title: 'Consilium Dynamics Website Redesign Case Study | Nathaniel Rodriguez',
-      description:
-        'Consilium Dynamics website redesign case study by Nathaniel Rodriguez, covering Figma design direction, WordPress Elementor Pro development, responsive implementation, and SEO-ready structure.',
-      canonical: 'https://rnthaniel.vercel.app/case-study-consilium-dynamics.html',
-      ogImage:
-        'https://rnthaniel.vercel.app/assets/case-studies/consilium%20dynamics/Project%20Thumbnail.jpg'
-    }
+    pdfs: [{ label: 'Old Website Design PDF', src: 'assets/case-studies/consilium%20dynamics/Old%20Website%20Design%20CD.pdf' }, { label: 'New Website Design PDF', src: 'assets/case-studies/consilium%20dynamics/New%20Website%20Design%20CD.pdf' }],
+    seo: { title: 'Consilium Dynamics Website Redesign Case Study | Nathaniel Rodriguez', description: 'Consilium Dynamics website redesign case study by Nathaniel Rodriguez, covering Figma design direction, WordPress Elementor Pro development, responsive implementation, and SEO-ready structure.', canonical: 'https://rnthaniel.vercel.app/case-study-consilium-dynamics.html', ogImage: 'https://rnthaniel.vercel.app/assets/case-studies/consilium%20dynamics/Project%20Thumbnail.jpg' }
   },
   {
     title: 'Genieum Custom Elementor Website',
     slug: 'genieum-custom-elementor-website',
     category: 'Figma to WordPress / Elementor Pro',
-    summary:
-      'A custom WordPress website developed from Figma designs using Elementor Pro, with custom CSS refinements for a cleaner, responsive, modern layout.',
+    summary: 'A custom WordPress website developed from Figma designs using Elementor Pro, with custom CSS refinements for a cleaner, responsive, modern layout.',
     tags: ['WordPress', 'Elementor Pro', 'Figma', 'CSS'],
     filters: ['WordPress', 'Elementor', 'Figma to WordPress'],
-    services: [
-      'Figma to WordPress',
-      'Elementor Pro Development',
-      'Custom CSS Styling',
-      'Responsive Website Build'
-    ],
+    services: ['Figma to WordPress', 'Elementor Pro Development', 'Custom CSS Styling', 'Responsive Website Build'],
     tools: ['WordPress', 'Elementor Pro', 'Figma', 'CSS'],
     image: 'assets/case-studies/genieum/Project%20Thumbnail.jpg',
     fallbackImage: 'assets/case-studies/genieum/genieum-thumbnail.svg',
     mockup: 'preview-genieum',
     featured: false,
-    links: {
-      archiveCard: 'case-study.html?project=genieum-custom-elementor-website',
-      dedicatedPage: 'case-study-genieum.html',
-      live: 'https://genieum.com/',
-      reference: 'Live Genieum website'
-    },
+    links: { archiveCard: 'case-study.html?project=genieum-custom-elementor-website', dedicatedPage: 'case-study-genieum.html', live: 'https://genieum.com/', reference: 'Live Genieum website' },
     clientIndustry: 'Trade Credit Platform',
     projectType: 'Custom Elementor Website / Figma to WordPress',
-    status:
-      'Converted a Figma design into a clean, responsive WordPress website using Elementor Pro and custom CSS for more precise styling control.',
-    challenge: [
-      'Genieum needed its Figma website design converted into a responsive WordPress site while keeping the visual direction clean, modern, and aligned with the approved design.',
-      'The build required more control than standard Elementor settings alone could provide, especially for layout details, spacing, and unique styling refinements.'
-    ],
-    solution: [
-      'I developed the website in WordPress using Elementor Pro, carefully translating the Figma layout into editable sections while keeping the design visually consistent across screen sizes.',
-      'I also added custom CSS where needed to improve styling precision, responsive behavior, and layout control beyond the default builder options.'
-    ],
-    outcome: [
-      'The result is a clean, modern, responsive WordPress website that reflects the original Figma design while remaining manageable through Elementor Pro.',
-      'The custom CSS enhancements helped improve polish, consistency, and flexibility across the final build.'
-    ],
+    status: 'Converted a Figma design into a clean, responsive WordPress website using Elementor Pro and custom CSS for more precise styling control.',
+    challenge: ['Genieum needed its Figma website design converted into a responsive WordPress site while keeping the visual direction clean, modern, and aligned with the approved design.', 'The build required more control than standard Elementor settings alone could provide, especially for layout details, spacing, and unique styling refinements.'],
+    solution: ['I developed the website in WordPress using Elementor Pro, carefully translating the Figma layout into editable sections while keeping the design visually consistent across screen sizes.', 'I also added custom CSS where needed to improve styling precision, responsive behavior, and layout control beyond the default builder options.'],
+    outcome: ['The result is a clean, modern, responsive WordPress website that reflects the original Figma design while remaining manageable through Elementor Pro.', 'The custom CSS enhancements helped improve polish, consistency, and flexibility across the final build.'],
     screenshots: [
-      {
-        label: 'Project Thumbnail',
-        src: 'assets/case-studies/genieum/Project%20Thumbnail.jpg',
-        fallback: 'assets/case-studies/genieum/genieum-thumbnail.svg',
-        alt: 'Genieum project thumbnail'
-      },
-      {
-        label: 'Home Page Preview',
-        src: 'assets/case-studies/genieum/Home%20Page.jpg',
-        alt: 'Genieum home page preview'
-      },
-      {
-        label: 'Hero Section Preview',
-        src: 'assets/case-studies/genieum/Hero%20Section.jpg',
-        alt: 'Genieum hero section preview'
-      },
-      {
-        label: 'Dashboard Section Preview',
-        src: 'assets/case-studies/genieum/Dashboard%20Section.jpg',
-        alt: 'Genieum dashboard section preview'
-      },
-      {
-        label: 'Mobile Responsive Preview',
-        src: 'assets/case-studies/genieum/Mobile%20Responsive.jpg',
-        alt: 'Genieum mobile responsive preview'
-      }
+      { label: 'Project Thumbnail', src: 'assets/case-studies/genieum/Project%20Thumbnail.jpg', fallback: 'assets/case-studies/genieum/genieum-thumbnail.svg', alt: 'Genieum project thumbnail' },
+      { label: 'Home Page Preview', src: 'assets/case-studies/genieum/Home%20Page.jpg', alt: 'Genieum home page preview' },
+      { label: 'Hero Section Preview', src: 'assets/case-studies/genieum/Hero%20Section.jpg', alt: 'Genieum hero section preview' },
+      { label: 'Dashboard Section Preview', src: 'assets/case-studies/genieum/Dashboard%20Section.jpg', alt: 'Genieum dashboard section preview' },
+      { label: 'Mobile Responsive Preview', src: 'assets/case-studies/genieum/Mobile%20Responsive.jpg', alt: 'Genieum mobile responsive preview' }
     ],
     pdfs: [],
-    seo: {
-      title: 'Genieum Custom Elementor Website Case Study | Nathaniel Rodriguez',
-      description:
-        'Genieum custom Elementor website case study by Nathaniel Rodriguez, covering Figma to WordPress development, Elementor Pro implementation, custom CSS styling, and responsive website build.',
-      canonical: 'https://rnthaniel.vercel.app/case-study-genieum.html',
-      ogImage: 'https://rnthaniel.vercel.app/assets/case-studies/genieum/genieum-thumbnail.svg'
-    }
+    seo: { title: 'Genieum Custom Elementor Website Case Study | Nathaniel Rodriguez', description: 'Genieum custom Elementor website case study by Nathaniel Rodriguez, covering Figma to WordPress development, Elementor Pro implementation, custom CSS styling, and responsive website build.', canonical: 'https://rnthaniel.vercel.app/case-study-genieum.html', ogImage: 'https://rnthaniel.vercel.app/assets/case-studies/genieum/genieum-thumbnail.svg' }
   },
   {
     title: 'Ivy Aesthetic Med Spa Web Design and Development',
     slug: 'ivy-aesthetic-med-spa-web-design-development',
     category: 'Medical Spa Website / WordPress Development',
-    summary:
-      'A premium medical spa website designed and developed to showcase aesthetic services, attract new clients, and support a clean, high-end booking-focused user experience.',
+    summary: 'A premium medical spa website designed and developed to showcase aesthetic services, attract new clients, and support a clean, high-end booking-focused user experience.',
     tags: ['Web Design', 'Landing Page', 'Responsive Design', 'Elementor', 'Figma'],
     filters: ['WordPress', 'Elementor', 'Figma to WordPress', 'Landing Pages'],
-    services: [
-      'Web Design',
-      'WordPress Development',
-      'Elementor Pro Development',
-      'Responsive Website Design',
-      'Conversion-Focused Service Pages'
-    ],
+    services: ['Web Design', 'WordPress Development', 'Elementor Pro Development', 'Responsive Website Design', 'Conversion-Focused Service Pages'],
     tools: ['WordPress', 'Elementor Pro', 'Figma', 'Responsive Design'],
-    image: '',
-    fallbackImage: '',
-    mockup: 'preview-healthcare',
-    featured: false,
-    publishedDate: '2026-01-29',
-    links: {
-      archiveCard: 'case-study.html?project=ivy-aesthetic-med-spa-web-design-development',
-      live: 'https://ivyaestheticmedspa.com/',
-      reference: 'Live Ivy Aesthetic Med Spa website'
-    },
-    clientIndustry: 'Medical Spa / Aesthetic Services',
-    projectType: 'Web Design and WordPress Development',
-    assetFolder: 'assets/case-studies/ivy-aesthetic-med-spa/',
-    assetFileNames: [
-      'project-thumbnail.jpg',
-      'homepage-preview.jpg',
-      'service-page-preview.jpg',
-      'mobile-preview.jpg',
-      'booking-section.jpg'
-    ],
-    status:
-      'Designed and developed as a premium medical spa website using WordPress and Elementor Pro, with a clean high-end aesthetic, responsive layout, and conversion-focused service presentation.',
-    challenge: [
-      'Ivy Aesthetic Med Spa needed a polished online presence that could present its services clearly while feeling premium, calm, and aligned with the high-end aesthetic of the brand.',
-      'The website needed to help visitors understand the available treatments, build trust quickly, and move toward booking or enquiry actions without feeling cluttered or overly sales-driven.'
-    ],
-    solution: [
-      'I designed and developed the website using WordPress and Elementor Pro, focusing on clean visual hierarchy, elegant spacing, soft brand presentation, and service pages that are easy to scan.',
-      'The build focused on responsive layouts, strong calls to action, clear service pathways, and a refined design style that supports both new client acquisition and a premium medical spa experience.'
-    ],
-    outcome: [
-      'The finished website gives Ivy Aesthetic Med Spa a more professional and polished digital presence, helping visitors quickly understand the brand, services, and booking options.',
-      'The WordPress and Elementor setup provides a manageable foundation for service updates, future landing pages, and ongoing improvements as the business grows.'
-    ],
-    screenshots: [],
-    pdfs: [],
-    seo: {
-      title: 'Ivy Aesthetic Med Spa Web Design and Development Case Study | Nathaniel Rodriguez',
-      description:
-        'Ivy Aesthetic Med Spa web design and development case study by Nathaniel Rodriguez, covering WordPress Elementor development, responsive design, premium service pages, and conversion-focused website structure.',
-      canonical:
-        'https://rnthaniel.vercel.app/case-study.html?project=ivy-aesthetic-med-spa-web-design-development',
-      ogImage: ''
-    }
+    image: '', fallbackImage: '', mockup: 'preview-healthcare', featured: false, publishedDate: '2026-01-29',
+    links: { archiveCard: 'case-study.html?project=ivy-aesthetic-med-spa-web-design-development', live: 'https://ivyaestheticmedspa.com/', reference: 'Live Ivy Aesthetic Med Spa website' },
+    clientIndustry: 'Medical Spa / Aesthetic Services', projectType: 'Web Design and WordPress Development', assetFolder: 'assets/case-studies/ivy-aesthetic-med-spa/', assetFileNames: ['project-thumbnail.jpg', 'homepage-preview.jpg', 'service-page-preview.jpg', 'mobile-preview.jpg', 'booking-section.jpg'],
+    status: 'Designed and developed as a premium medical spa website using WordPress and Elementor Pro, with a clean high-end aesthetic, responsive layout, and conversion-focused service presentation.',
+    challenge: ['Ivy Aesthetic Med Spa needed a polished online presence that could present its services clearly while feeling premium, calm, and aligned with the high-end aesthetic of the brand.', 'The website needed to help visitors understand the available treatments, build trust quickly, and move toward booking or enquiry actions without feeling cluttered or overly sales-driven.'],
+    solution: ['I designed and developed the website using WordPress and Elementor Pro, focusing on clean visual hierarchy, elegant spacing, soft brand presentation, and service pages that are easy to scan.', 'The build focused on responsive layouts, strong calls to action, clear service pathways, and a refined design style that supports both new client acquisition and a premium medical spa experience.'],
+    outcome: ['The finished website gives Ivy Aesthetic Med Spa a more professional and polished digital presence, helping visitors quickly understand the brand, services, and booking options.', 'The WordPress and Elementor setup provides a manageable foundation for service updates, future landing pages, and ongoing improvements as the business grows.'],
+    screenshots: [], pdfs: [], seo: { title: 'Ivy Aesthetic Med Spa Web Design and Development Case Study | Nathaniel Rodriguez', description: 'Ivy Aesthetic Med Spa web design and development case study by Nathaniel Rodriguez, covering WordPress Elementor development, responsive design, premium service pages, and conversion-focused website structure.', canonical: 'https://rnthaniel.vercel.app/case-study.html?project=ivy-aesthetic-med-spa-web-design-development', ogImage: '' }
   },
   {
     title: '13 North Grafton Website Design',
     slug: '13-north-grafton-website-design',
     category: 'Restaurant Website / WordPress Development',
-    summary:
-      'A modern WordPress website designed and developed for 13 North Grafton with a clean, professional layout and responsive structure across desktop, tablet, and mobile devices.',
+    summary: 'A modern WordPress website designed and developed for 13 North Grafton with a clean, professional layout and responsive structure across desktop, tablet, and mobile devices.',
     tags: ['WordPress', 'Elementor', 'Web Design', 'Web Development', 'Responsive Design'],
     filters: ['WordPress', 'Elementor', 'Landing Pages'],
-    services: [
-      'Website Design',
-      'WordPress Development',
-      'Elementor Development',
-      'Responsive Website Design',
-      'Web Development'
-    ],
+    services: ['Website Design', 'WordPress Development', 'Elementor Development', 'Responsive Website Design', 'Web Development'],
     tools: ['WordPress', 'Elementor', 'Responsive Design'],
-    image: '',
-    fallbackImage: '',
-    mockup: 'preview-restaurant',
-    featured: false,
-    publishedDate: '2026-01-29',
-    links: {
-      archiveCard: 'case-study.html?project=13-north-grafton-website-design',
-      live: 'https://13northgrafton.com/',
-      reference: 'Live 13 North Grafton website'
-    },
-    clientIndustry: 'Restaurant / Hospitality',
-    projectType: 'Website Design and WordPress Development',
-    assetFolder: 'assets/case-studies/13-north-grafton/',
-    assetFileNames: [
-      'project-thumbnail.jpg',
-      'homepage-preview.jpg',
-      'menu-section.jpg',
-      'booking-section.jpg',
-      'mobile-preview.jpg'
-    ],
-    status:
-      'Designed and developed as a modern WordPress website using Elementor, with a clean professional layout, responsive structure, and user-friendly presentation for restaurant guests.',
-    challenge: [
-      '13 North Grafton needed a polished restaurant website that could present the dining experience clearly while keeping navigation simple and accessible across devices.',
-      'The project needed to support a strong first impression, easy access to key information, and a smooth user experience for visitors browsing from desktop, tablet, or mobile.'
-    ],
-    solution: [
-      'I designed and developed the website in WordPress using Elementor, focusing on a clean visual structure, responsive layouts, and clear pathways to important restaurant actions such as viewing information and booking online.',
-      'The build emphasized professional presentation, simple navigation, mobile-friendly spacing, and a layout structure that supports the brand’s restaurant and hospitality experience.'
-    ],
-    outcome: [
-      'The finished website gives 13 North Grafton a cleaner and more professional digital presence that helps visitors quickly understand the restaurant, atmosphere, and booking options.',
-      'The responsive WordPress setup provides a manageable foundation for future content updates, menu changes, event information, and ongoing website improvements.'
-    ],
-    screenshots: [],
-    pdfs: [],
-    seo: {
-      title: '13 North Grafton Website Design Case Study | Nathaniel Rodriguez',
-      description:
-        '13 North Grafton website design case study by Nathaniel Rodriguez, covering WordPress Elementor development, responsive design, restaurant website structure, and professional web development.',
-      canonical: 'https://rnthaniel.vercel.app/case-study.html?project=13-north-grafton-website-design',
-      ogImage: ''
-    }
+    image: '', fallbackImage: '', mockup: 'preview-restaurant', featured: false, publishedDate: '2026-01-29',
+    links: { archiveCard: 'case-study.html?project=13-north-grafton-website-design', live: 'https://13northgrafton.com/', reference: 'Live 13 North Grafton website' },
+    clientIndustry: 'Restaurant / Hospitality', projectType: 'Website Design and WordPress Development', assetFolder: 'assets/case-studies/13-north-grafton/', assetFileNames: ['project-thumbnail.jpg', 'homepage-preview.jpg', 'menu-section.jpg', 'booking-section.jpg', 'mobile-preview.jpg'],
+    status: 'Designed and developed as a modern WordPress website using Elementor, with a clean professional layout, responsive structure, and user-friendly presentation for restaurant guests.',
+    challenge: ['13 North Grafton needed a polished restaurant website that could present the dining experience clearly while keeping navigation simple and accessible across devices.', 'The project needed to support a strong first impression, easy access to key information, and a smooth user experience for visitors browsing from desktop, tablet, or mobile.'],
+    solution: ['I designed and developed the website in WordPress using Elementor, focusing on a clean visual structure, responsive layouts, and clear pathways to important restaurant actions such as viewing information and booking online.', 'The build emphasized professional presentation, simple navigation, mobile-friendly spacing, and a layout structure that supports the brand’s restaurant and hospitality experience.'],
+    outcome: ['The finished website gives 13 North Grafton a cleaner and more professional digital presence that helps visitors quickly understand the restaurant, atmosphere, and booking options.', 'The responsive WordPress setup provides a manageable foundation for future content updates, menu changes, event information, and ongoing website improvements.'],
+    screenshots: [], pdfs: [], seo: { title: '13 North Grafton Website Design Case Study | Nathaniel Rodriguez', description: '13 North Grafton website design case study by Nathaniel Rodriguez, covering WordPress Elementor development, responsive design, restaurant website structure, and professional web development.', canonical: 'https://rnthaniel.vercel.app/case-study.html?project=13-north-grafton-website-design', ogImage: '' }
   },
   {
     title: 'Color Ink Website Redesign',
     slug: 'color-ink-website-redesign',
     category: 'Website Redesign / WordPress Development',
-    summary:
-      'A modern WordPress website redesign for Color Ink, rebuilt with updated page layouts, improved visual consistency, responsive structure, and a stronger overall user experience across devices.',
+    summary: 'A modern WordPress website redesign for Color Ink, rebuilt with updated page layouts, improved visual consistency, responsive structure, and a stronger overall user experience across devices.',
     tags: ['WordPress', 'Elementor', 'Website Redesign', 'Adobe XD', 'Responsive Design'],
     filters: ['WordPress', 'Elementor', 'Landing Pages'],
-    services: [
-      'Website Redesign',
-      'WordPress Development',
-      'Elementor Development',
-      'Responsive Website Design',
-      'Adobe XD to WordPress'
-    ],
+    services: ['Website Redesign', 'WordPress Development', 'Elementor Development', 'Responsive Website Design', 'Adobe XD to WordPress'],
     tools: ['WordPress', 'Elementor', 'Adobe XD', 'Responsive Design'],
-    image: '',
-    fallbackImage: '',
-    mockup: 'preview-creative',
-    featured: false,
-    publishedDate: '2026-01-29',
-    links: {
-      archiveCard: 'case-study.html?project=color-ink-website-redesign',
-      live: 'https://colorink.com/',
-      reference: 'Live Color Ink website'
-    },
-    clientIndustry: 'Experiential Communications / Creative Production',
-    projectType: 'Website Redesign and WordPress Development',
-    assetFolder: 'assets/case-studies/color-ink/',
-    assetFileNames: [
-      'project-thumbnail.jpg',
-      'homepage-preview.jpg',
-      'services-preview.jpg',
-      'mobile-preview.jpg',
-      'before-after-preview.jpg'
-    ],
-    status:
-      'Redesigned and rebuilt the Color Ink website in WordPress using Elementor, based on updated Adobe XD layouts, with a focus on responsive design, consistency, and a more modern user experience.',
-    challenge: [
-      'Color Ink needed a more modern and user-friendly website that could better represent its experiential communications work while improving visual consistency across pages.',
-      'The existing site needed updated layouts, clearer page structure, and a smoother responsive experience so visitors could browse services, influencer kits, and brand information more easily across devices.'
-    ],
-    solution: [
-      'I recreated updated page layouts from Adobe XD and developed the redesign in WordPress using Elementor, focusing on cleaner structure, stronger visual hierarchy, and more consistent page styling.',
-      'The build improved responsive behavior across desktop, tablet, and mobile while keeping the overall brand energy bold, creative, and aligned with Color Ink’s experiential communications positioning.'
-    ],
-    outcome: [
-      'The redesigned website gives Color Ink a more polished and cohesive digital presence, with clearer service presentation and a better browsing experience for potential clients.',
-      'The WordPress and Elementor setup also provides a more manageable foundation for ongoing content updates, future service pages, and continued improvements to the site experience.'
-    ],
-    screenshots: [],
-    pdfs: [],
-    seo: {
-      title: 'Color Ink Website Redesign Case Study | Nathaniel Rodriguez',
-      description:
-        'Color Ink website redesign case study by Nathaniel Rodriguez, covering WordPress Elementor development, Adobe XD page layouts, responsive redesign, and improved website user experience.',
-      canonical: 'https://rnthaniel.vercel.app/case-study.html?project=color-ink-website-redesign',
-      ogImage: ''
-    }
+    image: '', fallbackImage: '', mockup: 'preview-creative', featured: false, publishedDate: '2026-01-29',
+    links: { archiveCard: 'case-study.html?project=color-ink-website-redesign', live: 'https://colorink.com/', reference: 'Live Color Ink website' },
+    clientIndustry: 'Experiential Communications / Creative Production', projectType: 'Website Redesign and WordPress Development', assetFolder: 'assets/case-studies/color-ink/', assetFileNames: ['project-thumbnail.jpg', 'homepage-preview.jpg', 'services-preview.jpg', 'mobile-preview.jpg', 'before-after-preview.jpg'],
+    status: 'Redesigned and rebuilt the Color Ink website in WordPress using Elementor, based on updated Adobe XD layouts, with a focus on responsive design, consistency, and a more modern user experience.',
+    challenge: ['Color Ink needed a more modern and user-friendly website that could better represent its experiential communications work while improving visual consistency across pages.', 'The existing site needed updated layouts, clearer page structure, and a smoother responsive experience so visitors could browse services, influencer kits, and brand information more easily across devices.'],
+    solution: ['I recreated updated page layouts from Adobe XD and developed the redesign in WordPress using Elementor, focusing on cleaner structure, stronger visual hierarchy, and more consistent page styling.', 'The build improved responsive behavior across desktop, tablet, and mobile while keeping the overall brand energy bold, creative, and aligned with Color Ink’s experiential communications positioning.'],
+    outcome: ['The redesigned website gives Color Ink a more polished and cohesive digital presence, with clearer service presentation and a better browsing experience for potential clients.', 'The WordPress and Elementor setup also provides a more manageable foundation for ongoing content updates, future service pages, and continued improvements to the site experience.'],
+    screenshots: [], pdfs: [], seo: { title: 'Color Ink Website Redesign Case Study | Nathaniel Rodriguez', description: 'Color Ink website redesign case study by Nathaniel Rodriguez, covering WordPress Elementor development, Adobe XD page layouts, responsive redesign, and improved website user experience.', canonical: 'https://rnthaniel.vercel.app/case-study.html?project=color-ink-website-redesign', ogImage: '' }
   },
   {
     title: 'VR Hopeful Hearts Web Design and Development',
     slug: 'vr-hopeful-hearts-web-design-development',
     category: 'Healthcare Website / WordPress Development',
-    summary:
-      'A warm, professional WordPress website designed and developed for an organization supporting autistic children, with Figma layouts, Elementor Pro implementation, and a responsive user-friendly structure.',
+    summary: 'A warm, professional WordPress website designed and developed for an organization supporting autistic children, with Figma layouts, Elementor Pro implementation, and a responsive user-friendly structure.',
     tags: ['WordPress', 'Elementor', 'Web Design', 'Figma', 'Responsive Design'],
     filters: ['WordPress', 'Elementor', 'Figma to WordPress', 'Landing Pages'],
-    services: [
-      'Web Design',
-      'WordPress Development',
-      'Elementor Pro Development',
-      'Figma Page Layouts',
-      'Responsive Website Design'
-    ],
+    services: ['Web Design', 'WordPress Development', 'Elementor Pro Development', 'Figma Page Layouts', 'Responsive Website Design'],
     tools: ['WordPress', 'Elementor Pro', 'Figma', 'Responsive Design'],
-    image: '',
-    fallbackImage: '',
-    mockup: 'preview-healthcare',
-    featured: false,
-    publishedDate: '2026-01-29',
-    links: {
-      archiveCard: 'case-study.html?project=vr-hopeful-hearts-web-design-development',
-      live: 'https://vrhopefulhearts.com/',
-      reference: 'Live VR Hopeful Hearts website'
-    },
-    clientIndustry: 'Healthcare / Autism Support Services',
-    projectType: 'Web Design and WordPress Development',
-    assetFolder: 'assets/case-studies/vr-hopeful-hearts/',
-    assetFileNames: [
-      'project-thumbnail.jpg',
-      'homepage-preview.jpg',
-      'services-preview.jpg',
-      'mobile-preview.jpg',
-      'internal-page-preview.jpg'
-    ],
-    status:
-      'Designed homepage and internal page layouts in Figma, then developed the final website in WordPress using Elementor Pro with a responsive, accessible, and family-friendly structure.',
-    challenge: [
-      'VR Hopeful Hearts needed a professional and reassuring website for families looking for autism support services, with clear information, warm visuals, and simple pathways to take action.',
-      'The project needed to communicate trust, services, and bilingual-friendly support while remaining easy to navigate across desktop, tablet, and mobile devices.'
-    ],
-    solution: [
-      'I created homepage and internal page layouts in Figma, then built the website in WordPress using Elementor Pro with a clean responsive structure and service-focused page hierarchy.',
-      'The design focused on a warm visual direction, clear calls to action, family-friendly messaging, and easy-to-scan sections that help visitors understand services quickly.'
-    ],
-    outcome: [
-      'The final website gives VR Hopeful Hearts a warm and professional online presence that helps families understand the organization’s services and take action more easily.',
-      'The WordPress and Elementor Pro setup provides a flexible foundation for updating services, publishing content, and improving the site as the organization grows.'
-    ],
-    screenshots: [],
-    pdfs: [],
-    seo: {
-      title: 'VR Hopeful Hearts Web Design and Development Case Study | Nathaniel Rodriguez',
-      description:
-        'VR Hopeful Hearts web design and development case study by Nathaniel Rodriguez, covering Figma layouts, WordPress Elementor Pro development, responsive design, and healthcare website structure.',
-      canonical:
-        'https://rnthaniel.vercel.app/case-study.html?project=vr-hopeful-hearts-web-design-development',
-      ogImage: ''
-    }
+    image: '', fallbackImage: '', mockup: 'preview-healthcare', featured: false, publishedDate: '2026-01-29',
+    links: { archiveCard: 'case-study.html?project=vr-hopeful-hearts-web-design-development', live: 'https://vrhopefulhearts.com/', reference: 'Live VR Hopeful Hearts website' },
+    clientIndustry: 'Healthcare / Autism Support Services', projectType: 'Web Design and WordPress Development', assetFolder: 'assets/case-studies/vr-hopeful-hearts/', assetFileNames: ['project-thumbnail.jpg', 'homepage-preview.jpg', 'services-preview.jpg', 'mobile-preview.jpg', 'internal-page-preview.jpg'],
+    status: 'Designed homepage and internal page layouts in Figma, then developed the final website in WordPress using Elementor Pro with a responsive, accessible, and family-friendly structure.',
+    challenge: ['VR Hopeful Hearts needed a professional and reassuring website for families looking for autism support services, with clear information, warm visuals, and simple pathways to take action.', 'The project needed to communicate trust, services, and bilingual-friendly support while remaining easy to navigate across desktop, tablet, and mobile devices.'],
+    solution: ['I created homepage and internal page layouts in Figma, then built the website in WordPress using Elementor Pro with a clean responsive structure and service-focused page hierarchy.', 'The design focused on a warm visual direction, clear calls to action, family-friendly messaging, and easy-to-scan sections that help visitors understand services quickly.'],
+    outcome: ['The final website gives VR Hopeful Hearts a warm and professional online presence that helps families understand the organization’s services and take action more easily.', 'The WordPress and Elementor Pro setup provides a flexible foundation for updating services, publishing content, and improving the site as the organization grows.'],
+    screenshots: [], pdfs: [], seo: { title: 'VR Hopeful Hearts Web Design and Development Case Study | Nathaniel Rodriguez', description: 'VR Hopeful Hearts web design and development case study by Nathaniel Rodriguez, covering Figma layouts, WordPress Elementor Pro development, responsive design, and healthcare website structure.', canonical: 'https://rnthaniel.vercel.app/case-study.html?project=vr-hopeful-hearts-web-design-development', ogImage: '' }
+  },
+  {
+    title: 'Monica T. Chang Personal Website',
+    slug: 'monica-t-chang-personal-website',
+    category: 'Personal Brand Website / WordPress Development',
+    summary: 'A polished personal brand website for Monica T. Chang, converted from Figma into WordPress and Elementor Pro with structured pages, professional presentation, and smooth mobile responsiveness.',
+    tags: ['WordPress', 'Elementor', 'Figma', 'Web Development', 'Responsive Design'],
+    filters: ['WordPress', 'Elementor', 'Figma to WordPress', 'Landing Pages'],
+    services: ['Figma to WordPress', 'WordPress Development', 'Elementor Pro Development', 'Personal Brand Website', 'Responsive Website Design'],
+    tools: ['WordPress', 'Elementor Pro', 'Figma', 'Responsive Design'],
+    image: '', fallbackImage: '', mockup: 'preview-consulting', featured: false, publishedDate: '2026-01-29',
+    links: { archiveCard: 'case-study.html?project=monica-t-chang-personal-website', live: 'https://monicatchang.com/', reference: 'Live Monica T. Chang website' },
+    clientIndustry: 'Executive Coaching / Personal Brand', projectType: 'Personal Website / Figma to WordPress', assetFolder: 'assets/case-studies/monica-t-chang/', assetFileNames: ['project-thumbnail.jpg', 'homepage-preview.jpg', 'services-preview.jpg', 'mobile-preview.jpg', 'client-success-preview.jpg'],
+    status: 'Converted Figma designs into a polished personal brand website using WordPress and Elementor Pro, with professional page structure, responsive layouts, and a clear executive coaching presentation.',
+    challenge: ['Monica T. Chang needed a polished personal brand website that could communicate executive coaching services clearly while feeling professional, credible, and easy to navigate.', 'The site needed to translate Figma designs into a smooth WordPress experience with structured pages, strong calls to action, and responsive layouts across all devices.'],
+    solution: ['I converted the Figma designs into WordPress using Elementor Pro, building clean page sections, clear content hierarchy, and a consistent visual structure for the personal brand.', 'The implementation focused on responsive behavior, polished spacing, service-focused sections, and a professional online presence that supports consultation enquiries and thought leadership content.'],
+    outcome: ['The final website gives Monica T. Chang a stronger personal brand platform with clear messaging, professional presentation, and a smooth mobile-responsive experience.', 'The WordPress and Elementor Pro setup provides a flexible foundation for updating services, adding insights, and continuing to grow the brand online.'],
+    screenshots: [], pdfs: [], seo: { title: 'Monica T. Chang Personal Website Case Study | Nathaniel Rodriguez', description: 'Monica T. Chang personal website case study by Nathaniel Rodriguez, covering Figma to WordPress conversion, Elementor Pro development, responsive design, and personal brand website structure.', canonical: 'https://rnthaniel.vercel.app/case-study.html?project=monica-t-chang-personal-website', ogImage: '' }
   },
   {
     title: 'Human Prosperity Lab Website Build',
     slug: 'human-prosperity-lab-website-build',
     category: 'Brand Website / WordPress Build',
-    summary:
-      'A complete brand and website experience for Human Prosperity Lab, focused on clear brand presentation, responsive WordPress implementation, and a credible modern online presence.',
+    summary: 'A complete brand and website experience for Human Prosperity Lab, focused on clear brand presentation, responsive WordPress implementation, and a credible modern online presence.',
     tags: ['WordPress', 'Elementor', 'Brand Guidelines', 'Figma'],
     filters: ['WordPress', 'Elementor', 'Figma to WordPress', 'Landing Pages', 'SEO'],
-    services: [
-      'Brand Guidelines',
-      'Website Design',
-      'Elementor Development',
-      'Responsive WordPress Build'
-    ],
+    services: ['Brand Guidelines', 'Website Design', 'Elementor Development', 'Responsive WordPress Build'],
     tools: ['WordPress', 'Elementor', 'Figma', 'Brand Guidelines', 'Responsive Design'],
-    image: '',
-    fallbackImage: '',
-    mockup: 'preview-hpl',
-    featured: true,
-    links: {
-      archiveCard: 'case-study.html?project=human-prosperity-lab-website-build',
-      live: 'https://humanprosperitylab.com/',
-      reference: 'Live Human Prosperity Lab website'
-    },
-    clientIndustry: 'Leadership / Human-Centered Business',
-    projectType: 'Brand Website / WordPress Build',
-    assetFolder: 'assets/case-studies/human-prosperity-lab/',
-    assetFileNames: [
-      'Project Thumbnail.jpg',
-      'Homepage Preview.jpg',
-      'Mobile Preview.jpg',
-      'Brand Guidelines.jpg',
-      'About Section.jpg',
-      'Contact Section.jpg',
-      'Approved HPL Brand Guidelines.pdf'
-    ],
-    status:
-      'Built as a complete brand and website experience with brand guidelines, Figma layout direction, and responsive WordPress implementation using Elementor Pro.',
-    challenge: [
-      'Human Prosperity Lab needed a complete digital presence that could communicate its mission clearly while still feeling credible, modern, and aligned with its brand values.',
-      'The website had to bring together brand direction, messaging, responsive layout, and a polished WordPress build without losing the calm, human-centered feel of the organization.'
-    ],
-    solution: [
-      'I developed brand guidelines, designed the site layout, and created a responsive WordPress website using Elementor Pro with a clean structure and easy-to-manage sections.',
-      'The build focused on clear hierarchy, thoughtful spacing, brand consistency, and a layout system that supports the organization’s messaging across desktop, tablet, and mobile.'
-    ],
-    outcome: [
-      'The final website gives Human Prosperity Lab a credible and modern online presence that better supports its mission and makes the organization easier to understand at a glance.',
-      'The WordPress setup provides a manageable foundation for future updates, additional content, and ongoing brand communication.'
-    ],
-    screenshots: [],
-    pdfs: [],
-    seo: {
-      title: 'Human Prosperity Lab Website Build Case Study | Nathaniel Rodriguez',
-      description:
-        'Human Prosperity Lab website build case study by Nathaniel Rodriguez, covering brand guidelines, WordPress Elementor implementation, responsive structure, and a credible modern online presence.',
-      canonical: 'https://rnthaniel.vercel.app/case-study.html?project=human-prosperity-lab-website-build',
-      ogImage: ''
-    }
+    image: '', fallbackImage: '', mockup: 'preview-hpl', featured: true,
+    links: { archiveCard: 'case-study.html?project=human-prosperity-lab-website-build', live: 'https://humanprosperitylab.com/', reference: 'Live Human Prosperity Lab website' },
+    clientIndustry: 'Leadership / Human-Centered Business', projectType: 'Brand Website / WordPress Build', assetFolder: 'assets/case-studies/human-prosperity-lab/', assetFileNames: ['Project Thumbnail.jpg', 'Homepage Preview.jpg', 'Mobile Preview.jpg', 'Brand Guidelines.jpg', 'About Section.jpg', 'Contact Section.jpg', 'Approved HPL Brand Guidelines.pdf'],
+    status: 'Built as a complete brand and website experience with brand guidelines, Figma layout direction, and responsive WordPress implementation using Elementor Pro.',
+    challenge: ['Human Prosperity Lab needed a complete digital presence that could communicate its mission clearly while still feeling credible, modern, and aligned with its brand values.', 'The website had to bring together brand direction, messaging, responsive layout, and a polished WordPress build without losing the calm, human-centered feel of the organization.'],
+    solution: ['I developed brand guidelines, designed the site layout, and created a responsive WordPress website using Elementor Pro with a clean structure and easy-to-manage sections.', 'The build focused on clear hierarchy, thoughtful spacing, brand consistency, and a layout system that supports the organization’s messaging across desktop, tablet, and mobile.'],
+    outcome: ['The final website gives Human Prosperity Lab a credible and modern online presence that better supports its mission and makes the organization easier to understand at a glance.', 'The WordPress setup provides a manageable foundation for future updates, additional content, and ongoing brand communication.'],
+    screenshots: [], pdfs: [], seo: { title: 'Human Prosperity Lab Website Build Case Study | Nathaniel Rodriguez', description: 'Human Prosperity Lab website build case study by Nathaniel Rodriguez, covering brand guidelines, WordPress Elementor implementation, responsive structure, and a credible modern online presence.', canonical: 'https://rnthaniel.vercel.app/case-study.html?project=human-prosperity-lab-website-build', ogImage: '' }
   }
 ];
