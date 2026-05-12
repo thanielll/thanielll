@@ -152,6 +152,24 @@ window.NRPortfolioCaseStudies = [
     screenshots: [], pdfs: [], seo: { title: 'Monica T. Chang Personal Website Case Study | Nathaniel Rodriguez', description: 'Monica T. Chang personal website case study by Nathaniel Rodriguez, covering Figma to WordPress conversion, Elementor Pro development, responsive design, and personal brand website structure.', canonical: 'https://rnthaniel.vercel.app/case-study.html?project=monica-t-chang-personal-website', ogImage: '' }
   },
   {
+    title: 'ChiroClicks Marketing Redesign',
+    slug: 'chiroclicks-marketing-redesign',
+    category: 'Marketing Agency Website / WordPress Redesign',
+    summary: 'A modern WordPress redesign for ChiroClicks Marketing, built with Elementor Pro to improve credibility, user flow, responsive presentation, and conversion-focused structure.',
+    tags: ['WordPress', 'Elementor', 'Website Redesign', 'Web Development', 'Figma'],
+    filters: ['WordPress', 'Elementor', 'Figma to WordPress', 'Landing Pages'],
+    services: ['Website Redesign', 'WordPress Development', 'Elementor Pro Development', 'Responsive Website Design', 'Conversion-Focused Structure'],
+    tools: ['WordPress', 'Elementor Pro', 'Figma', 'Responsive Design'],
+    image: '', fallbackImage: '', mockup: 'preview-marketing', featured: false, publishedDate: '2026-01-29',
+    links: { archiveCard: 'case-study.html?project=chiroclicks-marketing-redesign', live: 'https://chiroclicks.marketing/', reference: 'Live ChiroClicks Marketing website' },
+    clientIndustry: 'Marketing Agency / Chiropractic Marketing', projectType: 'Website Redesign and WordPress Development', assetFolder: 'assets/case-studies/chiroclicks-marketing/', assetFileNames: ['project-thumbnail.jpg', 'homepage-preview.jpg', 'services-preview.jpg', 'mobile-preview.jpg', 'conversion-section-preview.jpg'],
+    status: 'Redesigned and developed a modern WordPress website for a marketing agency using Elementor Pro, with improved credibility, responsive layouts, cleaner user flow, and stronger conversion-focused sections.',
+    challenge: ['ChiroClicks needed a more credible and modern marketing website that could clearly communicate its services, value proposition, and results-focused positioning for chiropractic practices.', 'The redesign needed to improve presentation, responsive behavior, user flow, and conversion structure while keeping the site easy to manage in WordPress.'],
+    solution: ['I redesigned and developed the website in WordPress using Elementor Pro, focusing on stronger visual hierarchy, service clarity, responsive page layouts, and more direct calls to action.', 'The build improved the overall presentation with cleaner sections, clearer trust elements, better spacing, and a layout structure designed to guide visitors toward booking a strategy session.'],
+    outcome: ['The finished redesign gives ChiroClicks a sharper and more professional digital presence that better supports its marketing agency positioning and service offering.', 'The WordPress and Elementor Pro setup provides a flexible foundation for future service updates, campaign pages, and ongoing conversion-focused improvements.'],
+    screenshots: [], pdfs: [], seo: { title: 'ChiroClicks Marketing Redesign Case Study | Nathaniel Rodriguez', description: 'ChiroClicks Marketing redesign case study by Nathaniel Rodriguez, covering WordPress Elementor Pro development, responsive redesign, marketing agency website structure, and conversion-focused page layout.', canonical: 'https://rnthaniel.vercel.app/case-study.html?project=chiroclicks-marketing-redesign', ogImage: '' }
+  },
+  {
     title: 'Human Prosperity Lab Website Build',
     slug: 'human-prosperity-lab-website-build',
     category: 'Brand Website / WordPress Build',
