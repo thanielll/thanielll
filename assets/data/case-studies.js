@@ -251,6 +251,66 @@ window.NRPortfolioCaseStudies = [
     }
   },
   {
+    title: '13 North Grafton Website Design',
+    slug: '13-north-grafton-website-design',
+    category: 'Restaurant Website / WordPress Development',
+    summary:
+      'A modern WordPress website designed and developed for 13 North Grafton with a clean, professional layout and responsive structure across desktop, tablet, and mobile devices.',
+    tags: ['WordPress', 'Elementor', 'Web Design', 'Web Development', 'Responsive Design'],
+    filters: ['WordPress', 'Elementor', 'Landing Pages'],
+    services: [
+      'Website Design',
+      'WordPress Development',
+      'Elementor Development',
+      'Responsive Website Design',
+      'Web Development'
+    ],
+    tools: ['WordPress', 'Elementor', 'Responsive Design'],
+    image: '',
+    fallbackImage: '',
+    mockup: 'preview-restaurant',
+    featured: false,
+    publishedDate: '2026-01-29',
+    links: {
+      archiveCard: 'case-study.html?project=13-north-grafton-website-design',
+      live: 'https://13northgrafton.com/',
+      reference: 'Live 13 North Grafton website'
+    },
+    clientIndustry: 'Restaurant / Hospitality',
+    projectType: 'Website Design and WordPress Development',
+    assetFolder: 'assets/case-studies/13-north-grafton/',
+    assetFileNames: [
+      'project-thumbnail.jpg',
+      'homepage-preview.jpg',
+      'menu-section.jpg',
+      'booking-section.jpg',
+      'mobile-preview.jpg'
+    ],
+    status:
+      'Designed and developed as a modern WordPress website using Elementor, with a clean professional layout, responsive structure, and user-friendly presentation for restaurant guests.',
+    challenge: [
+      '13 North Grafton needed a polished restaurant website that could present the dining experience clearly while keeping navigation simple and accessible across devices.',
+      'The project needed to support a strong first impression, easy access to key information, and a smooth user experience for visitors browsing from desktop, tablet, or mobile.'
+    ],
+    solution: [
+      'I designed and developed the website in WordPress using Elementor, focusing on a clean visual structure, responsive layouts, and clear pathways to important restaurant actions such as viewing information and booking online.',
+      'The build emphasized professional presentation, simple navigation, mobile-friendly spacing, and a layout structure that supports the brand’s restaurant and hospitality experience.'
+    ],
+    outcome: [
+      'The finished website gives 13 North Grafton a cleaner and more professional digital presence that helps visitors quickly understand the restaurant, atmosphere, and booking options.',
+      'The responsive WordPress setup provides a manageable foundation for future content updates, menu changes, event information, and ongoing website improvements.'
+    ],
+    screenshots: [],
+    pdfs: [],
+    seo: {
+      title: '13 North Grafton Website Design Case Study | Nathaniel Rodriguez',
+      description:
+        '13 North Grafton website design case study by Nathaniel Rodriguez, covering WordPress Elementor development, responsive design, restaurant website structure, and professional web development.',
+      canonical: 'https://rnthaniel.vercel.app/case-study.html?project=13-north-grafton-website-design',
+      ogImage: ''
+    }
+  },
+  {
     title: 'Human Prosperity Lab Website Build',
     slug: 'human-prosperity-lab-website-build',
     category: 'Brand Website / WordPress Build',
