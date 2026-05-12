@@ -371,6 +371,67 @@ window.NRPortfolioCaseStudies = [
     }
   },
   {
+    title: 'VR Hopeful Hearts Web Design and Development',
+    slug: 'vr-hopeful-hearts-web-design-development',
+    category: 'Healthcare Website / WordPress Development',
+    summary:
+      'A warm, professional WordPress website designed and developed for an organization supporting autistic children, with Figma layouts, Elementor Pro implementation, and a responsive user-friendly structure.',
+    tags: ['WordPress', 'Elementor', 'Web Design', 'Figma', 'Responsive Design'],
+    filters: ['WordPress', 'Elementor', 'Figma to WordPress', 'Landing Pages'],
+    services: [
+      'Web Design',
+      'WordPress Development',
+      'Elementor Pro Development',
+      'Figma Page Layouts',
+      'Responsive Website Design'
+    ],
+    tools: ['WordPress', 'Elementor Pro', 'Figma', 'Responsive Design'],
+    image: '',
+    fallbackImage: '',
+    mockup: 'preview-healthcare',
+    featured: false,
+    publishedDate: '2026-01-29',
+    links: {
+      archiveCard: 'case-study.html?project=vr-hopeful-hearts-web-design-development',
+      live: 'https://vrhopefulhearts.com/',
+      reference: 'Live VR Hopeful Hearts website'
+    },
+    clientIndustry: 'Healthcare / Autism Support Services',
+    projectType: 'Web Design and WordPress Development',
+    assetFolder: 'assets/case-studies/vr-hopeful-hearts/',
+    assetFileNames: [
+      'project-thumbnail.jpg',
+      'homepage-preview.jpg',
+      'services-preview.jpg',
+      'mobile-preview.jpg',
+      'internal-page-preview.jpg'
+    ],
+    status:
+      'Designed homepage and internal page layouts in Figma, then developed the final website in WordPress using Elementor Pro with a responsive, accessible, and family-friendly structure.',
+    challenge: [
+      'VR Hopeful Hearts needed a professional and reassuring website for families looking for autism support services, with clear information, warm visuals, and simple pathways to take action.',
+      'The project needed to communicate trust, services, and bilingual-friendly support while remaining easy to navigate across desktop, tablet, and mobile devices.'
+    ],
+    solution: [
+      'I created homepage and internal page layouts in Figma, then built the website in WordPress using Elementor Pro with a clean responsive structure and service-focused page hierarchy.',
+      'The design focused on a warm visual direction, clear calls to action, family-friendly messaging, and easy-to-scan sections that help visitors understand services quickly.'
+    ],
+    outcome: [
+      'The final website gives VR Hopeful Hearts a warm and professional online presence that helps families understand the organization’s services and take action more easily.',
+      'The WordPress and Elementor Pro setup provides a flexible foundation for updating services, publishing content, and improving the site as the organization grows.'
+    ],
+    screenshots: [],
+    pdfs: [],
+    seo: {
+      title: 'VR Hopeful Hearts Web Design and Development Case Study | Nathaniel Rodriguez',
+      description:
+        'VR Hopeful Hearts web design and development case study by Nathaniel Rodriguez, covering Figma layouts, WordPress Elementor Pro development, responsive design, and healthcare website structure.',
+      canonical:
+        'https://rnthaniel.vercel.app/case-study.html?project=vr-hopeful-hearts-web-design-development',
+      ogImage: ''
+    }
+  },
+  {
     title: 'Human Prosperity Lab Website Build',
     slug: 'human-prosperity-lab-website-build',
     category: 'Brand Website / WordPress Build',
