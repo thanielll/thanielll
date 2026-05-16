@@ -1,0 +1,549 @@
+/* ═══════════════════════════════════════════════════════════════
+   visual-polish.css — Modern, Clean, Professional Refinements
+   Loads after style.css + launch-fixes.css for safe layering.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. Token Fixes & Refinements ─────────────────────────────── */
+:root {
+  /* --color-ink is used in JS-injected styles but never defined */
+  --color-ink: var(--color-text);
+
+  /* Slightly lightened, cleaner backgrounds */
+  --color-bg:       #f8f5f0;
+  --color-bg-soft:  #f3efe9;
+  --color-bg-alt:   #ebe5da;
+
+  /* Softer borders — less heavy */
+  --color-border:     #d8d1c6;
+  --color-line:       #d8d1c6;
+  --color-line-strong: #c0b5ab;
+
+  /* Better text contrast */
+  --color-muted:      #5a5450;
+  --color-muted-soft: #8b8178;
+
+  /* Slightly more refined accent */
+  --color-accent:      #bb5f24;
+  --color-accent-soft: #f1d0ba;
+  --color-accent-dark: #853710;
+
+  /* Dark section colours */
+  --color-on-dark:       #fef5ec;
+  --color-on-dark-muted: #e6d6c6;
+
+  /* Updated RGB variants */
+  --color-bg-rgb:          248, 245, 240;
+  --color-bg-soft-rgb:     243, 239, 233;
+  --color-accent-rgb:      187, 95, 36;
+  --color-accent-soft-rgb: 241, 208, 186;
+  --color-accent-dark-rgb: 133, 55, 16;
+
+  /* Spacing & radius */
+  --section-space: 108px;
+  --radius: 4px;
+
+  /* Softer shadow */
+  --shadow:
+    0 4px 16px rgba(var(--color-accent-dark-rgb), 0.08),
+    0 16px 48px rgba(var(--color-accent-dark-rgb), 0.08);
+}
+
+/* ── 2. Body — quieter grid ────────────────────────────────────── */
+body {
+  background:
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.02) 1px, transparent 1px),
+    linear-gradient(rgba(var(--color-accent-rgb), 0.02) 1px, transparent 1px),
+    var(--color-bg);
+  background-size: 92px 92px;
+}
+
+/* ── 3. Typography — room to breathe ──────────────────────────── */
+/* Headings had line-height: 0.94 which was overly compressed */
+h1 {
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+/* h3 inside cards: drop all-caps for a warmer, more readable feel */
+h3 {
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+/* ── 4. Navigation ─────────────────────────────────────────────── */
+.nav-links a {
+  font-size: 0.79rem;
+  letter-spacing: 0.05em;
+}
+
+.brand-name {
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── 5. Hero — cleaner, more refined ─────────────────────────── */
+.hero {
+  /* Replace noisy multi-layer bg with a clean gradient + soft radial glow */
+  background:
+    radial-gradient(ellipse 65% 75% at 78% -5%, rgba(var(--color-accent-rgb), 0.08) 0%, transparent 100%),
+    linear-gradient(170deg, var(--color-bg-soft) 0%, var(--color-bg) 100%);
+}
+
+/* Hide the floating square decoration — adds noise without benefit */
+.hero::before { display: none; }
+
+.hero h1 {
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.hero-text {
+  line-height: 1.75;
+  color: var(--color-muted);
+}
+
+/* Small availability note below CTA buttons */
+.hero-availability {
+  font-size: 0.79rem;
+  color: var(--color-muted-soft);
+  margin-top: 0.9rem;
+}
+
+.trust-row li {
+  font-size: 0.73rem;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  border-color: var(--color-border);
+  background: rgba(var(--color-surface-rgb), 0.65);
+}
+
+/* ── 5b. Hero Featured Card — the right-column case study card ── */
+/* This class existed in HTML but had no matching CSS — styled here */
+.hero-featured-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: center;
+  padding: 1.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow:
+    0 2px 20px rgba(var(--color-accent-dark-rgb), 0.07),
+    8px 8px 0 rgba(var(--color-accent-rgb), 0.09);
+  isolation: isolate;
+}
+
+/* Thumbnail — full-width image at top of card */
+.hero-featured-thumb {
+  order: -1;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(var(--color-accent-rgb), 0.18);
+  border-radius: calc(var(--radius) - 1px);
+}
+
+.hero-featured-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.hero-featured-thumb:hover img,
+.hero-featured-thumb:focus-visible img {
+  transform: scale(1.04);
+}
+
+/* "Featured Case Study" kicker label */
+.hero-featured-kicker {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+}
+
+/* The div wrapping kicker + title */
+.hero-featured-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hero-featured-card h2 {
+  font-size: 1.3rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.hero-featured-card > p {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* Meta row — category / tools */
+.hero-featured-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.hero-featured-meta span {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-muted-soft);
+}
+
+/* Hide on tablet and below (matches original .hero-accent behaviour) */
+@media (max-width: 940px) {
+  .hero-featured-card { display: none; }
+}
+
+/* ── 6. Value Strip ────────────────────────────────────────────── */
+.value-strip { background: var(--color-surface); }
+
+.icon-block {
+  background: var(--color-bg-alt);
+  color: var(--color-accent-dark);
+  border-color: var(--color-border);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+}
+
+.value-item {
+  min-height: 200px;
+  padding: 1.55rem;
+}
+
+.value-item h2 {
+  font-size: 1.18rem;
+  line-height: 1.22;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.value-item p {
+  font-size: 0.91rem;
+  line-height: 1.7;
+  margin-top: 0.6rem;
+}
+
+/* ── 7. Section Headings ──────────────────────────────────────── */
+.section-heading h2,
+.about-copy h2,
+.heading-split h2 {
+  letter-spacing: -0.04em;
+  line-height: 1.06;
+}
+
+.section-heading::after { opacity: 0.35; }
+
+.heading-split p:not(.eyebrow) {
+  font-size: 0.97rem;
+  line-height: 1.72;
+}
+
+/* ── 8. About ─────────────────────────────────────────────────── */
+#about::before { opacity: 0.3; }
+
+.about-copy p {
+  font-size: 0.97rem;
+  line-height: 1.78;
+}
+
+.credential-row li {
+  font-size: 0.71rem;
+  letter-spacing: 0.06em;
+}
+
+/* ── 9. Testimonial ───────────────────────────────────────────── */
+.testimonial-intro h2 {
+  line-height: 1.06  !important;
+  letter-spacing: -0.04em !important;
+}
+
+.testimonial-intro p:last-child {
+  font-size: 0.95rem !important;
+  line-height: 1.75 !important;
+}
+
+.testimonial-card {
+  border-color: var(--color-border) !important;
+  box-shadow:
+    0 4px 24px rgba(var(--color-accent-dark-rgb), 0.07),
+    8px 8px 0 rgba(var(--color-accent-rgb), 0.08) !important;
+}
+
+.testimonial-quote {
+  line-height: 1.65 !important;
+  letter-spacing: -0.02em;
+}
+
+.testimonial-tags li {
+  font-size: 0.67rem;
+  letter-spacing: 0.05em;
+}
+
+/* ── 10. Best For ─────────────────────────────────────────────── */
+.best-for-grid h3 {
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.best-for-grid span {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+/* ── 11. Services ─────────────────────────────────────────────── */
+.service-card {
+  min-height: 290px;
+}
+
+.service-card h3 {
+  font-size: 1.12rem;
+  line-height: 1.25;
+  margin-top: 1.75rem;
+}
+
+.service-card p {
+  font-size: 0.91rem;
+  line-height: 1.7;
+}
+
+.service-card > span {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+/* ── 12. Process ──────────────────────────────────────────────── */
+#process::before { opacity: 0.3; }
+
+.process-step h3 {
+  font-size: 1.28rem;
+  line-height: 1.22;
+}
+
+.process-step > span {
+  font-size: 2.3rem;
+  color: var(--color-accent);
+  opacity: 0.75;
+}
+
+.process-step p {
+  font-size: 0.97rem;
+  line-height: 1.75;
+}
+
+/* ── 13. Project Grid / Work ──────────────────────────────────── */
+.project-content h3 {
+  font-size: 1.08rem;
+  line-height: 1.25;
+  min-height: auto;
+}
+
+.project-summary {
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.project-content li {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── 14. Project Inquiry ──────────────────────────────────────── */
+.project-inquiry-copy h2 {
+  line-height: 1.06 !important;
+  letter-spacing: -0.04em !important;
+}
+
+.project-inquiry-copy > p {
+  font-size: 0.97rem !important;
+  line-height: 1.75 !important;
+}
+
+.project-inquiry-card h3 {
+  text-transform: none !important;
+  font-size: clamp(1.35rem, 2.1vw, 1.9rem) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.project-inquiry-card p {
+  font-size: 0.93rem !important;
+  line-height: 1.72 !important;
+}
+
+.project-type-grid li {
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
+}
+
+/* ── 15. CTA / Contact Section ────────────────────────────────── */
+.cta-section h2 {
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.cta-section p:not(.eyebrow) {
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.cta-copy h2 { color: var(--color-on-dark); }
+
+/* Channel cards — tighter border in dark context */
+.channel-card {
+  border-color: rgba(var(--color-surface-rgb), 0.22) !important;
+}
+
+.channel-card span:not(.channel-icon):not(.channel-mark) {
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── 16. Buttons ─────────────────────────────────────────────── */
+.btn {
+  font-size: 0.79rem;
+  letter-spacing: 0.07em;
+  min-height: 48px;
+}
+
+/* ── 17. Strip out excessive section decorations ──────────────── */
+/* The spinning/floating rectangles on every section create noise */
+main > section:not(.cta-section)::after { display: none; }
+
+#services::before { opacity: 0.35; }
+
+/* ── 18. Footer ───────────────────────────────────────────────── */
+.site-footer { background: var(--color-bg-soft); }
+
+.footer-brand {
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}
+
+.footer-role {
+  font-size: 0.86rem;
+  margin-top: 0.5rem;
+}
+
+.footer-intro p:not(.footer-role) {
+  font-size: 0.88rem;
+  line-height: 1.72;
+  margin-top: 0.65rem;
+}
+
+.site-footer h2 {
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+}
+
+.footer-links a,
+.footer-bottom a {
+  font-size: 0.87rem;
+}
+
+.footer-contact a {
+  font-size: 0.88rem;
+}
+
+.footer-contact span {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
+/* ── 19. Case Study pages ─────────────────────────────────────── */
+.case-copy p {
+  font-size: 1rem;
+  line-height: 1.78;
+}
+
+.case-section-heading h2 {
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.page-hero h1,
+.case-hero h1 {
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.case-hero-copy > p:not(.eyebrow) {
+  line-height: 1.72;
+}
+
+.overview-grid strong {
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.highlight-grid h3 { font-size: 1.05rem; }
+
+.highlight-grid p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ── 20. Responsive adjustments ───────────────────────────────── */
+@media (max-width: 940px) {
+  :root { --section-space: 88px; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    line-height: 1.02 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  /* Restore correct heading rhythm at mobile sizes */
+  .section-heading h2,
+  .about-copy h2,
+  .cta-section h2,
+  .project-inquiry-copy h2,
+  .testimonial-intro h2,
+  .best-for-section .section-heading h2,
+  #process .section-heading h2 {
+    line-height: 1.06 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  .project-inquiry-card h3 {
+    line-height: 1.15 !important;
+  }
+}
+
+@media (max-width: 680px) {
+  :root { --section-space: 72px; }
+
+  .value-item { padding: 1.25rem; }
+  .service-card { min-height: auto; }
+}
