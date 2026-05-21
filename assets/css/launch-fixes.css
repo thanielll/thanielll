@@ -1,117 +1,101 @@
-/* Launch stability, static sections, and mobile polish */
+/* ═══════════════════════════════════════════════════════════════
+   launch-fixes.css — Testimonial + Inquiry Section Layout 2026
+   Clean, professional. Zero warm-orange tokens.
+   No font-weight:900. No text-transform:uppercase overrides.
+   No flat offset box-shadows. No decorative pseudo-elements.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Testimonial Section ───────────────────────────────────────── */
 .testimonial-section {
   position: relative;
-  overflow: hidden;
-  background: var(--color-bg-soft);
-  border-top: 1px solid rgba(var(--color-accent-rgb), 0.08);
-  border-bottom: 1px solid rgba(var(--color-accent-rgb), 0.08);
-}
-
-.testimonial-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(var(--color-accent-rgb), 0.045) 0 1px, transparent 1.5px),
-    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.025) 1px, transparent 1px),
-    linear-gradient(rgba(var(--color-accent-rgb), 0.025) 1px, transparent 1px);
-  background-size: 24px 24px, 96px 96px, 96px 96px;
-  pointer-events: none;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .testimonial-grid {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
 }
 
 .testimonial-intro h2 {
-  max-width: 11ch;
-  font-size: clamp(3rem, 4.45rem, 4.45rem);
-  line-height: 0.94;
-  letter-spacing: -0.055em;
+  max-width: 12ch;
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .testimonial-intro p:last-child {
-  max-width: 28rem;
+  max-width: 30rem;
   color: var(--color-muted);
-  font-size: 0.98rem;
+  font-size: 0.9625rem;
   line-height: 1.75;
+  margin-top: 0.875rem;
 }
 
 .testimonial-card {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  padding: clamp(1.25rem, 3vw, 2rem);
-  background: rgba(var(--color-surface-rgb), 0.9);
-  box-shadow: 10px 10px 0 rgba(var(--color-accent-rgb), 0.08);
-  isolation: isolate;
-}
-
-.testimonial-card::before {
-  content: "";
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 52px;
-  height: 52px;
-  border-top: 1px solid rgba(var(--color-accent-rgb), 0.22);
-  border-right: 1px solid rgba(var(--color-accent-rgb), 0.22);
-  pointer-events: none;
+  border-radius: 12px;
+  padding: clamp(1.375rem, 3vw, 2rem);
+  background: var(--color-bg-soft);
+  box-shadow: var(--shadow);
 }
 
 .testimonial-topline {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem 1rem;
+  gap: 0.5rem 1rem;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 1.125rem;
 }
 
 .testimonial-rating {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-accent-dark);
-  font-size: 0.86rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .testimonial-rating span {
-  color: var(--color-accent);
-  letter-spacing: 0.08em;
+  color: #F59E0B;
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
 }
 
 .testimonial-project {
   color: var(--color-muted);
   font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
 .testimonial-quote {
-  max-width: 48rem;
+  max-width: 52rem;
   margin: 0;
-  color: var(--color-ink);
-  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
-  font-weight: 600;
-  line-height: 1.55;
-  letter-spacing: -0.025em;
+  color: var(--color-text);
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  font-style: italic;
 }
 
 .testimonial-author {
   display: flex;
   align-items: center;
-  gap: 0.82rem;
+  gap: 0.875rem;
   margin-top: 1.25rem;
-  padding-top: 1rem;
+  padding-top: 1.125rem;
   border-top: 1px solid var(--color-border);
 }
 
@@ -120,167 +104,141 @@
   height: 42px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--color-ink);
-  background: var(--color-ink);
-  color: var(--color-on-dark);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
   font-family: var(--font-display);
-  font-size: 0.9rem;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  box-shadow: 4px 4px 0 rgba(var(--color-accent-rgb), 0.12);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  box-shadow: none;
 }
 
 .testimonial-author strong,
-.testimonial-author span {
-  display: block;
-}
+.testimonial-author span { display: block; }
 
 .testimonial-author strong {
-  color: var(--color-ink);
-  font-size: 0.94rem;
-  font-weight: 900;
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  font-weight: 700;
 }
 
-.testimonial-author span {
-  margin-top: 0.12rem;
+.testimonial-author span:not(.testimonial-avatar) {
+  margin-top: 0.125rem;
   color: var(--color-muted);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .testimonial-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.15rem 0 0;
+  gap: 0.375rem;
+  margin: 1rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .testimonial-tags li {
   border: 1px solid var(--color-border);
-  padding: 0.45rem 0.6rem;
-  background: rgba(var(--color-surface-rgb), 0.7);
-  color: var(--color-accent-dark);
-  font-size: 0.68rem;
-  font-weight: 900;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.3rem 0.625rem;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
+/* ── Project Inquiry Section ───────────────────────────────────── */
 .project-inquiry-section {
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--color-border);
-  background:
-    radial-gradient(circle at 12% 18%, rgba(var(--color-accent-rgb), 0.055) 0 1px, transparent 1.5px),
-    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(var(--color-accent-rgb), 0.03) 1px, transparent 1px),
-    var(--color-bg-soft);
-  background-size: 22px 22px, 92px 92px, 92px 92px, auto;
-}
-
-.project-inquiry-section::before {
-  content: "START";
-  position: absolute;
-  top: 42px;
-  right: max(22px, calc((100% - var(--container)) / 2));
-  z-index: 0;
-  color: transparent;
-  font-family: var(--font-display);
-  font-size: clamp(4.5rem, 12vw, 10rem);
-  font-weight: 900;
-  line-height: 0.8;
-  letter-spacing: -0.075em;
-  -webkit-text-stroke: 1px rgba(var(--color-accent-rgb), 0.09);
-  text-transform: uppercase;
-  pointer-events: none;
+  background: var(--color-bg);
 }
 
 .project-inquiry-grid {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.44fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.44fr);
+  gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
 }
 
 .project-inquiry-copy h2 {
-  max-width: 16ch !important;
-  font-size: clamp(3rem, 4.45rem, 4.45rem);
-  line-height: 0.94;
-  letter-spacing: -0.055em;
+  max-width: 18ch;
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  line-height: 1.1 !important;
+  letter-spacing: -0.03em !important;
 }
 
 .project-inquiry-copy > p {
-  max-width: 56rem;
-  margin-top: 1.15rem;
+  max-width: 52rem;
+  margin-top: 1rem;
   color: var(--color-muted);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.9625rem !important;
+  line-height: 1.75 !important;
 }
 
 .project-type-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 1.35rem;
+  gap: 0.5rem;
+  margin-top: 1.375rem;
   padding: 0;
   list-style: none;
 }
 
 .project-type-grid li {
   border: 1px solid var(--color-border);
-  padding: 0.55rem 0.7rem;
-  background: rgba(var(--color-surface-rgb), 0.7);
-  color: var(--color-accent-dark);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.4rem 0.875rem;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .project-inquiry-card {
   position: relative;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   border: 1px solid var(--color-border);
-  padding: clamp(1.15rem, 2.4vw, 1.65rem);
-  background: rgba(var(--color-surface-rgb), 0.88);
-  box-shadow: 10px 10px 0 rgba(var(--color-accent-rgb), 0.08);
-}
-
-.project-inquiry-card::after {
-  content: "";
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  width: 34px;
-  height: 34px;
-  border-top: 1px solid rgba(var(--color-accent-rgb), 0.24);
-  border-right: 1px solid rgba(var(--color-accent-rgb), 0.24);
-  pointer-events: none;
+  border-radius: 12px;
+  padding: clamp(1.375rem, 2.5vw, 1.75rem);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
 }
 
 .project-inquiry-card h3 {
   margin: 0;
-  max-width: 11ch;
-  font-size: clamp(1.55rem, 2.4vw, 2.3rem);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  font-size: clamp(1.25rem, 2vw, 1.5rem) !important;
+  font-weight: 700;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+  max-width: none;
 }
 
 .project-inquiry-card p {
   color: var(--color-muted);
-  line-height: 1.7;
+  font-size: 0.9rem !important;
+  line-height: 1.72 !important;
+  margin-top: 0.75rem;
 }
 
 .project-inquiry-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 0.25rem;
+  margin-top: 1.375rem;
 }
 
 .featured-projects-action {
@@ -294,32 +252,19 @@
   justify-content: center;
 }
 
-.project-card .project-preview,
-.case-card .project-preview {
-  min-height: 0 !important;
-  height: auto !important;
-  aspect-ratio: 16 / 10 !important;
-  padding: 0 !important;
-}
-
-.project-card .project-preview img,
-.case-card .project-preview img {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-}
-
+/* ── Responsive ────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .testimonial-grid,
   .project-inquiry-grid {
     grid-template-columns: 1fr;
   }
 
-  .testimonial-intro h2,
+  .testimonial-intro h2 {
+    max-width: 15ch !important;
+  }
+
   .project-inquiry-copy h2 {
-    max-width: 13ch !important;
+    max-width: 20ch !important;
   }
 }
 
@@ -327,9 +272,9 @@
   .hero h1,
   .page-hero h1,
   .case-hero h1 {
-    font-size: clamp(2.9rem, 13vw, 4.2rem) !important;
-    line-height: 0.92 !important;
-    letter-spacing: -0.065em !important;
+    font-size: clamp(2.25rem, 10vw, 3.5rem) !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.03em !important;
   }
 
   .section-heading h2,
@@ -340,16 +285,9 @@
   .testimonial-intro h2,
   .best-for-section .section-heading h2,
   #process .section-heading h2 {
-    font-size: clamp(2.35rem, 10vw, 3.55rem) !important;
-    line-height: 0.94 !important;
-    letter-spacing: -0.055em !important;
-    max-width: 12ch !important;
-  }
-
-  .process-copy-panel h3,
-  .project-inquiry-card h3 {
-    font-size: clamp(1.8rem, 8vw, 2.7rem) !important;
-    line-height: 0.96 !important;
+    font-size: clamp(1.75rem, 8vw, 2.75rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
   }
 }
 
@@ -357,17 +295,16 @@
   .hero h1,
   .page-hero h1,
   .case-hero h1 {
-    font-size: clamp(2.35rem, 12.5vw, 3.25rem) !important;
+    font-size: clamp(1.875rem, 11vw, 2.5rem) !important;
   }
 
   .section-heading h2,
   .about-copy h2,
-  .case-section-heading h2,
   .cta-section h2,
   .project-inquiry-copy h2,
   .testimonial-intro h2,
   .best-for-section .section-heading h2,
   #process .section-heading h2 {
-    font-size: clamp(2rem, 9vw, 2.75rem) !important;
+    font-size: clamp(1.625rem, 9vw, 2.25rem) !important;
   }
 }

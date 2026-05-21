@@ -3,32 +3,30 @@
    Redesign 2026 · Clean Professional Light
    ═══════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
-
 /* ── Variables ─────────────────────────────────────────── */
 :root {
-  /* Color system */
-  --color-bg:             #F7F9FC;
+  /* Color system — Zinc neutrals + blue accent (UI/UX Pro Max recommendation) */
+  --color-bg:             #FAFAFA;
   --color-surface:        #FFFFFF;
-  --color-text:           #0D1520;
-  --color-muted:          #5E6E85;
-  --color-muted-soft:     #8A97AA;
-  --color-border:         #DDE5F0;
-  --color-line:           #DDE5F0;
-  --color-line-strong:    #C5D0E4;
+  --color-text:           #09090B;
+  --color-muted:          #71717A;
+  --color-muted-soft:     #A1A1AA;
+  --color-border:         #E4E4E7;
+  --color-line:           #E4E4E7;
+  --color-line-strong:    #D4D4D8;
 
-  /* Accent — rich indigo, not generic SaaS blue */
-  --color-accent:         #1B4FD8;
-  --color-accent-soft:    #EBF0FF;
-  --color-accent-dark:    #1338B0;
+  /* Accent — recommended by UI/UX Pro Max for professional portfolio */
+  --color-accent:         #2563EB;
+  --color-accent-soft:    #EFF6FF;
+  --color-accent-dark:    #1D4ED8;
 
   /* Surface variants */
-  --color-bg-soft:        #EEF3FB;
-  --color-bg-alt:         #E5EDF8;
+  --color-bg-soft:        #F4F4F5;
+  --color-bg-alt:         #E4E4E7;
 
   /* Dark surface (CTA section) */
   --color-on-dark:        #FFFFFF;
-  --color-on-dark-muted:  rgba(255, 255, 255, 0.62);
+  --color-on-dark-muted:  rgba(255, 255, 255, 0.60);
 
   /* Aliases */
   --color-heading:        var(--color-text);
@@ -38,17 +36,17 @@
   --color-ink:            var(--color-text);
 
   /* RGB variants */
-  --color-bg-rgb:         247, 249, 252;
-  --color-bg-soft-rgb:    238, 243, 251;
+  --color-bg-rgb:         250, 250, 250;
+  --color-bg-soft-rgb:    244, 244, 245;
   --color-surface-rgb:    255, 255, 255;
-  --color-text-rgb:       13, 21, 32;
-  --color-accent-rgb:     27, 79, 216;
-  --color-accent-soft-rgb:235, 240, 255;
-  --color-accent-dark-rgb:19, 56, 176;
+  --color-text-rgb:       9, 9, 11;
+  --color-accent-rgb:     37, 99, 235;
+  --color-accent-soft-rgb:239, 246, 255;
+  --color-accent-dark-rgb:29, 78, 216;
 
-  /* Typography */
-  --font-body:    "DM Sans", "Inter", system-ui, -apple-system, sans-serif;
-  --font-display: "Archivo", "DM Sans", system-ui, sans-serif;
+  /* Typography — Archivo headings + Space Grotesk body (UI/UX Pro Max #1 pick) */
+  --font-body:    "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-display: "Archivo", "Space Grotesk", system-ui, sans-serif;
 
   /* Layout */
   --container:     1280px;
