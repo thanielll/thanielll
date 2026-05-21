@@ -1,34 +1,35 @@
 /* ═══════════════════════════════════════════════════════
    Nathaniel Rodriguez — Portfolio
-   Redesign 2026 · Clean Professional Light
+   Studio Linen Design System 2026
+   Forest Green + Warm Stone + Pill Buttons
    ═══════════════════════════════════════════════════════ */
 
 /* ── Variables ─────────────────────────────────────────── */
 :root {
-  /* Color system — Zinc neutrals + blue accent (UI/UX Pro Max recommendation) */
-  --color-bg:             #FAFAFA;
+  /* Color system — Warm stone neutrals + forest green accent */
+  --color-bg:             #FAFAF8;
   --color-surface:        #FFFFFF;
-  --color-text:           #09090B;
-  --color-muted:          #71717A;
-  --color-muted-soft:     #A1A1AA;
-  --color-border:         #E4E4E7;
-  --color-line:           #E4E4E7;
-  --color-line-strong:    #D4D4D8;
+  --color-text:           #1A1A1A;
+  --color-muted:          #6B7280;
+  --color-muted-soft:     #9CA3AF;
+  --color-border:         #E5E5E3;
+  --color-line:           #E5E5E3;
+  --color-line-strong:    #D1D5DB;
 
-  /* Accent — recommended by UI/UX Pro Max for professional portfolio */
-  --color-accent:         #2563EB;
-  --color-accent-soft:    #EFF6FF;
-  --color-accent-dark:    #1D4ED8;
+  /* Accent — Forest green: completely different from orange and blue */
+  --color-accent:         #16A34A;
+  --color-accent-soft:    #F0FDF4;
+  --color-accent-dark:    #15803D;
 
   /* Surface variants */
-  --color-bg-soft:        #F4F4F5;
-  --color-bg-alt:         #E4E4E7;
+  --color-bg-soft:        #F5F5F3;
+  --color-bg-alt:         #ECEAE5;
 
   /* Dark surface (CTA section) */
   --color-on-dark:        #FFFFFF;
-  --color-on-dark-muted:  rgba(255, 255, 255, 0.60);
+  --color-on-dark-muted:  rgba(255, 255, 255, 0.62);
 
-  /* Aliases */
+  /* Aliases — keep all old names so JS files work without errors */
   --color-heading:        var(--color-text);
   --color-white:          var(--color-surface);
   --color-black:          var(--color-text);
@@ -36,29 +37,30 @@
   --color-ink:            var(--color-text);
 
   /* RGB variants */
-  --color-bg-rgb:         250, 250, 250;
-  --color-bg-soft-rgb:    244, 244, 245;
+  --color-bg-rgb:         250, 250, 248;
+  --color-bg-soft-rgb:    245, 245, 243;
   --color-surface-rgb:    255, 255, 255;
-  --color-text-rgb:       9, 9, 11;
-  --color-accent-rgb:     37, 99, 235;
-  --color-accent-soft-rgb:239, 246, 255;
-  --color-accent-dark-rgb:29, 78, 216;
+  --color-text-rgb:       26, 26, 26;
+  --color-accent-rgb:     22, 163, 74;
+  --color-accent-soft-rgb:240, 253, 244;
+  --color-accent-dark-rgb:21, 128, 61;
 
-  /* Typography — Archivo headings + Space Grotesk body (UI/UX Pro Max #1 pick) */
+  /* Typography — Archivo headings + Space Grotesk body */
   --font-body:    "Space Grotesk", system-ui, -apple-system, sans-serif;
   --font-display: "Archivo", "Space Grotesk", system-ui, sans-serif;
 
   /* Layout */
   --container:     1280px;
   --section-space: 96px;
-  --radius:        8px;
-  --radius-sm:     4px;
-  --radius-lg:     12px;
+  --radius:        999px;   /* Pill buttons — distinctive design language */
+  --radius-sm:     6px;
+  --radius-lg:     14px;
+  --radius-card:   12px;
 
-  /* Shadows */
-  --shadow-sm:  0 1px 3px rgba(0, 20, 60, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow:     0 4px 16px rgba(0, 20, 60, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
-  --shadow-lg:  0 12px 40px rgba(0, 20, 60, 0.10), 0 4px 12px rgba(0, 0, 0, 0.04);
+  /* Shadows — clean, no color tint */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow:     0 4px 16px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg:  0 12px 36px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.05);
 
   /* Motion */
   --motion-fast:   150ms;
@@ -211,21 +213,23 @@ h3 {
 .eyebrow-invert { color: rgba(255, 255, 255, 0.7); }
 .eyebrow-invert::before { background: rgba(255, 255, 255, 0.5); }
 
-/* ── Buttons ───────────────────────────────────────────── */
+/* ── Buttons — Pill Design ─────────────────────────────── */
 .btn {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.375rem;
   min-height: 48px;
   border: 1.5px solid transparent;
-  border-radius: var(--radius);
-  padding: 0 1.375rem;
+  border-radius: 999px;
+  padding: 0 1.5rem;
   font-family: var(--font-display);
   font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
   white-space: nowrap;
+  cursor: pointer;
   transition:
     background   var(--motion-fast) ease,
     border-color var(--motion-fast) ease,
@@ -234,7 +238,6 @@ h3 {
     box-shadow   var(--motion-fast) ease;
 }
 
-/* Remove the previous faux-underline pseudo */
 .btn::after { display: none; }
 
 .btn:hover,
@@ -242,25 +245,33 @@ h3 {
   transform: translateY(-2px);
 }
 
+/* Primary — forest green fill */
+.btn-primary,
 .btn-dark {
   color: #fff;
-  background: var(--color-text);
-  border-color: var(--color-text);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
+.btn-primary:hover,
+.btn-primary:focus-visible,
 .btn-dark:hover,
 .btn-dark:focus-visible {
   background: var(--color-accent-dark);
   border-color: var(--color-accent-dark);
-  box-shadow: 0 4px 18px rgba(var(--color-accent-rgb), 0.32);
+  box-shadow: 0 4px 20px rgba(var(--color-accent-rgb), 0.30);
 }
 
+/* Secondary — bordered */
+.btn-secondary,
 .btn-light {
   color: var(--color-text);
   background: var(--color-surface);
   border-color: var(--color-border);
 }
 
+.btn-secondary:hover,
+.btn-secondary:focus-visible,
 .btn-light:hover,
 .btn-light:focus-visible {
   border-color: var(--color-accent);
@@ -279,10 +290,11 @@ h3 {
   background: var(--color-accent-soft);
 }
 
+/* On dark backgrounds */
 .btn-outline-dark {
   color: var(--color-on-dark);
-  border-color: rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .btn-outline-dark:hover,
@@ -499,7 +511,7 @@ h3 {
 .hero-featured-card {
   background: var(--color-bg-soft);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   overflow: hidden;
   transition: box-shadow var(--motion-base) ease, transform var(--motion-base) ease;
 }
@@ -717,7 +729,7 @@ main > section:not(.cta-section)::after,
   flex-direction: column;
   min-height: 280px;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   padding: 1.625rem;
   background: var(--color-surface);
   transition:
@@ -822,7 +834,7 @@ main > section:not(.cta-section)::after,
 
 .project-card {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   overflow: hidden;
   background: var(--color-surface);
   transition:
@@ -1050,7 +1062,7 @@ main > section:not(.cta-section)::after,
   position: relative;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   background: var(--color-surface);
   transition:
     transform    var(--motion-base) ease,
@@ -1166,7 +1178,7 @@ main > section:not(.cta-section)::after,
 .case-hero-visual {
   overflow: hidden;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   background: var(--color-surface);
   box-shadow: var(--shadow-lg);
   /* No skew/tilt */
@@ -1244,7 +1256,7 @@ main > section:not(.cta-section)::after,
 .overview-grid article,
 .highlight-grid article {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   padding: 1.375rem;
   background: var(--color-surface);
 }
@@ -1309,7 +1321,7 @@ main > section:not(.cta-section)::after,
   display: grid;
   align-content: end;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   padding: 1rem;
   background: var(--color-bg-soft);
 }
@@ -1420,7 +1432,7 @@ main > section:not(.cta-section)::after,
   position: relative;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   background: var(--color-surface);
   box-shadow: var(--shadow-lg);
   aspect-ratio: 4 / 4.65;
@@ -1460,7 +1472,7 @@ main > section:not(.cta-section)::after,
 /* Tools panel */
 .tools-panel {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   padding: 1.5rem;
   background: var(--color-surface);
   box-shadow: var(--shadow);
@@ -1514,7 +1526,7 @@ main > section:not(.cta-section)::after,
 
 .testimonial-card {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   padding: 1.75rem;
   background: var(--color-bg-soft);
 }
@@ -1635,7 +1647,7 @@ main > section:not(.cta-section)::after,
 
 .project-inquiry-card {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   padding: 1.75rem;
   background: var(--color-surface);
   box-shadow: var(--shadow);
@@ -1663,10 +1675,11 @@ main > section:not(.cta-section)::after,
 .cta-section {
   padding: 88px 0;
   color: var(--color-on-dark);
-  background: var(--color-text);
+  /* Deep forest green CTA — completely different from old dark grey */
+  background: #14532D;
   background-image:
-    radial-gradient(ellipse at 14% 18%, rgba(var(--color-accent-rgb), 0.22) 0%, transparent 48%),
-    radial-gradient(ellipse at 82% 72%, rgba(var(--color-accent-rgb), 0.14) 0%, transparent 42%);
+    radial-gradient(ellipse at 14% 20%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 84% 76%, rgba(255,255,255,0.05) 0%, transparent 45%);
 }
 
 .cta-grid {
@@ -1739,7 +1752,7 @@ main > section:not(.cta-section)::after,
   gap: 0.875rem;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   padding: 1rem 1.125rem;
   color: var(--color-on-dark);
   background: rgba(255, 255, 255, 0.045);
@@ -1903,7 +1916,7 @@ main > section:not(.cta-section)::after,
   position: relative;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
   transition:
@@ -2050,7 +2063,7 @@ main > section:not(.cta-section)::after,
     max-height: calc(100vh - 90px);
     overflow-y: auto;
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-card);
     padding: 1rem;
     background: var(--color-surface);
     box-shadow: var(--shadow-lg);

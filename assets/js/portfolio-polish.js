@@ -1,5 +1,9 @@
+/* portfolio-polish.js — Cleaned 2026
+   Removed: hardcoded warm rgba(255,248,239), flat 14px offset shadows,
+   font-weight:900, text-transform:uppercase overrides.
+   Kept: hero featured card wiring, footer branding, case meta list. */
 (function portfolioPolishEnhancements() {
-  const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (document.querySelector('[data-portfolio-polish]')) return;
 
   const style = document.createElement('style');
   style.setAttribute('data-portfolio-polish', 'true');
@@ -7,123 +11,118 @@
     .hero-featured-card {
       position: relative;
       overflow: hidden;
-      display: grid;
-      gap: 1.2rem;
+      display: flex;
+      flex-direction: column;
       align-self: center;
       border: 1px solid var(--color-border);
-      padding: clamp(1.25rem, 3vw, 1.8rem);
-      background: linear-gradient(180deg, rgba(var(--color-surface-rgb), 0.96), rgba(255, 248, 239, 0.88));
-      box-shadow: 14px 14px 0 rgba(var(--color-accent-rgb), 0.1);
-      isolation: isolate;
+      border-radius: 12px;
+      background: var(--color-surface);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+      transition: box-shadow 240ms ease, transform 240ms ease;
     }
 
-    .hero-featured-card::before {
-      content: "";
-      position: absolute;
-      inset: 1rem;
-      z-index: -1;
-      border: 1px solid rgba(var(--color-accent-rgb), 0.13);
-      pointer-events: none;
-    }
-
-    .hero-featured-card::after {
-      content: "";
-      position: absolute;
-      top: -70px;
-      right: -70px;
-      width: 180px;
-      height: 180px;
-      z-index: -2;
-      border: 1px solid rgba(var(--color-accent-rgb), 0.18);
-      transform: rotate(16deg);
+    .hero-featured-card:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,0.09), 0 4px 8px rgba(0,0,0,0.04);
+      transform: translateY(-2px);
     }
 
     .hero-featured-thumb {
-      position: relative;
+      display: block;
       overflow: hidden;
-      border: 1px solid var(--color-border);
-      background: var(--color-bg-alt);
+      border-bottom: 1px solid var(--color-border);
+      border-radius: 12px 12px 0 0;
       aspect-ratio: 16 / 10;
     }
 
     .hero-featured-thumb img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       display: block;
       object-fit: cover;
-      filter: grayscale(0.05) sepia(0.06) contrast(1.02);
-      transition: transform 420ms ease, filter 420ms ease;
+      transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .hero-featured-card:hover .hero-featured-thumb img,
-    .hero-featured-card:focus-within .hero-featured-thumb img {
-      transform: scale(1.035);
-      filter: grayscale(0) sepia(0.04) contrast(1.04);
+    .hero-featured-card:hover .hero-featured-thumb img {
+      transform: scale(1.04);
     }
 
-    .hero-featured-kicker,
-    .case-meta-list span,
-    .footer-brand-lockup span {
-      color: var(--color-accent-dark);
-      font-size: 0.72rem;
-      font-weight: 900;
+    .hero-featured-card > div {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.125rem 1.25rem 0;
+    }
+
+    .hero-featured-kicker {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      color: var(--color-accent);
+      background: var(--color-accent-soft);
+      padding: 0.25rem 0.625rem;
+      border-radius: 999px;
     }
 
     .hero-featured-card h2 {
-      max-width: 12ch;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      text-transform: none;
       margin: 0;
-      color: var(--color-ink);
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      line-height: 0.94;
-      letter-spacing: -0.055em;
-      text-transform: uppercase;
+      color: var(--color-text);
     }
 
-    .hero-featured-card p {
+    .hero-featured-card > p {
       margin: 0;
       color: var(--color-muted);
-      font-size: 0.96rem;
+      font-size: 0.875rem;
       line-height: 1.65;
+      padding: 0.625rem 1.25rem 0;
     }
 
     .hero-featured-meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      border: 1px solid var(--color-border);
-      background: rgba(var(--color-surface-rgb), 0.62);
+      display: flex;
+      gap: 0.375rem;
+      flex-wrap: wrap;
+      padding: 0.75rem 1.25rem 0;
     }
 
     .hero-featured-meta span {
-      padding: 0.82rem;
-      color: var(--color-ink);
-      font-size: 0.72rem;
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--color-muted);
+      background: var(--color-bg-soft);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+      text-transform: none;
+      letter-spacing: 0;
     }
 
-    .hero-featured-meta span + span {
-      border-left: 1px solid var(--color-border);
+    .hero-featured-card > .btn {
+      display: flex;
+      margin: 1rem 1.25rem 1.25rem;
+      width: calc(100% - 2.5rem);
+      justify-content: center;
     }
 
     .case-meta-list {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 0;
-      margin: 1.15rem 0 0;
+      margin: 1rem 0 0;
       border: 1px solid var(--color-border);
-      background: rgba(var(--color-bg-soft-rgb), 0.74);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--color-bg-soft);
     }
 
     .case-meta-list li {
       display: grid;
-      gap: 0.32rem;
-      padding: 0.82rem;
-      border: 0;
-      background: transparent !important;
+      gap: 0.25rem;
+      padding: 0.75rem;
       list-style: none;
     }
 
@@ -131,35 +130,44 @@
       border-left: 1px solid var(--color-border);
     }
 
+    .case-meta-list span {
+      color: var(--color-muted-soft);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
     .case-meta-list strong {
-      color: var(--color-ink);
-      font-size: 0.78rem;
-      line-height: 1.35;
+      color: var(--color-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.3;
     }
 
     .footer-brand-lockup {
       display: inline-flex;
       align-items: center;
-      gap: 0.9rem;
-      margin-bottom: 0.9rem;
-      color: var(--color-ink);
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-text);
       text-decoration: none;
+      transition: opacity 150ms ease;
     }
 
+    .footer-brand-lockup:hover { opacity: 0.8; }
+
     .footer-brand-logo {
-      width: 46px;
-      height: 46px;
+      width: 40px; height: 40px;
       display: grid;
       place-items: center;
-      border: 1px solid var(--color-ink);
-      padding: 0.34rem;
-      background: var(--color-ink);
-      box-shadow: 6px 6px 0 rgba(var(--color-accent-rgb), 0.14);
+      border-radius: 8px;
+      padding: 0.3rem;
+      background: var(--color-text);
     }
 
     .footer-brand-logo img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       display: block;
       object-fit: contain;
       filter: brightness(0) invert(1);
@@ -167,48 +175,46 @@
 
     .footer-brand-lockup strong {
       display: block;
-      margin-top: 0.18rem;
       font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 0.9375rem;
+      font-weight: 800;
       line-height: 1;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.01em;
+      text-transform: none;
+    }
+
+    .footer-brand-lockup span > span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--color-muted);
       text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    @media (max-width: 940px) {
+      .hero-featured-card { display: none; }
     }
 
     @media (max-width: 900px) {
-      .hero-featured-card {
-        margin-top: 0.5rem;
-      }
-
-      .case-meta-list {
-        grid-template-columns: 1fr;
-      }
-
-      .case-meta-list li + li,
-      .hero-featured-meta span + span {
-        border-left: 0;
-        border-top: 1px solid var(--color-border);
-      }
-
-      .hero-featured-meta {
-        grid-template-columns: 1fr;
-      }
+      .case-meta-list { grid-template-columns: 1fr; }
+      .case-meta-list li + li { border-left: 0; border-top: 1px solid var(--color-border); }
     }
   `;
   document.head.appendChild(style);
 
   const getFeaturedStudy = () => {
     if (!Array.isArray(window.caseStudies) || !window.caseStudies.length) return null;
-    return window.caseStudies.find((study) => study.slug === 'consilium-dynamics-website-redesign') || window.caseStudies.find((study) => study.featured) || window.caseStudies[0];
+    return (
+      window.caseStudies.find((s) => s.slug === 'consilium-dynamics-website-redesign') ||
+      window.caseStudies.find((s) => s.featured) ||
+      window.caseStudies[0]
+    );
   };
 
-  const escapeText = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    "'": '&#039;',
-    '"': '&quot;'
-  }[char]));
+  const escapeText = (v) => String(v || '').replace(/[&<>'"]/g, (c) => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;' }[c]
+  ));
 
   const enhanceHero = () => {
     const heroPanel = document.querySelector('.hero-accent');
@@ -218,27 +224,27 @@
     heroPanel.className = 'hero-featured-card';
     heroPanel.innerHTML = `
       <a class="hero-featured-thumb" href="${escapeText(study.link)}" aria-label="View ${escapeText(study.title)} case study">
-        <img src="${escapeText(study.image || 'assets/images/Nathaniel%20Logo.png')}" alt="${escapeText(study.title)} preview" loading="eager">
+        <img src="${escapeText(study.image || '')}" alt="${escapeText(study.title)} preview" loading="eager">
       </a>
       <div>
         <span class="hero-featured-kicker">Featured Case Study</span>
         <h2>${escapeText(study.title.replace(' Website Redesign', ''))}</h2>
       </div>
       <p>${escapeText(study.summary)}</p>
-      <div class="hero-featured-meta" aria-label="Featured project details">
+      <div class="hero-featured-meta">
         <span>${escapeText(study.projectType || study.category)}</span>
         <span>${escapeText((study.tools || []).slice(0, 2).join(' / ') || 'WordPress / Elementor')}</span>
       </div>
-      <a class="btn btn-dark" href="${escapeText(study.link)}">View Case Study</a>
+      <a class="btn btn-primary" href="${escapeText(study.link)}">View Case Study</a>
     `;
   };
 
   const enhanceCaseCards = () => {
     document.querySelectorAll('.case-card').forEach((card) => {
       if (card.querySelector('.case-meta-list')) return;
-
       const title = card.querySelector('h2')?.textContent?.trim();
-      const study = Array.isArray(window.caseStudies) ? window.caseStudies.find((item) => item.title === title) : null;
+      const study = Array.isArray(window.caseStudies)
+        ? window.caseStudies.find((s) => s.title === title) : null;
       const body = card.querySelector('.case-card-body');
       const tags = body?.querySelector('ul');
       if (!body || !study || !tags) return;
@@ -256,11 +262,10 @@
   };
 
   const enhanceFooterBranding = () => {
-    document.querySelectorAll('.footer-intro').forEach((footerIntro) => {
-      const currentBrand = footerIntro.querySelector('.footer-brand');
-      if (!currentBrand || footerIntro.querySelector('.footer-brand-lockup')) return;
-
-      currentBrand.outerHTML = `
+    document.querySelectorAll('.footer-intro').forEach((intro) => {
+      const brand = intro.querySelector('.footer-brand');
+      if (!brand || intro.querySelector('.footer-brand-lockup')) return;
+      brand.outerHTML = `
         <a class="footer-brand-lockup" href="index.html#home" aria-label="Nathaniel Rodriguez home">
           <span class="footer-brand-logo"><img src="assets/images/Nathaniel%20Logo.png" alt="Nathaniel Rodriguez logo"></span>
           <span><span>Portfolio</span><strong>Nathaniel Rodriguez</strong></span>
@@ -269,21 +274,14 @@
     });
   };
 
-  const runEnhancements = () => {
+  const run = () => {
     enhanceHero();
     enhanceCaseCards();
     enhanceFooterBranding();
   };
 
-  runEnhancements();
+  run();
 
-  const caseGrid = document.querySelector('[data-case-study-grid]');
-  if (caseGrid) {
-    const observer = new MutationObserver(() => enhanceCaseCards());
-    observer.observe(caseGrid, { childList: true, subtree: true });
-  }
-
-  if (hasFinePointer) {
-    document.addEventListener('pointermove', () => enhanceCaseCards(), { once: true, passive: true });
-  }
+  const grid = document.querySelector('[data-case-study-grid]');
+  if (grid) new MutationObserver(enhanceCaseCards).observe(grid, { childList: true, subtree: true });
 })();

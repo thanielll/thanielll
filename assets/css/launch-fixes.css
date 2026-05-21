@@ -1,13 +1,11 @@
 /* ═══════════════════════════════════════════════════════════════
-   launch-fixes.css — Testimonial + Inquiry Section Layout 2026
-   Clean, professional. Zero warm-orange tokens.
-   No font-weight:900. No text-transform:uppercase overrides.
-   No flat offset box-shadows. No decorative pseudo-elements.
+   launch-fixes.css — Testimonial + Inquiry Layout 2026
+   Forest green system. No warm-orange. No font-weight:900 overrides.
+   No flat offset shadows. No decorative pseudo-elements.
    ═══════════════════════════════════════════════════════════════ */
 
 /* ── Testimonial Section ───────────────────────────────────────── */
 .testimonial-section {
-  position: relative;
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
@@ -22,7 +20,7 @@
 }
 
 .testimonial-intro h2 {
-  max-width: 12ch;
+  max-width: 13ch;
   font-size: clamp(1.875rem, 3.5vw, 2.75rem);
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -38,7 +36,6 @@
 
 .testimonial-card {
   position: relative;
-  overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: clamp(1.375rem, 3vw, 2rem);
@@ -63,12 +60,12 @@
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0;
+  text-transform: none;
 }
 
 .testimonial-rating span {
   color: #F59E0B;
   letter-spacing: 0.04em;
-  font-size: 0.9rem;
 }
 
 .testimonial-project {
@@ -83,9 +80,9 @@
   max-width: 52rem;
   margin: 0;
   color: var(--color-text);
-  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  font-size: clamp(0.9625rem, 1.2vw, 1.0625rem);
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.75;
   letter-spacing: -0.01em;
   font-style: italic;
 }
@@ -100,8 +97,7 @@
 }
 
 .testimonial-avatar {
-  width: 42px;
-  height: 42px;
+  width: 42px; height: 42px;
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -116,7 +112,7 @@
 }
 
 .testimonial-author strong,
-.testimonial-author span { display: block; }
+.testimonial-author span:not(.testimonial-avatar) { display: block; }
 
 .testimonial-author strong {
   color: var(--color-text);
@@ -129,6 +125,7 @@
   color: var(--color-muted);
   font-size: 0.8rem;
   font-weight: 500;
+  text-transform: none;
 }
 
 .testimonial-tags {
@@ -152,119 +149,14 @@
   text-transform: none;
 }
 
-/* ── Project Inquiry Section ───────────────────────────────────── */
-.project-inquiry-section {
-  position: relative;
-  overflow: hidden;
-  border-top: 1px solid var(--color-border);
-  background: var(--color-bg);
-}
-
-.project-inquiry-grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.44fr);
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
-}
-
-.project-inquiry-copy h2 {
-  max-width: 18ch;
-  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
-  line-height: 1.1 !important;
-  letter-spacing: -0.03em !important;
-}
-
-.project-inquiry-copy > p {
-  max-width: 52rem;
-  margin-top: 1rem;
-  color: var(--color-muted);
-  font-size: 0.9625rem !important;
-  line-height: 1.75 !important;
-}
-
-.project-type-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.375rem;
-  padding: 0;
-  list-style: none;
-}
-
-.project-type-grid li {
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  padding: 0.4rem 0.875rem;
-  background: var(--color-surface);
-  color: var(--color-muted);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-.project-inquiry-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: clamp(1.375rem, 2.5vw, 1.75rem);
-  background: var(--color-surface);
-  box-shadow: var(--shadow);
-}
-
-.project-inquiry-card h3 {
-  margin: 0;
-  font-size: clamp(1.25rem, 2vw, 1.5rem) !important;
-  font-weight: 700;
-  line-height: 1.25 !important;
-  letter-spacing: -0.02em !important;
-  text-transform: none !important;
-  max-width: none;
-}
-
-.project-inquiry-card p {
-  color: var(--color-muted);
-  font-size: 0.9rem !important;
-  line-height: 1.72 !important;
-  margin-top: 0.75rem;
-}
-
-.project-inquiry-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.375rem;
-}
-
-.featured-projects-action {
-  display: flex;
-  justify-content: center;
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.featured-projects-action .btn {
-  min-width: 190px;
-  justify-content: center;
-}
-
 /* ── Responsive ────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .testimonial-grid,
-  .project-inquiry-grid {
+  .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
   .testimonial-intro h2 {
     max-width: 15ch !important;
-  }
-
-  .project-inquiry-copy h2 {
-    max-width: 20ch !important;
   }
 }
 
@@ -272,7 +164,7 @@
   .hero h1,
   .page-hero h1,
   .case-hero h1 {
-    font-size: clamp(2.25rem, 10vw, 3.5rem) !important;
+    font-size: clamp(2.125rem, 10vw, 3.25rem) !important;
     line-height: 1.06 !important;
     letter-spacing: -0.03em !important;
   }
@@ -285,7 +177,7 @@
   .testimonial-intro h2,
   .best-for-section .section-heading h2,
   #process .section-heading h2 {
-    font-size: clamp(1.75rem, 8vw, 2.75rem) !important;
+    font-size: clamp(1.75rem, 7vw, 2.5rem) !important;
     line-height: 1.1 !important;
     letter-spacing: -0.03em !important;
   }
@@ -295,7 +187,7 @@
   .hero h1,
   .page-hero h1,
   .case-hero h1 {
-    font-size: clamp(1.875rem, 11vw, 2.5rem) !important;
+    font-size: clamp(1.875rem, 11vw, 2.375rem) !important;
   }
 
   .section-heading h2,
@@ -305,6 +197,6 @@
   .testimonial-intro h2,
   .best-for-section .section-heading h2,
   #process .section-heading h2 {
-    font-size: clamp(1.625rem, 9vw, 2.25rem) !important;
+    font-size: clamp(1.625rem, 9vw, 2.125rem) !important;
   }
 }
